@@ -1,0 +1,112 @@
+{
+  "run_name": "transformer_1layer_s0",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = = <eos> the 766th regiment was the 766th regiment was the 766th regiment was the 766th regiment , and the 766th regiment was sent to reinforce the 766th regiment . the 766th regiment was sent to the 766th regiment , commanded by the 766th",
+        "seconds": 0.3160640840069391,
+        "distinct_1": 0.28,
+        "distinct_2": 0.4489795918367347,
+        "distinct_3": 0.5833333333333334,
+        "repeated_4gram_frac": 0.2978723404255319
+      },
+      "topk": {
+        "text": "against the 766th forces . <eos> the 766th headquarters was originally taken over them by the 766th regiment , 2nd division was appointed an <unk> unit of the <unk> , who had no advantage of fighting . these were lost after the 766th unit did not return to the 5th",
+        "seconds": 0.11636829099734314,
+        "distinct_1": 0.72,
+        "distinct_2": 0.9387755102040817,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ", and the island of the island . <eos> = = = = = <eos> the storm was named after the storm , the storm was named after the storm , the storm was named after the storm , the storm was named after the storm , the storm was",
+        "seconds": 0.09623308302252553,
+        "distinct_1": 0.24,
+        "distinct_2": 0.3673469387755102,
+        "distinct_3": 0.4375,
+        "repeated_4gram_frac": 0.5319148936170213
+      },
+      "topk": {
+        "text": ", the island 's cathedral . <eos> = = = = <eos> the east of <unk> ( <unk> ) = = = <eos> = = development = <eos> the new york times the first period = = <eos> the next year ) = <eos> = = reception = = =",
+        "seconds": 0.11582925001857802,
+        "distinct_1": 0.44,
+        "distinct_2": 0.6326530612244898,
+        "distinct_3": 0.7916666666666666,
+        "repeated_4gram_frac": 0.06382978723404255
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "a new state of the state of the state of the state of the state of the state of the state of the state of the state of the state of the state of the state of the state of the state of the state of the state of maryland",
+        "seconds": 0.09455137499026023,
+        "distinct_1": 0.12,
+        "distinct_2": 0.12244897959183673,
+        "distinct_3": 0.125,
+        "repeated_4gram_frac": 0.8723404255319149
+      },
+      "topk": {
+        "text": "a budget of 5 @,@ 000 in 2011 . <eos> after the next year , he has been awarded a special candidate for the state of yugoslavia . <eos> there is no doubt that he may have the <unk> , as a <unk> of a year of <unk> in the",
+        "seconds": 0.11426220898283646,
+        "distinct_1": 0.66,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "highway . <eos> = = = = <eos> the highway is a highway system to the highway system . the highway was designated as the highway system as a highway system of the highway system . the highway was designated as the highway system . the highway was designated as",
+        "seconds": 0.09597516601206735,
+        "distinct_1": 0.26,
+        "distinct_2": 0.46938775510204084,
+        "distinct_3": 0.6041666666666666,
+        "repeated_4gram_frac": 0.3191489361702128
+      },
+      "topk": {
+        "text": "system to the first line and , with an early 20th century , and by a village , was completed . <eos> hakim is used in the united states and made from a second @-@ day @-@ old film . <eos> = = = = = <eos> = = =",
+        "seconds": 0.11283033300423995,
+        "distinct_1": 0.66,
+        "distinct_2": 0.8571428571428571,
+        "distinct_3": 0.9166666666666666,
+        "repeated_4gram_frac": 0.0425531914893617
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american academy ( <unk> ) , <unk> ( <unk> ) , <unk> ( <unk> ) , <unk> ( <unk> ) , <unk> ( <unk> ) , <unk> ( <unk> ) , <unk> ( <unk> ) , <unk> ( <unk> ) , <unk> ( <unk> ) , <unk> ( <unk> )",
+        "seconds": 0.09279416600475088,
+        "distinct_1": 0.12,
+        "distinct_2": 0.14285714285714285,
+        "distinct_3": 0.14583333333333334,
+        "repeated_4gram_frac": 0.851063829787234
+      },
+      "topk": {
+        "text": "korean , which were also described as \" <unk> \" ) , a new school \" ( 1999 ) . <eos> tintin in april 2010 , 2005 , \" <unk> \" ) : written by james f. kennedy , and wrote that this period in <unk> that year . in",
+        "seconds": 0.11270641701412387,
+        "distinct_1": 0.68,
+        "distinct_2": 0.9387755102040817,
+        "distinct_3": 0.9583333333333334,
+        "repeated_4gram_frac": 0.02127659574468085
+      }
+    }
+  ]
+}

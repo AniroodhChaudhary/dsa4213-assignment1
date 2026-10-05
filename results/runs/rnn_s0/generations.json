@@ -1,0 +1,112 @@
+{
+  "run_name": "rnn_s0",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos>",
+        "seconds": 0.18545633301255293,
+        "distinct_1": 0.06,
+        "distinct_2": 0.08163265306122448,
+        "distinct_3": 0.10416666666666667,
+        "repeated_4gram_frac": 0.8723404255319149
+      },
+      "topk": {
+        "text": "against the kpa 's king , and a peace @-@ force \" it into a high position . <unk> had the right end of the 766th ( \" <eos> <unk> de <unk> ) from the huai ( emperor <unk> ) in the cathedral area with the cathedral . <eos> the",
+        "seconds": 0.08419020799919963,
+        "distinct_1": 0.68,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ", and <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk>",
+        "seconds": 0.06001433401252143,
+        "distinct_1": 0.06,
+        "distinct_2": 0.10204081632653061,
+        "distinct_3": 0.10416666666666667,
+        "repeated_4gram_frac": 0.8936170212765957
+      },
+      "topk": {
+        "text": ", and the middle section . <unk> for <unk> and the other group of the <unk> are used as a source of the georgian spacing is in the same . <eos> = = = early sources = = <eos> = = critical reception = = <eos> while critics were given",
+        "seconds": 0.07866083297994919,
+        "distinct_1": 0.62,
+        "distinct_2": 0.8367346938775511,
+        "distinct_3": 0.9583333333333334,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "a new <unk> , and the <unk> of the <unk> . <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos> = = = = = <eos> = =",
+        "seconds": 0.05910037501598708,
+        "distinct_1": 0.2,
+        "distinct_2": 0.2653061224489796,
+        "distinct_3": 0.3125,
+        "repeated_4gram_frac": 0.6595744680851063
+      },
+      "topk": {
+        "text": "a suitable game . \" , the player is the largest and other members of the united states as \" its course \" , and the belgian company , said in its existence of \" one \" <eos> <unk> of the city , \" and the second of a year",
+        "seconds": 0.07587533298647031,
+        "distinct_1": 0.6,
+        "distinct_2": 0.9387755102040817,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "east of the <unk> <unk> . <eos> = = = <unk> = = = <eos> the kakapo is a <unk> of the <unk> <unk> ( <unk> ) , and <unk> ( <unk> ) , <unk> <unk> ( <unk> ) , <unk> <unk> ( <unk> ) , <unk> <unk> ( <unk>",
+        "seconds": 0.05976737500168383,
+        "distinct_1": 0.28,
+        "distinct_2": 0.4897959183673469,
+        "distinct_3": 0.5833333333333334,
+        "repeated_4gram_frac": 0.3404255319148936
+      },
+      "topk": {
+        "text": "east state . <eos> = = = = tropical storm developed the season , a tropical wave the system peaked in the azores and a storm . the storm caused wind gusts to a high winds of 65 mph ) . <eos> = = = = <eos> a large number",
+        "seconds": 0.0796547080099117,
+        "distinct_1": 0.6,
+        "distinct_2": 0.8571428571428571,
+        "distinct_3": 0.8958333333333334,
+        "repeated_4gram_frac": 0.06382978723404255
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk>",
+        "seconds": 0.05860724998638034,
+        "distinct_1": 0.06,
+        "distinct_2": 0.061224489795918366,
+        "distinct_3": 0.0625,
+        "repeated_4gram_frac": 0.9361702127659575
+      },
+      "topk": {
+        "text": "america , which were not known as , <unk> , tintin , the <unk> of the dominican republic and ireland , frelimo , which was held on the site of the jin dynasty college of war ii ( <unk> ) . <eos> \" this is <unk> by a new york",
+        "seconds": 0.07877879199804738,
+        "distinct_1": 0.72,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "run_name": "ngram",
+  "device": "cpu",
+  "hardware": {
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "torch": "2.14.0",
+    "mps_available": true,
+    "cuda_available": false,
+    "cpu": "Apple M4",
+    "memory_gb": 16.0,
+    "macos": "15.7.9"
+  },
+  "size": {
+    "n_entries": 5769874,
+    "checkpoint_bytes": 156261090
+  },
+  "score_test": {
+    "tokens": 244102,
+    "seconds": 0.7666872919944581,
+    "tokens_per_second": 318385.3476493575
+  },
+  "generate": {
+    "prompts": 5,
+    "new_tokens_per_prompt": 50,
+    "decoding": "top-k 40, T=1.0",
+    "seconds": 4.934650624927599,
+    "ms_per_token": 19.738602499710396,
+    "tokens_per_second": 50.662147941561315
+  }
+}

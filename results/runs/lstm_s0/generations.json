@@ -1,0 +1,112 @@
+{
+  "run_name": "lstm_s0",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = = = = = = = = = = = = <eos> the first time of the year , the first time , was the first time of the year , and the first time was the first time to be the first time",
+        "seconds": 0.19310020800912753,
+        "distinct_1": 0.26,
+        "distinct_2": 0.42857142857142855,
+        "distinct_3": 0.5416666666666666,
+        "repeated_4gram_frac": 0.3404255319148936
+      },
+      "topk": {
+        "text": "during the conflict . <eos> the first time against the american union were created by the royal army , both the republic of their <unk> against the country , and one of the 1st century ce , although the general government was supported by his party . the first two",
+        "seconds": 0.08492604101775214,
+        "distinct_1": 0.7,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ". the first two years later , the first of the first time was the first time in the first season , and the first time of the year , the <unk> of the <unk> , was the first time to be the first time . <eos> = = =",
+        "seconds": 0.06193120899843052,
+        "distinct_1": 0.38,
+        "distinct_2": 0.6530612244897959,
+        "distinct_3": 0.8958333333333334,
+        "repeated_4gram_frac": 0.02127659574468085
+      },
+      "topk": {
+        "text": ", and the capital of the north end , which is not as a second <unk> and the east and west west of the southern gulf of the area , and it was the last five years of the united states during the first period , until september 14 ,",
+        "seconds": 0.08540108398301527,
+        "distinct_1": 0.64,
+        "distinct_2": 0.8979591836734694,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "a \" <unk> \" . <eos> = = = = = = = = = = = = = = = <eos> = = = = = = = = = = = = = = = = <eos> the first time of the film was the first time of",
+        "seconds": 0.062176791980164126,
+        "distinct_1": 0.24,
+        "distinct_2": 0.32653061224489793,
+        "distinct_3": 0.375,
+        "repeated_4gram_frac": 0.574468085106383
+      },
+      "topk": {
+        "text": "a key of the school to the house of <unk> that was also used in the area . he also suggested that his life was to seek to a lot of education between the country and their <unk> <unk> , a number of six men . the <unk> @-@ off",
+        "seconds": 0.08414279198041186,
+        "distinct_1": 0.64,
+        "distinct_2": 1.0,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "<unk> of the <unk> . <eos> = = = = <unk> = = = = <eos> the first part of the first season was the first time of the season , and the first time was the first time to be the first time . <eos> = = = =",
+        "seconds": 0.062009707995457575,
+        "distinct_1": 0.3,
+        "distinct_2": 0.5714285714285714,
+        "distinct_3": 0.7708333333333334,
+        "repeated_4gram_frac": 0.10638297872340426
+      },
+      "topk": {
+        "text": "area in the first area of the final half . the first of the south atlantic ocean , an additional , <unk> bridge , is in the end of the northern atlantic 's west . the road ' north of the city is at the top the west and the",
+        "seconds": 0.08465458298451267,
+        "distinct_1": 0.56,
+        "distinct_2": 0.8775510204081632,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american academy , the <unk> of the <unk> , was the first time of the first time . the first time was the first time of the year , and the first time was the first time to be the first time . <eos> = = = = = =",
+        "seconds": 0.061870082980021834,
+        "distinct_1": 0.32,
+        "distinct_2": 0.5102040816326531,
+        "distinct_3": 0.6666666666666666,
+        "repeated_4gram_frac": 0.2127659574468085
+      },
+      "topk": {
+        "text": "newspaper , he had not been built that the other troops in the state is \" just so what they had happened of all the life and a ] \" . he concluded what it was born during the war . <unk> at a further <unk> from the british post",
+        "seconds": 0.08450870800879784,
+        "distinct_1": 0.78,
+        "distinct_2": 1.0,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

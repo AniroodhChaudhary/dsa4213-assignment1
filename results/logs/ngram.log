@@ -1,0 +1,5 @@
+order 2: val ppl 274.77  fit 0.5s  entries 615,050  D={1: 0.189, 2: 0.697}
+order 3: val ppl 235.54  fit 1.3s  entries 1,993,039  D={1: 0.189, 2: 0.725, 3: 0.834}
+order 4: val ppl 229.00  fit 2.5s  entries 3,804,292  D={1: 0.189, 2: 0.725, 3: 0.863, 4: 0.916}
+order 5: val ppl 227.42  fit 3.9s  entries 5,769,874  D={1: 0.189, 2: 0.725, 3: 0.863, 4: 0.94, 5: 0.957}
+selected order 5 (val ppl 227.42); saved /Users/arnavjhajharia/Desktop/aniroodh-assignment/checkpoints/ngram.pkl (156 MB)

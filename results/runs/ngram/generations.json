@@ -1,0 +1,112 @@
+{
+  "run_name": "ngram",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": "in the region . <eos> = = = = <eos> the first recorded in the inventory of <unk> <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> ,",
+        "seconds": 1.1706763750116806,
+        "distinct_1": 0.26,
+        "distinct_2": 0.3673469387755102,
+        "distinct_3": 0.4166666666666667,
+        "repeated_4gram_frac": 0.5531914893617021
+      },
+      "topk": {
+        "text": "staged a sit in his home . <eos> with the rise of cobra commander in the sequel . <eos> he was appointed director @-@ <unk> during the late <unk> . another such cruise ship , loaded with troops , an individual 's perception have suggested that the team . the",
+        "seconds": 0.9913599159917794,
+        "distinct_1": 0.76,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ", and the <unk> of the <unk> , and the <unk> of the <unk> , and the <unk> of the <unk> , and the <unk> of the <unk> , and the <unk> of the <unk> , and the <unk> of the <unk> , and the <unk> of the <unk> ,",
+        "seconds": 1.219758749997709,
+        "distinct_1": 0.1,
+        "distinct_2": 0.12244897959183673,
+        "distinct_3": 0.14583333333333334,
+        "repeated_4gram_frac": 0.851063829787234
+      },
+      "topk": {
+        "text": ", and was replaced by the national library , which was a large @-@ scale <unk> paintings and drawings . a few months later a bomb . <unk> of <unk> , with the <unk> in an attempt to play in the fa cup , but the soviet archives of dumont",
+        "seconds": 1.0088931669888552,
+        "distinct_1": 0.68,
+        "distinct_2": 1.0,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "a new york times , the song is a re @-@ interpretation of the hymn \" joyful , joyful \" , and \" <unk> \" . <eos> = = = = <eos> the first recorded in the inventory of <unk> <unk> , a <unk> , a <unk> , a <unk>",
+        "seconds": 1.1048857079877052,
+        "distinct_1": 0.48,
+        "distinct_2": 0.8367346938775511,
+        "distinct_3": 0.875,
+        "repeated_4gram_frac": 0.0851063829787234
+      },
+      "topk": {
+        "text": "a map of the poem 's the country 's \" little to no use of this mushroom as if not exactly jammed together . the new yorker , and later , already putting a bit more polished <unk> <unk> , was also the first time in his career . he",
+        "seconds": 0.9390569999814034,
+        "distinct_1": 0.8,
+        "distinct_2": 1.0,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "area . <eos> = = = = <eos> the first recorded in the inventory of <unk> <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk> , a <unk>",
+        "seconds": 1.1595710830006283,
+        "distinct_1": 0.26,
+        "distinct_2": 0.3469387755102041,
+        "distinct_3": 0.375,
+        "repeated_4gram_frac": 0.5957446808510638
+      },
+      "topk": {
+        "text": "house and <unk> <unk> . the first four starts , and the <unk> <unk> of the hindu in a single . <eos> meanwhile , a 2 @-@ 3 . a total of 15 @,@ 000 @,@ 000 acres ( 2 @.@ 3 % in the area , and was an",
+        "seconds": 1.0299828329880256,
+        "distinct_1": 0.6,
+        "distinct_2": 0.9387755102040817,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american tribes , the <unk> , the <unk> <unk> , the <unk> <unk> , the <unk> <unk> , the <unk> <unk> , the <unk> <unk> , the <unk> <unk> , the <unk> <unk> , the <unk> <unk> , the <unk> <unk> , the <unk> <unk> , the <unk> <unk> ,",
+        "seconds": 1.2023706249892712,
+        "distinct_1": 0.1,
+        "distinct_2": 0.12244897959183673,
+        "distinct_3": 0.14583333333333334,
+        "repeated_4gram_frac": 0.8297872340425532
+      },
+      "topk": {
+        "text": "plant , as they were on the next to the player . \" <unk> \" and that his personal health , bethesda , maryland , in its original form of the god apollo bunder in the uk still \" . in a review for the <unk> ) in a large",
+        "seconds": 0.9653577089775354,
+        "distinct_1": 0.7,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "run_name": "transformer_s0",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = <eos> the song was written by the song by the song , and the song was written",
+        "seconds": 2.637158500001533,
+        "distinct_1": 0.2,
+        "distinct_2": 0.2857142857142857,
+        "distinct_3": 0.3541666666666667,
+        "repeated_4gram_frac": 0.5957446808510638
+      },
+      "topk": {
+        "text": "\u2014 and some of the song was \" impossible \" . <unk> said that \" this were a \" dramatic <unk> \" and \" <unk> ' and \" <unk> \" for the country ; the feast of their <unk> \" was a standard word that was a major <unk> of",
+        "seconds": 0.1780685830162838,
+        "distinct_1": 0.52,
+        "distinct_2": 0.8979591836734694,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ". the north of the south of the east of the east of the south of the south korean peninsula , the south korean river , and the south korean peninsula were constructed in the north korean peninsula . the 766th was also built in the north korean area .",
+        "seconds": 0.14871583299827762,
+        "distinct_1": 0.38,
+        "distinct_2": 0.5918367346938775,
+        "distinct_3": 0.75,
+        "repeated_4gram_frac": 0.1276595744680851
+      },
+      "topk": {
+        "text": ", the east 's western coast . the first few species of the west of <unk> were named as the site of the northern hemisphere and the north america , and south of <unk> and a small group of a. hygrometricus ; it was recorded . most recent species had",
+        "seconds": 0.16937183402478695,
+        "distinct_1": 0.7,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "a <unk> of the jin . the song was the song by the jin , and the jin was the song . the song was the song of the song , and the song was the song by the song . the song was the song by the song song",
+        "seconds": 0.14767308300361037,
+        "distinct_1": 0.22,
+        "distinct_2": 0.3877551020408163,
+        "distinct_3": 0.5833333333333334,
+        "repeated_4gram_frac": 0.3191489361702128
+      },
+      "topk": {
+        "text": "a letter of the emperor and the jin would be attacked . the court of modern rule was forced to defend a jin . <eos> the huai river , although the jurchens attempted to secure a treaty , the song had been <unk> to hold the jin , this would",
+        "seconds": 0.1694095419952646,
+        "distinct_1": 0.66,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "east of the east coast of the united states . <eos> = = = route description = = <eos> the highway is a highway between the highway of the highway system . the highway is located in the north of the north of the north of the north of the",
+        "seconds": 0.14653445899602957,
+        "distinct_1": 0.38,
+        "distinct_2": 0.6326530612244898,
+        "distinct_3": 0.8125,
+        "repeated_4gram_frac": 0.14893617021276595
+      },
+      "topk": {
+        "text": "east ) . <eos> = = = route description = = <eos> the route has been laid in a park , <unk> avenue and the state state route in the village of the east . the highway continues north and south . it is a few <unk> road in the",
+        "seconds": 0.17202241701306775,
+        "distinct_1": 0.58,
+        "distinct_2": 0.9387755102040817,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american newspaper , the film was published in the united states . <eos> = = = = production = = <eos> the film was released in september 2011 . the film was released in september 2011 . the film was released in september 2011 . the film was released in",
+        "seconds": 0.14666354199289344,
+        "distinct_1": 0.34,
+        "distinct_2": 0.4897959183673469,
+        "distinct_3": 0.5625,
+        "repeated_4gram_frac": 0.3829787234042553
+      },
+      "topk": {
+        "text": "sentence , wheeler 's book was known as the \" good and \" the first year that year was not the finest of one of the best film of the united kingdom during 1996 . in 2000 of the united states , wheeler continued to <unk> his wife . he",
+        "seconds": 0.16937066699028946,
+        "distinct_1": 0.7,
+        "distinct_2": 0.9183673469387755,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}
