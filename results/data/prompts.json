@@ -1,0 +1,80 @@
+{
+  "source": "wikitext-2 validation split, seed 0",
+  "prompts": [
+    {
+      "validation_line": 801,
+      "tokens": [
+        "the",
+        "americans",
+        "knew",
+        "of",
+        "the",
+        "approach",
+        "of",
+        "the",
+        "japanese",
+        "forces"
+      ]
+    },
+    {
+      "validation_line": 908,
+      "tokens": [
+        "the",
+        "ruins",
+        "lie",
+        "among",
+        "the",
+        "tropical",
+        "rainforests",
+        "of",
+        "northern",
+        "guatemala"
+      ]
+    },
+    {
+      "validation_line": 1357,
+      "tokens": [
+        "in",
+        "1644",
+        ",",
+        "hu",
+        "took",
+        "it",
+        "upon",
+        "himself",
+        "to",
+        "create"
+      ]
+    },
+    {
+      "validation_line": 1598,
+      "tokens": [
+        "as",
+        "the",
+        "highway",
+        "approaches",
+        "thompson",
+        ",",
+        "us",
+        "2",
+        "leaves",
+        "the"
+      ]
+    },
+    {
+      "validation_line": 2012,
+      "tokens": [
+        "churchill",
+        ",",
+        "ward",
+        "(",
+        "1996",
+        ")",
+        ".",
+        "from",
+        "a",
+        "native"
+      ]
+    }
+  ]
+}

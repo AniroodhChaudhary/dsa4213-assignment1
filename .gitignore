@@ -1,6 +1,6 @@
 # data, checkpoints and build artefacts are reproducible; results/ is committed
-data/
-checkpoints/
+/data/
+/checkpoints/
 .venv/
 __pycache__/
 *.pyc

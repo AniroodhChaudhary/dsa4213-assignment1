@@ -1,0 +1,109 @@
+{
+  "wikitext": {
+    "vocab_size": 28913,
+    "splits": {
+      "train": {
+        "lines": 23767,
+        "tokens_in_stream": 2075678,
+        "targets": 2075677,
+        "native_unk_tokens": 54625,
+        "oov_mapped_to_unk": 0
+      },
+      "validation": {
+        "lines": 2461,
+        "tokens_in_stream": 216348,
+        "targets": 216347,
+        "native_unk_tokens": 11718,
+        "oov_mapped_to_unk": 0
+      },
+      "test": {
+        "lines": 2891,
+        "tokens_in_stream": 244103,
+        "targets": 244102,
+        "native_unk_tokens": 15218,
+        "oov_mapped_to_unk": 0
+      }
+    },
+    "types_per_frequency_bucket": {
+      "1-10": 16728,
+      "11-100": 10017,
+      "101-1k": 2011,
+      "1k-10k": 132,
+      ">10k": 24
+    },
+    "seconds": 10.0
+  },
+  "agnews": {
+    "max_len": 96,
+    "splits": {
+      "train": {
+        "n_docs": 20000,
+        "n_tokens": 889298,
+        "n_unk": 67022,
+        "unk_rate": 0.07536506322964856,
+        "in_vocab_rate": 0.9246349367703515,
+        "truncated_frac": 0.00875,
+        "mean_len": 45.4649,
+        "unk_rate_per_class": {
+          "World": 0.06578907370567322,
+          "Sports": 0.07112828642129898,
+          "Business": 0.07823502272367477,
+          "Sci/Tech": 0.08453185111284256
+        },
+        "class_counts": {
+          "World": 5000,
+          "Sports": 5000,
+          "Business": 5000,
+          "Sci/Tech": 5000
+        }
+      },
+      "val": {
+        "n_docs": 2000,
+        "n_tokens": 89257,
+        "n_unk": 6602,
+        "unk_rate": 0.07396618752590833,
+        "in_vocab_rate": 0.9260338124740917,
+        "truncated_frac": 0.008,
+        "mean_len": 45.6285,
+        "unk_rate_per_class": {
+          "World": 0.06485868990421295,
+          "Sports": 0.06977911293506622,
+          "Business": 0.0790828987956047,
+          "Sci/Tech": 0.07990052551031113
+        },
+        "class_counts": {
+          "World": 500,
+          "Sports": 500,
+          "Business": 500,
+          "Sci/Tech": 500
+        }
+      },
+      "test": {
+        "n_docs": 7600,
+        "n_tokens": 335511,
+        "n_unk": 25176,
+        "unk_rate": 0.07503777819505172,
+        "in_vocab_rate": 0.9249622218049482,
+        "truncated_frac": 0.007105263157894737,
+        "mean_len": 45.146184210526314,
+        "unk_rate_per_class": {
+          "World": 0.06456144154071808,
+          "Sports": 0.07168702781200409,
+          "Business": 0.07713857293128967,
+          "Sci/Tech": 0.08592595160007477
+        },
+        "class_counts": {
+          "World": 1900,
+          "Sports": 1900,
+          "Business": 1900,
+          "Sci/Tech": 1900
+        }
+      }
+    },
+    "seconds": 9.0,
+    "example_tokenisation": {
+      "raw": "Fears for T N pension after talks Unions representing workers at Turner   Newall say they are 'disappointed' after talks with stricken parent firm Federal Mogul.",
+      "tokens": "fears for t n pension after talks unions representing workers at turner newall say they are ' disappointed ' after talks with stricken parent firm federal mogul ."
+    }
+  }
+}
