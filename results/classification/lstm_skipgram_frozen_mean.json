@@ -1,0 +1,312 @@
+{
+  "name": "lstm_skipgram_frozen_mean",
+  "meta": {
+    "kind": "lm",
+    "run": "lstm_skipgram_frozen_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 5.202588584041223
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.7577026902875817,
+      "test_accuracy": 0.7518421052631579,
+      "test_macro_f1": 0.7518209300661183,
+      "test_f1_per_class": {
+        "World": 0.7834411384217335,
+        "Sports": 0.8465412138881526,
+        "Business": 0.6770589763574955,
+        "Sci/Tech": 0.7002423915970913
+      },
+      "confusion": [
+        [
+          1514,
+          104,
+          177,
+          105
+        ],
+        [
+          113,
+          1597,
+          111,
+          79
+        ],
+        [
+          185,
+          83,
+          1303,
+          329
+        ],
+        [
+          153,
+          89,
+          358,
+          1300
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.7665522489293755,
+      "test_accuracy": 0.7702631578947369,
+      "test_macro_f1": 0.7705601129610833,
+      "test_f1_per_class": {
+        "World": 0.7939538583929993,
+        "Sports": 0.8704635761589404,
+        "Business": 0.694888178913738,
+        "Sci/Tech": 0.7229348383786557
+      },
+      "confusion": [
+        [
+          1497,
+          99,
+          162,
+          142
+        ],
+        [
+          89,
+          1643,
+          88,
+          80
+        ],
+        [
+          161,
+          67,
+          1305,
+          367
+        ],
+        [
+          124,
+          66,
+          301,
+          1409
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.01,
+      "val_macro_f1": 0.8016685137701175,
+      "test_accuracy": 0.7940789473684211,
+      "test_macro_f1": 0.7932464369211978,
+      "test_f1_per_class": {
+        "World": 0.8137460650577125,
+        "Sports": 0.892912571132954,
+        "Business": 0.7212496633450041,
+        "Sci/Tech": 0.7450774481491205
+      },
+      "confusion": [
+        [
+          1551,
+          106,
+          134,
+          109
+        ],
+        [
+          64,
+          1726,
+          47,
+          63
+        ],
+        [
+          171,
+          72,
+          1339,
+          318
+        ],
+        [
+          126,
+          62,
+          293,
+          1419
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 3671,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9971420168876648,
+      "unk_rate": 0.09302325581395349,
+      "text": "Microsoft Launches New Media Center PC Microsoft Corp. MSFT.O on Tuesday unveiled a new version of its Windows XP Media Center, adding features such as instant messaging and high-definition television to a personal computer designed for the living room."
+    },
+    {
+      "index": 3900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9948148131370544,
+      "unk_rate": 0.041666666666666664,
+      "text": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series."
+    },
+    {
+      "index": 3805,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9937983155250549,
+      "unk_rate": 0.03636363636363636,
+      "text": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St..."
+    },
+    {
+      "index": 7115,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9936426877975464,
+      "unk_rate": 0.08823529411764706,
+      "text": "DreamWorks, Pixar rule digital animation DreamWorks and Pixar both make cutting-edge digital animated films. But behind the scenes, the two studios are about as different as Shrek and Mr."
+    },
+    {
+      "index": 1269,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.993166983127594,
+      "unk_rate": 0.07317073170731707,
+      "text": "Philippines mourns dead in Russian school siege The Philippines Saturday expressed quot;deepest sympathy quot; to the families of the dead in the Russian school siege on Friday, in which 322 people were killed when Russian troops stormed "
+    },
+    {
+      "index": 2028,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9930170774459839,
+      "unk_rate": 0.0,
+      "text": "Ryder Cup: Europe close on victory Another good day at Oakland Hills sees Europe move 11-5 clear of the USA going into Sunday's Ryder Cup singles."
+    },
+    {
+      "index": 3180,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9926924109458923,
+      "unk_rate": 0.10204081632653061,
+      "text": "Russia May Ratify Kyoto Protocol in Oct. -- Minister (Reuters) Reuters - The Russian government expects\\parliament to ratify the Kyoto Protocol this month in a move\\allowing the long-delayed climate change treaty to come into\\force worldwide, a senior minister said Monday."
+    },
+    {
+      "index": 967,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.992493748664856,
+      "unk_rate": 0.08571428571428572,
+      "text": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-"
+    },
+    {
+      "index": 7539,
+      "true": "World",
+      "pred": "Sci/Tech",
+      "confidence": 0.9910221695899963,
+      "unk_rate": 0.03125,
+      "text": "Mars water tops science honours The discovery that salty, acidic water once flowed across the surface of Mars has topped a list of the 10 key scientific advances of 2004."
+    },
+    {
+      "index": 2574,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9901324510574341,
+      "unk_rate": 0.11320754716981132,
+      "text": "Adobe updates RAW plug-in with digital negative format Adobe has updated Photoshop #39;s support for digital cameras #39; RAW image formats. The new plug-in adds to the number of camera models supported and includes a utility for converting images into the DNG, digital negative format."
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9896007180213928,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 3563,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9891079664230347,
+      "unk_rate": 0.05,
+      "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41..."
+    },
+    {
+      "index": 3899,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9888089299201965,
+      "unk_rate": 0.04878048780487805,
+      "text": "Warne takes six but India establish handy lead (Reuters) Reuters - World test wicket record holder Shane Warne grabbed six wickets as India established a handy 141-run first innings lead in the second test on Saturday."
+    },
+    {
+      "index": 1080,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9866385459899902,
+      "unk_rate": 0.07547169811320754,
+      "text": "Davenport Advances at U.S. Open NEW YORK - Lindsay Davenport's summer of success stayed on course Thursday when the fifth-seeded former U.S. Open champion defeated Arantxa Parra Santonja 6-4, 6-2 and advanced to the third round of the season's final Grand Slam event..."
+    },
+    {
+      "index": 887,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.985664963722229,
+      "unk_rate": 0.08,
+      "text": "On TV -- from the Internet  SAN MATEO, Calif. -- The promise of Internet-based video has long been hamstrung by copyright and piracy worries, slow dial-up connections, technical challenges, and consumer disdain for watching blotchy videos on their home computers."
+    },
+    {
+      "index": 4862,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9849534034729004,
+      "unk_rate": 0.125,
+      "text": "AOL's Viral Marketing America Online will now provide gratis antivirus protection to its subscribers."
+    },
+    {
+      "index": 4000,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9843857884407043,
+      "unk_rate": 0.03508771929824561,
+      "text": "Google puts desktop search privacy up front Google has announced a new desktop search application that enables users to search their e-mail, files, web history, and chats. Perhaps learning from previous mistakes, Google says it has designed the product  quot;from the ground up to respect user privac"
+    },
+    {
+      "index": 4029,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9840981364250183,
+      "unk_rate": 0.02127659574468085,
+      "text": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No..."
+    },
+    {
+      "index": 744,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9834587574005127,
+      "unk_rate": 0.06779661016949153,
+      "text": "HP to tempt holiday shoppers with sights and sounds The computer-hardware giant, best known for products such as PCs and printers, on Friday laid out its plan to become a brand-name in consumer electronics products such as flat-screen TVs, music players and the devices that move content between them"
+    },
+    {
+      "index": 6576,
+      "true": "World",
+      "pred": "Sci/Tech",
+      "confidence": 0.9823775291442871,
+      "unk_rate": 0.09615384615384616,
+      "text": "Toshiba claims Hollywood backing in war for next DVD standard (AFP) AFP - Toshiba said four major Hollywood studios had thrown their crucial weight behind High Definition DVD (HD-DVD), one of two disc formats contending to be the standard in next-generation DVDs."
+    }
+  ],
+  "unk_rate_correct": 0.07507951123877794,
+  "unk_rate_wrong": 0.0738593160953425,
+  "seconds": 1.364279291999992
+}

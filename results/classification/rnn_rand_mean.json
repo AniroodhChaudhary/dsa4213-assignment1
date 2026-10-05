@@ -1,0 +1,312 @@
+{
+  "name": "rnn_rand_mean",
+  "meta": {
+    "kind": "lm",
+    "run": "rnn_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 4.802224166051019
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.6662557896781061,
+      "test_accuracy": 0.6725,
+      "test_macro_f1": 0.6716699451698281,
+      "test_f1_per_class": {
+        "World": 0.6936866718628215,
+        "Sports": 0.7953246753246753,
+        "Business": 0.5486866542849562,
+        "Sci/Tech": 0.6489817792068596
+      },
+      "confusion": [
+        [
+          1335,
+          133,
+          308,
+          124
+        ],
+        [
+          148,
+          1531,
+          148,
+          73
+        ],
+        [
+          305,
+          137,
+          1034,
+          424
+        ],
+        [
+          161,
+          149,
+          379,
+          1211
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.7000409971928713,
+      "test_accuracy": 0.6977631578947369,
+      "test_macro_f1": 0.696340847900187,
+      "test_f1_per_class": {
+        "World": 0.7247146270241571,
+        "Sports": 0.8126469819702117,
+        "Business": 0.5786830357142857,
+        "Sci/Tech": 0.6693187468920935
+      },
+      "confusion": [
+        [
+          1365,
+          126,
+          231,
+          178
+        ],
+        [
+          132,
+          1555,
+          113,
+          100
+        ],
+        [
+          242,
+          123,
+          1037,
+          498
+        ],
+        [
+          128,
+          123,
+          303,
+          1346
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.1,
+      "val_macro_f1": 0.7419749088210166,
+      "test_accuracy": 0.7364473684210526,
+      "test_macro_f1": 0.7353602746566557,
+      "test_f1_per_class": {
+        "World": 0.7557988011467293,
+        "Sports": 0.84977870346264,
+        "Business": 0.6396938217605249,
+        "Sci/Tech": 0.6961697722567288
+      },
+      "confusion": [
+        [
+          1450,
+          120,
+          185,
+          145
+        ],
+        [
+          104,
+          1632,
+          89,
+          75
+        ],
+        [
+          233,
+          98,
+          1170,
+          399
+        ],
+        [
+          150,
+          91,
+          314,
+          1345
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 967,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.999503493309021,
+      "unk_rate": 0.08571428571428572,
+      "text": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-"
+    },
+    {
+      "index": 6093,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9994589686393738,
+      "unk_rate": 0.11764705882352941,
+      "text": "Football: Spanish FA apologises The Spanish FA apologises to its English counterparts following racist chanting."
+    },
+    {
+      "index": 3186,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.998748779296875,
+      "unk_rate": 0.04,
+      "text": "Tennis: Night final for Aus Open The centenary Australian Open will be the first Grand Slam event to stage its final at night."
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9975939393043518,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 6150,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9974327683448792,
+      "unk_rate": 0.0625,
+      "text": "England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm the Springboks at Twickenham."
+    },
+    {
+      "index": 3900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9960414171218872,
+      "unk_rate": 0.041666666666666664,
+      "text": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series."
+    },
+    {
+      "index": 3063,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9957491159439087,
+      "unk_rate": 0.04,
+      "text": "US football: Patriots' historic win New England win a record-tying 18th straight game - plus an NFL round-up."
+    },
+    {
+      "index": 4029,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9956684112548828,
+      "unk_rate": 0.02127659574468085,
+      "text": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No..."
+    },
+    {
+      "index": 3563,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9952214360237122,
+      "unk_rate": 0.05,
+      "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41..."
+    },
+    {
+      "index": 614,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9942345023155212,
+      "unk_rate": 0.05,
+      "text": "Pakistan down India to ensure top six finish (AFP) AFP - Pakistan defeated arch-rivals India 3-0 here to ensure they stand among the top six in the Olympic men's field hockey competition."
+    },
+    {
+      "index": 7115,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9905659556388855,
+      "unk_rate": 0.08823529411764706,
+      "text": "DreamWorks, Pixar rule digital animation DreamWorks and Pixar both make cutting-edge digital animated films. But behind the scenes, the two studios are about as different as Shrek and Mr."
+    },
+    {
+      "index": 912,
+      "true": "Sci/Tech",
+      "pred": "Sports",
+      "confidence": 0.9868805408477783,
+      "unk_rate": 0.04878048780487805,
+      "text": "Bryant Makes First Appearance at Trial (AP) AP - NBA star Kobe Bryant arrived at his sexual assault trial Monday as attorneys in the case who spent the weekend poring over questionnaires prepared to question potential jurors individually."
+    },
+    {
+      "index": 3661,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9867449402809143,
+      "unk_rate": 0.13636363636363635,
+      "text": "Cricket: Tendulkar to miss test Sachin Tendulkar is almost certain to miss Thursday's second Test against Australia in Madras."
+    },
+    {
+      "index": 1068,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9854904413223267,
+      "unk_rate": 0.10526315789473684,
+      "text": "Specialty Retail Tales Not every specialty retailer is cut from the same mold -- some are just moldy."
+    },
+    {
+      "index": 3304,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.9854589700698853,
+      "unk_rate": 0.03225806451612903,
+      "text": "Howard Stern moves radio show to Sirius Shock jock Howard Stern announced Wednesday he #39;s taking his radio show off the public airwaves and over to Sirius satellite radio."
+    },
+    {
+      "index": 5613,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9852604269981384,
+      "unk_rate": 0.041666666666666664,
+      "text": "Secretary Rumsfeld Remarks En Route to El Salvador SEC. RUMSFELD: As you know, were going to be stopping in El Salvador and Nicaragua and Panama and Ecuador. The first stops will be visits to the places, particularly El Salvador and Nicaragua - countries "
+    },
+    {
+      "index": 2981,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.9835472702980042,
+      "unk_rate": 0.05128205128205128,
+      "text": "Ex-Pentagon Official Gets 9 Months for Conspiring to Favor Boeing The former official was sentenced after acknowledging that she had favored the Boeing Company in Pentagon contracts while seeking a job at the company for herself."
+    },
+    {
+      "index": 1466,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9828543663024902,
+      "unk_rate": 0.10204081632653061,
+      "text": "Colts Lead Pats Early in Third Quarter FOXBORO, Mass. - Peyton Manning reached the 25,000-yard passing mark faster than anyone but Dan Marino, and the Indianapolis Colts shredded the New England Patriots for a 17-13 halftime lead Thursday night..."
+    },
+    {
+      "index": 3671,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9805058240890503,
+      "unk_rate": 0.09302325581395349,
+      "text": "Microsoft Launches New Media Center PC Microsoft Corp. MSFT.O on Tuesday unveiled a new version of its Windows XP Media Center, adding features such as instant messaging and high-definition television to a personal computer designed for the living room."
+    },
+    {
+      "index": 2028,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.97849041223526,
+      "unk_rate": 0.0,
+      "text": "Ryder Cup: Europe close on victory Another good day at Oakland Hills sees Europe move 11-5 clear of the USA going into Sunday's Ryder Cup singles."
+    }
+  ],
+  "unk_rate_correct": 0.07533725217245284,
+  "unk_rate_wrong": 0.07340593090664876,
+  "seconds": 2.0342267499654554
+}

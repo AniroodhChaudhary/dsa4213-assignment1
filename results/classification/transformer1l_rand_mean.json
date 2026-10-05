@@ -1,0 +1,312 @@
+{
+  "name": "transformer1l_rand_mean",
+  "meta": {
+    "kind": "lm",
+    "run": "transformer_1layer_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 4.63328587502474
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.7114016144487323,
+      "test_accuracy": 0.7098684210526316,
+      "test_macro_f1": 0.7090109527402054,
+      "test_f1_per_class": {
+        "World": 0.7324310255075481,
+        "Sports": 0.8371005455962588,
+        "Business": 0.5993105277114824,
+        "Sci/Tech": 0.6672017121455324
+      },
+      "confusion": [
+        [
+          1407,
+          111,
+          259,
+          123
+        ],
+        [
+          133,
+          1611,
+          97,
+          59
+        ],
+        [
+          238,
+          123,
+          1130,
+          409
+        ],
+        [
+          164,
+          104,
+          385,
+          1247
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.1,
+      "val_macro_f1": 0.7510184426155093,
+      "test_accuracy": 0.7478947368421053,
+      "test_macro_f1": 0.7479067072383982,
+      "test_f1_per_class": {
+        "World": 0.7698391774321118,
+        "Sports": 0.8644649933949802,
+        "Business": 0.6533226581265013,
+        "Sci/Tech": 0.704
+      },
+      "confusion": [
+        [
+          1460,
+          107,
+          183,
+          150
+        ],
+        [
+          102,
+          1636,
+          93,
+          69
+        ],
+        [
+          212,
+          72,
+          1224,
+          392
+        ],
+        [
+          119,
+          70,
+          347,
+          1364
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 1.0,
+      "val_macro_f1": 0.7931570084217487,
+      "test_accuracy": 0.7898684210526316,
+      "test_macro_f1": 0.7888634694458092,
+      "test_f1_per_class": {
+        "World": 0.8078947368421052,
+        "Sports": 0.8902031370532271,
+        "Business": 0.7095391211146839,
+        "Sci/Tech": 0.7478168827732204
+      },
+      "confusion": [
+        [
+          1535,
+          102,
+          154,
+          109
+        ],
+        [
+          75,
+          1731,
+          52,
+          42
+        ],
+        [
+          179,
+          82,
+          1324,
+          315
+        ],
+        [
+          111,
+          74,
+          302,
+          1413
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 3354,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9997207522392273,
+      "unk_rate": 0.0625,
+      "text": "Nintendo to Unveil Handheld Upgrade Facing its biggest threat ever from the arrival of Sony Corp. in the portable video-game machine market, Japanese game-maker Nintendo Co."
+    },
+    {
+      "index": 6150,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.999548614025116,
+      "unk_rate": 0.0625,
+      "text": "England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm the Springboks at Twickenham."
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9993357062339783,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9987803101539612,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 747,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9984272718429565,
+      "unk_rate": 0.02631578947368421,
+      "text": "Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States team of National Basketball Association stars 89-81 here Friday in the Olympic semi-finals, dethroning the three-time defending champions."
+    },
+    {
+      "index": 912,
+      "true": "Sci/Tech",
+      "pred": "Sports",
+      "confidence": 0.9978723526000977,
+      "unk_rate": 0.04878048780487805,
+      "text": "Bryant Makes First Appearance at Trial (AP) AP - NBA star Kobe Bryant arrived at his sexual assault trial Monday as attorneys in the case who spent the weekend poring over questionnaires prepared to question potential jurors individually."
+    },
+    {
+      "index": 6022,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9976732134819031,
+      "unk_rate": 0.05405405405405406,
+      "text": "SBC and Yahoo! extend pact to offer Internet service SAN ANTONIO SBC Communications and Yahoo are expanding their high-speed Internet service partnership to link video, wireless phone, Internet and other services."
+    },
+    {
+      "index": 3661,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9966486096382141,
+      "unk_rate": 0.13636363636363635,
+      "text": "Cricket: Tendulkar to miss test Sachin Tendulkar is almost certain to miss Thursday's second Test against Australia in Madras."
+    },
+    {
+      "index": 5941,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9965020418167114,
+      "unk_rate": 0.0,
+      "text": "Cricket: NZ suffer Franklin blow New Zealand bowler James Franklin misses the first Test against Australia with  injury."
+    },
+    {
+      "index": 2574,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.99648118019104,
+      "unk_rate": 0.11320754716981132,
+      "text": "Adobe updates RAW plug-in with digital negative format Adobe has updated Photoshop #39;s support for digital cameras #39; RAW image formats. The new plug-in adds to the number of camera models supported and includes a utility for converting images into the DNG, digital negative format."
+    },
+    {
+      "index": 2028,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.996055006980896,
+      "unk_rate": 0.0,
+      "text": "Ryder Cup: Europe close on victory Another good day at Oakland Hills sees Europe move 11-5 clear of the USA going into Sunday's Ryder Cup singles."
+    },
+    {
+      "index": 3900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9948652386665344,
+      "unk_rate": 0.041666666666666664,
+      "text": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series."
+    },
+    {
+      "index": 3186,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9942439198493958,
+      "unk_rate": 0.04,
+      "text": "Tennis: Night final for Aus Open The centenary Australian Open will be the first Grand Slam event to stage its final at night."
+    },
+    {
+      "index": 1269,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9935299754142761,
+      "unk_rate": 0.07317073170731707,
+      "text": "Philippines mourns dead in Russian school siege The Philippines Saturday expressed quot;deepest sympathy quot; to the families of the dead in the Russian school siege on Friday, in which 322 people were killed when Russian troops stormed "
+    },
+    {
+      "index": 4029,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9923914074897766,
+      "unk_rate": 0.02127659574468085,
+      "text": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No..."
+    },
+    {
+      "index": 6669,
+      "true": "World",
+      "pred": "Business",
+      "confidence": 0.9917815327644348,
+      "unk_rate": 0.05714285714285714,
+      "text": "Panel Urges N.Y. to Pay \\$14 Billion More for City Schools Court-appointed referees recommended the state pay an additional \\$14 billion over four years to improve New York City schools."
+    },
+    {
+      "index": 3063,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9908913969993591,
+      "unk_rate": 0.04,
+      "text": "US football: Patriots' historic win New England win a record-tying 18th straight game - plus an NFL round-up."
+    },
+    {
+      "index": 2546,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.9903566241264343,
+      "unk_rate": 0.045454545454545456,
+      "text": "No ticket matched all four numbers and the MegaBall in Friday #39;s &lt;b&gt;...&lt;/b&gt; No ticket matched all four numbers and the MegaBall in Friday #39;s Mega Money drawing of the Florida Lottery. The numbers drawn were 10-18-19-22; the Megaball was 6. Twelve tickets matched four of the numbers"
+    },
+    {
+      "index": 967,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9903488159179688,
+      "unk_rate": 0.08571428571428572,
+      "text": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-"
+    },
+    {
+      "index": 1080,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9901120066642761,
+      "unk_rate": 0.07547169811320754,
+      "text": "Davenport Advances at U.S. Open NEW YORK - Lindsay Davenport's summer of success stayed on course Thursday when the fifth-seeded former U.S. Open champion defeated Arantxa Parra Santonja 6-4, 6-2 and advanced to the third round of the season's final Grand Slam event..."
+    }
+  ],
+  "unk_rate_correct": 0.07471112039187701,
+  "unk_rate_wrong": 0.07526851866173966,
+  "seconds": 2.8413244590046816
+}

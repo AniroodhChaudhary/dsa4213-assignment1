@@ -1,0 +1,312 @@
+{
+  "name": "transformer_rand_last",
+  "meta": {
+    "kind": "lm",
+    "run": "transformer_s0",
+    "pooling": "last",
+    "dim": 300,
+    "seconds": 15.934258083987515
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.6797429529257895,
+      "test_accuracy": 0.6652631578947369,
+      "test_macro_f1": 0.665553588848736,
+      "test_f1_per_class": {
+        "World": 0.6829268292682927,
+        "Sports": 0.7926218708827405,
+        "Business": 0.561699948796723,
+        "Sci/Tech": 0.624965706447188
+      },
+      "confusion": [
+        [
+          1316,
+          131,
+          315,
+          138
+        ],
+        [
+          187,
+          1504,
+          115,
+          94
+        ],
+        [
+          283,
+          146,
+          1097,
+          374
+        ],
+        [
+          168,
+          114,
+          479,
+          1139
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.7044478986723564,
+      "test_accuracy": 0.6989473684210527,
+      "test_macro_f1": 0.6987498315997528,
+      "test_f1_per_class": {
+        "World": 0.7196808510638298,
+        "Sports": 0.8221988427143608,
+        "Business": 0.5958019375672766,
+        "Sci/Tech": 0.6573176950535441
+      },
+      "confusion": [
+        [
+          1353,
+          122,
+          231,
+          194
+        ],
+        [
+          131,
+          1563,
+          101,
+          105
+        ],
+        [
+          236,
+          123,
+          1107,
+          434
+        ],
+        [
+          140,
+          94,
+          377,
+          1289
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.1,
+      "val_macro_f1": 0.7430768521808082,
+      "test_accuracy": 0.7364473684210526,
+      "test_macro_f1": 0.7357231143221016,
+      "test_f1_per_class": {
+        "World": 0.7645811240721103,
+        "Sports": 0.8536648536648537,
+        "Business": 0.6376036373361862,
+        "Sci/Tech": 0.687042842215256
+      },
+      "confusion": [
+        [
+          1442,
+          114,
+          195,
+          149
+        ],
+        [
+          98,
+          1648,
+          68,
+          86
+        ],
+        [
+          212,
+          118,
+          1192,
+          378
+        ],
+        [
+          120,
+          81,
+          384,
+          1315
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 3900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9997742772102356,
+      "unk_rate": 0.041666666666666664,
+      "text": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series."
+    },
+    {
+      "index": 1533,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9997208714485168,
+      "unk_rate": 0.18181818181818182,
+      "text": "Collingwood anchors England (AFP) AFP - Paul Collingwood's unbeaten 80 took England to 299 for seven against Zimbabwe in their opening Champions Trophy Pool D match at Edgbaston here."
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9996863603591919,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 6150,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9985713958740234,
+      "unk_rate": 0.0625,
+      "text": "England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm the Springboks at Twickenham."
+    },
+    {
+      "index": 3186,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9980556964874268,
+      "unk_rate": 0.04,
+      "text": "Tennis: Night final for Aus Open The centenary Australian Open will be the first Grand Slam event to stage its final at night."
+    },
+    {
+      "index": 3063,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9976196885108948,
+      "unk_rate": 0.04,
+      "text": "US football: Patriots' historic win New England win a record-tying 18th straight game - plus an NFL round-up."
+    },
+    {
+      "index": 232,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9954283237457275,
+      "unk_rate": 0.02857142857142857,
+      "text": "Hundreds laid off at Fleet offices Bank of America Corp. yesterday laid off hundreds of workers at Fleet bank branches across the Northeast as the North Carolina bank began to implement its brand of ..."
+    },
+    {
+      "index": 5941,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9931687116622925,
+      "unk_rate": 0.0,
+      "text": "Cricket: NZ suffer Franklin blow New Zealand bowler James Franklin misses the first Test against Australia with  injury."
+    },
+    {
+      "index": 1775,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9927979111671448,
+      "unk_rate": 0.05,
+      "text": "Coast Guard Shuts Gulf of Mexico Ports  HOUSTON (Reuters) - The U.S. Coast Guard shut five ports on  Wednesday in the Gulf of Mexico coast states of Alabama,  Florida and Mississippi as Hurricane Ivan churned nearer."
+    },
+    {
+      "index": 1625,
+      "true": "Sci/Tech",
+      "pred": "Sports",
+      "confidence": 0.991823136806488,
+      "unk_rate": 0.0975609756097561,
+      "text": "CRN INTERVIEW: JOHN FOWLER, SUN Sun #39;s Fowler: Rising Sales While Hewlett-Packard, Dell and IBM are the recognized leaders of the X86 server market, one player has surprisingly begun to gain ground."
+    },
+    {
+      "index": 6380,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9910065531730652,
+      "unk_rate": 0.07894736842105263,
+      "text": "FBI Interviews Halliburton Whistleblower Bunnatine Greenhouse, chief contracting officer of the Army Corps of Engineers, is seen in her official undated government photo. FBI agents recently spent a day interviewing Greenhouse, the Army contracting "
+    },
+    {
+      "index": 4782,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.9907588958740234,
+      "unk_rate": 0.11578947368421053,
+      "text": "Racing in an Evening Gown (Forbes.com) Forbes.com - Not every driver was dressed formally for the start of this year's Bullrun, a road rally that begins in London, at the Marble Arch, and ends three days later in Ibiza, Spain. Yet as drivers thrummed their engines nervously on the afternoon of Sept."
+    },
+    {
+      "index": 3354,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9902473092079163,
+      "unk_rate": 0.0625,
+      "text": "Nintendo to Unveil Handheld Upgrade Facing its biggest threat ever from the arrival of Sony Corp. in the portable video-game machine market, Japanese game-maker Nintendo Co."
+    },
+    {
+      "index": 747,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9900658130645752,
+      "unk_rate": 0.02631578947368421,
+      "text": "Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States team of National Basketball Association stars 89-81 here Friday in the Olympic semi-finals, dethroning the three-time defending champions."
+    },
+    {
+      "index": 4302,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9895776510238647,
+      "unk_rate": 0.10526315789473684,
+      "text": "Sri Lanka off to positive start Kumar Sangakkara's unbeaten fifty revives Sri Lanka's chances against Pakistan."
+    },
+    {
+      "index": 1541,
+      "true": "Sci/Tech",
+      "pred": "Sports",
+      "confidence": 0.9894701242446899,
+      "unk_rate": 0.03571428571428571,
+      "text": "Tough to predict a hurricane landfall this season #39;s busy season of landfalling Atlantic hurricanes has seen a few less-than-perfect calls by tropical "
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9873344898223877,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 6592,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9868198037147522,
+      "unk_rate": 0.13333333333333333,
+      "text": "Sony, IBM, Toshiba Give Details of 'Cell' Chip (Reuters) Reuters - IBM , Sony Corp. (6758.T) and\\Toshiba Corp. (6502.T) on Monday revealed their plans for the\\powerful new \"Cell\" processor the three are jointly producing\\to run next-generation computers, game consoles and\\televisions."
+    },
+    {
+      "index": 5128,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9863713383674622,
+      "unk_rate": 0.13333333333333333,
+      "text": "Argentina Basketball Coach Magnano Quits Ruben Magnano, who coached Argentina to the Olympic basketball gold medal in Athens, resigned Thursday to accept a coaching job in Italy."
+    },
+    {
+      "index": 4065,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9861716628074646,
+      "unk_rate": 0.0,
+      "text": "GM Protests Spread Across Europe Tens of thousands of General Motors workers across Europe were set to stop working on Tuesday in a sign of solidarity with their German colleagues, who face massive job cuts."
+    }
+  ],
+  "unk_rate_correct": 0.07490522967302718,
+  "unk_rate_wrong": 0.07461313506505386,
+  "seconds": 2.857597916969098
+}

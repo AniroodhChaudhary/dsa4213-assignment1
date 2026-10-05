@@ -1,0 +1,18 @@
+# Part III: representations compared on AG News with one classifier family.
+# `run` refers to checkpoints/<run>.pt; `matrix` to an aligned embedding table.
+representations:
+  - {name: lstm_rand_last,            run: lstm_s0,                 pooling: last}
+  - {name: lstm_rand_mean,            run: lstm_s0,                 pooling: mean}
+  - {name: transformer_rand_mean,     run: transformer_s0,          pooling: mean}
+  - {name: transformer_rand_last,     run: transformer_s0,          pooling: last}
+  - {name: rnn_rand_mean,             run: rnn_s0,                  pooling: mean}
+  - {name: transformer1l_rand_mean,   run: transformer_1layer_s0,   pooling: mean}
+  - {name: lstm_skipgram_frozen_mean, run: lstm_skipgram_frozen_s0, pooling: mean}
+  - {name: lstm_glove_frozen_mean,    run: lstm_glove_frozen_s0,    pooling: mean}
+  - {name: emb_rand_learned_mean,     embedding_from_run: lstm_s0,  pooling: mean}
+  - {name: emb_skipgram_mean,         matrix: data/embeddings/skipgram300.npy, pooling: mean}
+  - {name: emb_glove_mean,            matrix: data/embeddings/glove300.npy,    pooling: mean}
+  - {name: tfidf,                     type: tfidf}
+n_train_grid: [500, 2000, 20000]
+C_grid: [0.01, 0.1, 1.0, 10.0]
+max_iter: 2000

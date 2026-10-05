@@ -1,0 +1,312 @@
+{
+  "name": "lstm_glove_frozen_mean",
+  "meta": {
+    "kind": "lm",
+    "run": "lstm_glove_frozen_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 5.235511333972681
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.771970256103086,
+      "test_accuracy": 0.7782894736842105,
+      "test_macro_f1": 0.7784626844759711,
+      "test_f1_per_class": {
+        "World": 0.793733681462141,
+        "Sports": 0.8696808510638298,
+        "Business": 0.6992600422832981,
+        "Sci/Tech": 0.7511761630946158
+      },
+      "confusion": [
+        [
+          1520,
+          99,
+          183,
+          98
+        ],
+        [
+          126,
+          1635,
+          88,
+          51
+        ],
+        [
+          175,
+          62,
+          1323,
+          340
+        ],
+        [
+          109,
+          64,
+          290,
+          1437
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.7991167934940356,
+      "test_accuracy": 0.796578947368421,
+      "test_macro_f1": 0.7964854033777432,
+      "test_f1_per_class": {
+        "World": 0.8132691278758695,
+        "Sports": 0.8849279161205766,
+        "Business": 0.7269303201506592,
+        "Sci/Tech": 0.7608142493638677
+      },
+      "confusion": [
+        [
+          1520,
+          107,
+          158,
+          115
+        ],
+        [
+          85,
+          1688,
+          58,
+          69
+        ],
+        [
+          139,
+          59,
+          1351,
+          351
+        ],
+        [
+          94,
+          61,
+          250,
+          1495
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 1.0,
+      "val_macro_f1": 0.8314622132477276,
+      "test_accuracy": 0.8238157894736842,
+      "test_macro_f1": 0.8232482425235151,
+      "test_f1_per_class": {
+        "World": 0.8306878306878307,
+        "Sports": 0.9113007499353504,
+        "Business": 0.7620570210498268,
+        "Sci/Tech": 0.7889473684210526
+      },
+      "confusion": [
+        [
+          1570,
+          102,
+          145,
+          83
+        ],
+        [
+          68,
+          1762,
+          30,
+          40
+        ],
+        [
+          140,
+          52,
+          1430,
+          278
+        ],
+        [
+          102,
+          51,
+          248,
+          1499
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 967,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9993416666984558,
+      "unk_rate": 0.08571428571428572,
+      "text": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-"
+    },
+    {
+      "index": 1533,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9992489218711853,
+      "unk_rate": 0.18181818181818182,
+      "text": "Collingwood anchors England (AFP) AFP - Paul Collingwood's unbeaten 80 took England to 299 for seven against Zimbabwe in their opening Champions Trophy Pool D match at Edgbaston here."
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9984824061393738,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 6089,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.998479425907135,
+      "unk_rate": 0.07692307692307693,
+      "text": "Football: Brazil legend's UK debut Brazil football great Socrates is set to make his debut for non-league Garforth Town on Saturday."
+    },
+    {
+      "index": 3662,
+      "true": "World",
+      "pred": "Business",
+      "confidence": 0.998477041721344,
+      "unk_rate": 0.02631578947368421,
+      "text": "Oil Prices, Earnings Send Stocks Lower NEW YORK - Investors sent stocks lower Tuesday as oil prices crossed another milestone, \\$54 per barrel. Earnings reports from heavyweights Johnson   Johnson and Merrill Lynch   Co..."
+    },
+    {
+      "index": 4027,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.998439371585846,
+      "unk_rate": 0.0,
+      "text": "Tennis: Davenport to play on Lindsay Davenport says she plans to play in the Australian Open next January."
+    },
+    {
+      "index": 2028,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9983727335929871,
+      "unk_rate": 0.0,
+      "text": "Ryder Cup: Europe close on victory Another good day at Oakland Hills sees Europe move 11-5 clear of the USA going into Sunday's Ryder Cup singles."
+    },
+    {
+      "index": 6093,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9982926249504089,
+      "unk_rate": 0.11764705882352941,
+      "text": "Football: Spanish FA apologises The Spanish FA apologises to its English counterparts following racist chanting."
+    },
+    {
+      "index": 1466,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9982682466506958,
+      "unk_rate": 0.10204081632653061,
+      "text": "Colts Lead Pats Early in Third Quarter FOXBORO, Mass. - Peyton Manning reached the 25,000-yard passing mark faster than anyone but Dan Marino, and the Indianapolis Colts shredded the New England Patriots for a 17-13 halftime lead Thursday night..."
+    },
+    {
+      "index": 4102,
+      "true": "World",
+      "pred": "Sci/Tech",
+      "confidence": 0.9974848031997681,
+      "unk_rate": 0.0,
+      "text": "Ancient fungus 'revived' in lab Fungus from a deep-sea sediment core that is hundreds of thousands of years old will grow when placed in culture, scientists discover."
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9971854090690613,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 747,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9971352815628052,
+      "unk_rate": 0.02631578947368421,
+      "text": "Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States team of National Basketball Association stars 89-81 here Friday in the Olympic semi-finals, dethroning the three-time defending champions."
+    },
+    {
+      "index": 1197,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9970991611480713,
+      "unk_rate": 0.05714285714285714,
+      "text": "World briefs LONDON - A man wielding a machete and a knife attacked two security guards at the building housing the headquarters of the British domestic intelligence service MI5 on Friday, police said."
+    },
+    {
+      "index": 4000,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9969561100006104,
+      "unk_rate": 0.03508771929824561,
+      "text": "Google puts desktop search privacy up front Google has announced a new desktop search application that enables users to search their e-mail, files, web history, and chats. Perhaps learning from previous mistakes, Google says it has designed the product  quot;from the ground up to respect user privac"
+    },
+    {
+      "index": 3354,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9968366622924805,
+      "unk_rate": 0.0625,
+      "text": "Nintendo to Unveil Handheld Upgrade Facing its biggest threat ever from the arrival of Sony Corp. in the portable video-game machine market, Japanese game-maker Nintendo Co."
+    },
+    {
+      "index": 1269,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9966314435005188,
+      "unk_rate": 0.07317073170731707,
+      "text": "Philippines mourns dead in Russian school siege The Philippines Saturday expressed quot;deepest sympathy quot; to the families of the dead in the Russian school siege on Friday, in which 322 people were killed when Russian troops stormed "
+    },
+    {
+      "index": 3900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9964410662651062,
+      "unk_rate": 0.041666666666666664,
+      "text": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series."
+    },
+    {
+      "index": 5128,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9963523149490356,
+      "unk_rate": 0.13333333333333333,
+      "text": "Argentina Basketball Coach Magnano Quits Ruben Magnano, who coached Argentina to the Olympic basketball gold medal in Athens, resigned Thursday to accept a coaching job in Italy."
+    },
+    {
+      "index": 5935,
+      "true": "World",
+      "pred": "Sci/Tech",
+      "confidence": 0.9962570667266846,
+      "unk_rate": 0.02631578947368421,
+      "text": "Swedes beam poetry into outer space (Reuters) Reuters - Swedish poets have broadcast their work into outer space by radio to give alien life forms -- if they exist -- a taste\\of earthling literature."
+    },
+    {
+      "index": 1098,
+      "true": "Sci/Tech",
+      "pred": "Sports",
+      "confidence": 0.9955561757087708,
+      "unk_rate": 0.041666666666666664,
+      "text": "The Bahamas - the real medal winner of the Athens Olympics A different way of calculating the medal standings brings some interesting results."
+    }
+  ],
+  "unk_rate_correct": 0.07500045226076832,
+  "unk_rate_wrong": 0.07402303839474644,
+  "seconds": 1.272335083980579
+}

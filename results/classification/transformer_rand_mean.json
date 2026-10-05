@@ -1,0 +1,312 @@
+{
+  "name": "transformer_rand_mean",
+  "meta": {
+    "kind": "lm",
+    "run": "transformer_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 17.04055174998939
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.1,
+      "val_macro_f1": 0.7041002888690162,
+      "test_accuracy": 0.6948684210526316,
+      "test_macro_f1": 0.6952912858917003,
+      "test_f1_per_class": {
+        "World": 0.7087883515340614,
+        "Sports": 0.8028769312733085,
+        "Business": 0.6008874967371444,
+        "Sci/Tech": 0.6686123640222871
+      },
+      "confusion": [
+        [
+          1363,
+          114,
+          287,
+          136
+        ],
+        [
+          174,
+          1507,
+          137,
+          82
+        ],
+        [
+          222,
+          136,
+          1151,
+          391
+        ],
+        [
+          187,
+          97,
+          356,
+          1260
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.1,
+      "val_macro_f1": 0.7469226301805926,
+      "test_accuracy": 0.7394736842105263,
+      "test_macro_f1": 0.7394427231301307,
+      "test_f1_per_class": {
+        "World": 0.7536539994685092,
+        "Sports": 0.8536714210248283,
+        "Business": 0.6488960689283791,
+        "Sci/Tech": 0.7015494030988062
+      },
+      "confusion": [
+        [
+          1418,
+          98,
+          215,
+          169
+        ],
+        [
+          105,
+          1616,
+          91,
+          88
+        ],
+        [
+          192,
+          104,
+          1205,
+          399
+        ],
+        [
+          148,
+          68,
+          303,
+          1381
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 1.0,
+      "val_macro_f1": 0.775624894968803,
+      "test_accuracy": 0.7768421052631579,
+      "test_macro_f1": 0.7761320669193345,
+      "test_f1_per_class": {
+        "World": 0.783641160949868,
+        "Sports": 0.8773926539058459,
+        "Business": 0.7021106064654021,
+        "Sci/Tech": 0.741383846356222
+      },
+      "confusion": [
+        [
+          1485,
+          102,
+          186,
+          127
+        ],
+        [
+          88,
+          1696,
+          56,
+          60
+        ],
+        [
+          182,
+          99,
+          1314,
+          305
+        ],
+        [
+          135,
+          69,
+          287,
+          1409
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 1269,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9997425675392151,
+      "unk_rate": 0.07317073170731707,
+      "text": "Philippines mourns dead in Russian school siege The Philippines Saturday expressed quot;deepest sympathy quot; to the families of the dead in the Russian school siege on Friday, in which 322 people were killed when Russian troops stormed "
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9996901750564575,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 3354,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9993565678596497,
+      "unk_rate": 0.0625,
+      "text": "Nintendo to Unveil Handheld Upgrade Facing its biggest threat ever from the arrival of Sony Corp. in the portable video-game machine market, Japanese game-maker Nintendo Co."
+    },
+    {
+      "index": 1466,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9993489384651184,
+      "unk_rate": 0.10204081632653061,
+      "text": "Colts Lead Pats Early in Third Quarter FOXBORO, Mass. - Peyton Manning reached the 25,000-yard passing mark faster than anyone but Dan Marino, and the Indianapolis Colts shredded the New England Patriots for a 17-13 halftime lead Thursday night..."
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9992532134056091,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 2028,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9986999034881592,
+      "unk_rate": 0.0,
+      "text": "Ryder Cup: Europe close on victory Another good day at Oakland Hills sees Europe move 11-5 clear of the USA going into Sunday's Ryder Cup singles."
+    },
+    {
+      "index": 614,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9986839890480042,
+      "unk_rate": 0.05,
+      "text": "Pakistan down India to ensure top six finish (AFP) AFP - Pakistan defeated arch-rivals India 3-0 here to ensure they stand among the top six in the Olympic men's field hockey competition."
+    },
+    {
+      "index": 1533,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9978209733963013,
+      "unk_rate": 0.18181818181818182,
+      "text": "Collingwood anchors England (AFP) AFP - Paul Collingwood's unbeaten 80 took England to 299 for seven against Zimbabwe in their opening Champions Trophy Pool D match at Edgbaston here."
+    },
+    {
+      "index": 3900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9976704716682434,
+      "unk_rate": 0.041666666666666664,
+      "text": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series."
+    },
+    {
+      "index": 2574,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9974931478500366,
+      "unk_rate": 0.11320754716981132,
+      "text": "Adobe updates RAW plug-in with digital negative format Adobe has updated Photoshop #39;s support for digital cameras #39; RAW image formats. The new plug-in adds to the number of camera models supported and includes a utility for converting images into the DNG, digital negative format."
+    },
+    {
+      "index": 6150,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9974684715270996,
+      "unk_rate": 0.0625,
+      "text": "England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm the Springboks at Twickenham."
+    },
+    {
+      "index": 3688,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9973242282867432,
+      "unk_rate": 0.1891891891891892,
+      "text": "Ljubicic Downs Hanescu at Open De Moselle Top-seeded Ivan Ljubicic of Croatia beat Victor Hanescu of Romania 6-4, 6-4 Tuesday in the first round of the Open de Moselle."
+    },
+    {
+      "index": 912,
+      "true": "Sci/Tech",
+      "pred": "Sports",
+      "confidence": 0.9972532391548157,
+      "unk_rate": 0.04878048780487805,
+      "text": "Bryant Makes First Appearance at Trial (AP) AP - NBA star Kobe Bryant arrived at his sexual assault trial Monday as attorneys in the case who spent the weekend poring over questionnaires prepared to question potential jurors individually."
+    },
+    {
+      "index": 1775,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9968089461326599,
+      "unk_rate": 0.05,
+      "text": "Coast Guard Shuts Gulf of Mexico Ports  HOUSTON (Reuters) - The U.S. Coast Guard shut five ports on  Wednesday in the Gulf of Mexico coast states of Alabama,  Florida and Mississippi as Hurricane Ivan churned nearer."
+    },
+    {
+      "index": 3805,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9954103827476501,
+      "unk_rate": 0.03636363636363636,
+      "text": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St..."
+    },
+    {
+      "index": 6669,
+      "true": "World",
+      "pred": "Business",
+      "confidence": 0.9943141341209412,
+      "unk_rate": 0.05714285714285714,
+      "text": "Panel Urges N.Y. to Pay \\$14 Billion More for City Schools Court-appointed referees recommended the state pay an additional \\$14 billion over four years to improve New York City schools."
+    },
+    {
+      "index": 747,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9935052394866943,
+      "unk_rate": 0.02631578947368421,
+      "text": "Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States team of National Basketball Association stars 89-81 here Friday in the Olympic semi-finals, dethroning the three-time defending champions."
+    },
+    {
+      "index": 3563,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9921544194221497,
+      "unk_rate": 0.05,
+      "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41..."
+    },
+    {
+      "index": 5067,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9918519854545593,
+      "unk_rate": 0.05405405405405406,
+      "text": "Quick end to US election crucial US President George W. Bush is on the verge of a re-election victory, but Democratic challenger John Kerry is not conceding defeat, at least not now."
+    },
+    {
+      "index": 5128,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9910936951637268,
+      "unk_rate": 0.13333333333333333,
+      "text": "Argentina Basketball Coach Magnano Quits Ruben Magnano, who coached Argentina to the Olympic basketball gold medal in Athens, resigned Thursday to accept a coaching job in Italy."
+    }
+  ],
+  "unk_rate_correct": 0.07506787181873581,
+  "unk_rate_wrong": 0.07399408301734652,
+  "seconds": 2.619883417035453
+}

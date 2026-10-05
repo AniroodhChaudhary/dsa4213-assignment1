@@ -1,0 +1,311 @@
+{
+  "name": "tfidf",
+  "meta": {
+    "kind": "tfidf",
+    "dim": 98555,
+    "sparse": true,
+    "seconds": 4.819421416963451
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 10.0,
+      "val_macro_f1": 0.7850036416958841,
+      "test_accuracy": 0.785,
+      "test_macro_f1": 0.7826901128298103,
+      "test_f1_per_class": {
+        "World": 0.8063362289218191,
+        "Sports": 0.8643643643643644,
+        "Business": 0.7325867249385414,
+        "Sci/Tech": 0.7274731330945164
+      },
+      "confusion": [
+        [
+          1578,
+          139,
+          104,
+          79
+        ],
+        [
+          92,
+          1727,
+          43,
+          38
+        ],
+        [
+          163,
+          104,
+          1341,
+          292
+        ],
+        [
+          181,
+          126,
+          273,
+          1320
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 10.0,
+      "val_macro_f1": 0.8466547586603855,
+      "test_accuracy": 0.8464473684210526,
+      "test_macro_f1": 0.8460598639356763,
+      "test_f1_per_class": {
+        "World": 0.8632317237658484,
+        "Sports": 0.9141388174807198,
+        "Business": 0.7982504100601422,
+        "Sci/Tech": 0.8086185044359949
+      },
+      "confusion": [
+        [
+          1600,
+          99,
+          90,
+          111
+        ],
+        [
+          43,
+          1778,
+          29,
+          50
+        ],
+        [
+          94,
+          57,
+          1460,
+          289
+        ],
+        [
+          70,
+          56,
+          179,
+          1595
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 10.0,
+      "val_macro_f1": 0.901820581354606,
+      "test_accuracy": 0.8994736842105263,
+      "test_macro_f1": 0.8992852867364705,
+      "test_f1_per_class": {
+        "World": 0.9063829787234042,
+        "Sports": 0.9545100077982844,
+        "Business": 0.8631411108158384,
+        "Sci/Tech": 0.8731070496083551
+      },
+      "confusion": [
+        [
+          1704,
+          59,
+          80,
+          57
+        ],
+        [
+          29,
+          1836,
+          18,
+          17
+        ],
+        [
+          67,
+          25,
+          1624,
+          184
+        ],
+        [
+          60,
+          27,
+          141,
+          1672
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 5740,
+      "true": "World",
+      "pred": "Business",
+      "confidence": 0.997992519025641,
+      "unk_rate": 0.09615384615384616,
+      "text": "Dow Jones Agrees to Buy MarketWatch in \\$519 Million Deal Dow Jones   Company, the publisher of The Wall Street Journal, has agreed to buy MarketWatch, the parent company of the financial news Web site CBS MarketWatch, for approximately \\$519 million, the companies said today."
+    },
+    {
+      "index": 4000,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9979435727778893,
+      "unk_rate": 0.03508771929824561,
+      "text": "Google puts desktop search privacy up front Google has announced a new desktop search application that enables users to search their e-mail, files, web history, and chats. Perhaps learning from previous mistakes, Google says it has designed the product  quot;from the ground up to respect user privac"
+    },
+    {
+      "index": 747,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9974708795252363,
+      "unk_rate": 0.02631578947368421,
+      "text": "Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States team of National Basketball Association stars 89-81 here Friday in the Olympic semi-finals, dethroning the three-time defending champions."
+    },
+    {
+      "index": 6592,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9974095167900886,
+      "unk_rate": 0.13333333333333333,
+      "text": "Sony, IBM, Toshiba Give Details of 'Cell' Chip (Reuters) Reuters - IBM , Sony Corp. (6758.T) and\\Toshiba Corp. (6502.T) on Monday revealed their plans for the\\powerful new \"Cell\" processor the three are jointly producing\\to run next-generation computers, game consoles and\\televisions."
+    },
+    {
+      "index": 1051,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9969836279900445,
+      "unk_rate": 0.18518518518518517,
+      "text": "Software Service Aims to Outfox Caller ID A new computerized service enables customers to create phony outbound phone numbers in order to mask their telephone identities."
+    },
+    {
+      "index": 5128,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9968704063657887,
+      "unk_rate": 0.13333333333333333,
+      "text": "Argentina Basketball Coach Magnano Quits Ruben Magnano, who coached Argentina to the Olympic basketball gold medal in Athens, resigned Thursday to accept a coaching job in Italy."
+    },
+    {
+      "index": 3115,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9967201154271943,
+      "unk_rate": 0.16279069767441862,
+      "text": "SBC links e-mail, voice messages, fax SBC on Monday announced a new service that integrates voice messages, faxes and e-mails into a single mailbox that can be accessed from anywhere by phone or the Internet."
+    },
+    {
+      "index": 6022,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9967054263686513,
+      "unk_rate": 0.05405405405405406,
+      "text": "SBC and Yahoo! extend pact to offer Internet service SAN ANTONIO SBC Communications and Yahoo are expanding their high-speed Internet service partnership to link video, wireless phone, Internet and other services."
+    },
+    {
+      "index": 3617,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9957233425787579,
+      "unk_rate": 0.01818181818181818,
+      "text": "Linux: Paris weighs a shift to open-source camp PARIS The open-source computer system known as Linux won a tough battle over Microsoft earlier this year when the city of Munich decided to change the operating software of 14,000 government computers, despite the personal intervention of Steve Ballmer"
+    },
+    {
+      "index": 4571,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9946221224594547,
+      "unk_rate": 0.04878048780487805,
+      "text": "Microsoft Readies Next Business IM Server A little over a year after introducing the first version of Office Live Communications Server, Microsoft says it plans to release the next version of its enterprise instant messaging software, in December."
+    },
+    {
+      "index": 3334,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9945402832901729,
+      "unk_rate": 0.125,
+      "text": "34 tech firms sued for alleged LCD patent theft Honeywell has issued lawsuits against 34 companies, including Dell, Apple, Sony and Toshiba alleging LCD panels used in their products infringe a 1992 patent the company holds."
+    },
+    {
+      "index": 5410,
+      "true": "Sci/Tech",
+      "pred": "Business",
+      "confidence": 0.9937460279481571,
+      "unk_rate": 0.13793103448275862,
+      "text": "PeopleSoft revises third-quarter profit Oracle target adds \\$2.6 million to bottom line after tax adjustment related to ex-CEO's severance package."
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9931569172251422,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 4689,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9920476351740029,
+      "unk_rate": 0.023809523809523808,
+      "text": "Yahoo Debuts Mobile Search SAN FRANCISCO -- Yahoo (Quote, Chart) expanded its search empire to the mobile arena with the launch of some additional services. The company was one of the original content providers for mobile devices running "
+    },
+    {
+      "index": 7148,
+      "true": "Sci/Tech",
+      "pred": "Business",
+      "confidence": 0.9917422823028542,
+      "unk_rate": 0.09523809523809523,
+      "text": "Sources: Sprint, Nextel closing in on \\$36B deal Sprint Corp. is in advanced talks to buy Nextel Communications Inc. for more than \\$36 billion in a mostly stock deal, sources familiar with the situation said today."
+    },
+    {
+      "index": 348,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9914319996934984,
+      "unk_rate": 0.1276595744680851,
+      "text": "Unknown Nesterenko Makes World Headlines (Reuters) Reuters - Belarus' Yuliya Nesterenko won the top\\women's athletics gold medal at the Olympics on Saturday,\\triumphing over a field stripped of many big names because of\\doping woes to win the 100 meters."
+    },
+    {
+      "index": 5431,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9911424220215613,
+      "unk_rate": 0.125,
+      "text": "Vodafone begins 3G service Vodafone launches its third-generation services for mobile phones, offering video calls, music downloads and games."
+    },
+    {
+      "index": 6247,
+      "true": "Sci/Tech",
+      "pred": "Business",
+      "confidence": 0.9894842226524699,
+      "unk_rate": 0.08,
+      "text": "Before-the-Bell: GenCorp Falls 5.6 Pct. (Reuters) Reuters - Shares of GenCorp Inc.  fell 5.6\\percent before the opening bell on Monday after investment fund\\Steel Partners withdrew its proposal to acquire the aerospace\\and real estate company."
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9882492576002438,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 7539,
+      "true": "World",
+      "pred": "Sci/Tech",
+      "confidence": 0.9875081176621405,
+      "unk_rate": 0.03125,
+      "text": "Mars water tops science honours The discovery that salty, acidic water once flowed across the surface of Mars has topped a list of the 10 key scientific advances of 2004."
+    }
+  ],
+  "unk_rate_correct": 0.07533383904941184,
+  "unk_rate_wrong": 0.07030439302808467,
+  "seconds": 7.405110125022475
+}

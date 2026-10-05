@@ -1,0 +1,312 @@
+{
+  "name": "emb_rand_learned_mean",
+  "meta": {
+    "kind": "embedding_only",
+    "source": "input embedding of lstm_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 0.37031750002643093
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.6374472123942699,
+      "test_accuracy": 0.6361842105263158,
+      "test_macro_f1": 0.6332211963714206,
+      "test_f1_per_class": {
+        "World": 0.640373637778931,
+        "Sports": 0.7203535477534987,
+        "Business": 0.5618615209988649,
+        "Sci/Tech": 0.6102960789543879
+      },
+      "confusion": [
+        [
+          1234,
+          252,
+          245,
+          169
+        ],
+        [
+          195,
+          1467,
+          117,
+          121
+        ],
+        [
+          281,
+          214,
+          990,
+          415
+        ],
+        [
+          244,
+          240,
+          272,
+          1144
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.7060477848360037,
+      "test_accuracy": 0.7011842105263157,
+      "test_macro_f1": 0.699981003546317,
+      "test_f1_per_class": {
+        "World": 0.717274678111588,
+        "Sports": 0.7793403221682434,
+        "Business": 0.629608938547486,
+        "Sci/Tech": 0.6737000753579503
+      },
+      "confusion": [
+        [
+          1337,
+          183,
+          196,
+          184
+        ],
+        [
+          136,
+          1524,
+          113,
+          127
+        ],
+        [
+          191,
+          153,
+          1127,
+          429
+        ],
+        [
+          164,
+          151,
+          244,
+          1341
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.1,
+      "val_macro_f1": 0.7513749737030391,
+      "test_accuracy": 0.7521052631578947,
+      "test_macro_f1": 0.7511700969554702,
+      "test_f1_per_class": {
+        "World": 0.7623342175066313,
+        "Sports": 0.8236493374108053,
+        "Business": 0.6991560032670842,
+        "Sci/Tech": 0.7195408296373598
+      },
+      "confusion": [
+        [
+          1437,
+          164,
+          157,
+          142
+        ],
+        [
+          116,
+          1616,
+          78,
+          90
+        ],
+        [
+          169,
+          125,
+          1284,
+          322
+        ],
+        [
+          148,
+          119,
+          254,
+          1379
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 3563,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9981194138526917,
+      "unk_rate": 0.05,
+      "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41..."
+    },
+    {
+      "index": 3805,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.996738851070404,
+      "unk_rate": 0.03636363636363636,
+      "text": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St..."
+    },
+    {
+      "index": 6089,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9957363605499268,
+      "unk_rate": 0.07692307692307693,
+      "text": "Football: Brazil legend's UK debut Brazil football great Socrates is set to make his debut for non-league Garforth Town on Saturday."
+    },
+    {
+      "index": 6022,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9935632944107056,
+      "unk_rate": 0.05405405405405406,
+      "text": "SBC and Yahoo! extend pact to offer Internet service SAN ANTONIO SBC Communications and Yahoo are expanding their high-speed Internet service partnership to link video, wireless phone, Internet and other services."
+    },
+    {
+      "index": 2124,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9915030002593994,
+      "unk_rate": 0.0,
+      "text": "AOL pushes into Internet shopping Looking for new ways to boost its revenue, America Online is launching an online shopping service that won #39;t require an AOL account to access."
+    },
+    {
+      "index": 1775,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9905797839164734,
+      "unk_rate": 0.05,
+      "text": "Coast Guard Shuts Gulf of Mexico Ports  HOUSTON (Reuters) - The U.S. Coast Guard shut five ports on  Wednesday in the Gulf of Mexico coast states of Alabama,  Florida and Mississippi as Hurricane Ivan churned nearer."
+    },
+    {
+      "index": 1213,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9888527393341064,
+      "unk_rate": 0.02857142857142857,
+      "text": "Tokyo Stocks Higher at Late Morning (AP) AP - Tokyo stocks rose moderately Monday morning on bargain hunting following Friday's losses. The U.S. dollar was up against the Japanese yen."
+    },
+    {
+      "index": 5431,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.987739622592926,
+      "unk_rate": 0.125,
+      "text": "Vodafone begins 3G service Vodafone launches its third-generation services for mobile phones, offering video calls, music downloads and games."
+    },
+    {
+      "index": 225,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.9832583665847778,
+      "unk_rate": 0.07692307692307693,
+      "text": "Holiday-Shopping Season Remains Sluggish (Reuters) Reuters - U.S. shoppers have kept a tight grip\\on their wallets this holiday season with indices on Tuesday\\showing sluggish sales in the second week of the  season."
+    },
+    {
+      "index": 7413,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9816981554031372,
+      "unk_rate": 0.08823529411764706,
+      "text": "Bush Pledges Strong-Dollar Policy President Bush meets with Italian Prime Minister Silvio Berlusconi in the Oval Office of the White House, Wednesday, Dec. 15, 2004, in Washington."
+    },
+    {
+      "index": 459,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9795947670936584,
+      "unk_rate": 0.05,
+      "text": "Philippine President Says Country Faces Fiscal Crisis Philippine president Gloria Arroyo warned that her country is in the midst of a fiscal crisis. A report by economists at the University of the Philippines said the country faces economic collapse "
+    },
+    {
+      "index": 3598,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9795770645141602,
+      "unk_rate": 0.08823529411764706,
+      "text": "King abdicates after 6 decades King Norodom Sihanouk, known as much for his colorful personality as his controversial statesmanship, has been synonymous with Cambodia #39;s modern history for six decades."
+    },
+    {
+      "index": 1725,
+      "true": "Sci/Tech",
+      "pred": "Business",
+      "confidence": 0.978768527507782,
+      "unk_rate": 0.10810810810810811,
+      "text": "Oracle 1Q Earnings Rise 16 Percent (AP) AP - Business software giant Oracle Corp. said Tuesday that first-quarter earnings rose 16 percent driven by new database license sales that rose 19 percent."
+    },
+    {
+      "index": 3662,
+      "true": "World",
+      "pred": "Business",
+      "confidence": 0.9785311222076416,
+      "unk_rate": 0.02631578947368421,
+      "text": "Oil Prices, Earnings Send Stocks Lower NEW YORK - Investors sent stocks lower Tuesday as oil prices crossed another milestone, \\$54 per barrel. Earnings reports from heavyweights Johnson   Johnson and Merrill Lynch   Co..."
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.97801274061203,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 4900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9774523973464966,
+      "unk_rate": 0.075,
+      "text": "THE UNFOLDING UNIFORM Pakistan is inherently unstable. Dealing with them is like playing with matches in a forest. - Larry Pressler. That statement from Larry Pressler, made during his recent visit to India, coincided with "
+    },
+    {
+      "index": 3220,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9772011041641235,
+      "unk_rate": 0.024390243902439025,
+      "text": "Chip and PC Stocks Mixed on Warnings Semiconductor stocks were mixed Tuesday after Advanced Micro Devices Inc. warned quarterly revenue would be lower than expected due to sluggish sales of flash memory chips used in mobile phones and other devices."
+    },
+    {
+      "index": 4029,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.976507306098938,
+      "unk_rate": 0.02127659574468085,
+      "text": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No..."
+    },
+    {
+      "index": 4000,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9748728275299072,
+      "unk_rate": 0.03508771929824561,
+      "text": "Google puts desktop search privacy up front Google has announced a new desktop search application that enables users to search their e-mail, files, web history, and chats. Perhaps learning from previous mistakes, Google says it has designed the product  quot;from the ground up to respect user privac"
+    },
+    {
+      "index": 1541,
+      "true": "Sci/Tech",
+      "pred": "Sports",
+      "confidence": 0.9739477634429932,
+      "unk_rate": 0.03571428571428571,
+      "text": "Tough to predict a hurricane landfall this season #39;s busy season of landfalling Atlantic hurricanes has seen a few less-than-perfect calls by tropical "
+    }
+  ],
+  "unk_rate_correct": 0.07507812776845776,
+  "unk_rate_wrong": 0.07407011767023958,
+  "seconds": 1.0191644169972278
+}

@@ -1,0 +1,312 @@
+{
+  "name": "emb_skipgram_mean",
+  "meta": {
+    "kind": "embedding_only",
+    "source": "data/embeddings/skipgram300.npy",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 0.23387529200408608
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.8038220346841414,
+      "test_accuracy": 0.8011842105263158,
+      "test_macro_f1": 0.8006395031230338,
+      "test_f1_per_class": {
+        "World": 0.8175710594315245,
+        "Sports": 0.8977987421383647,
+        "Business": 0.7330292460423934,
+        "Sci/Tech": 0.7541589648798521
+      },
+      "confusion": [
+        [
+          1582,
+          88,
+          131,
+          99
+        ],
+        [
+          75,
+          1713,
+          65,
+          47
+        ],
+        [
+          168,
+          53,
+          1366,
+          313
+        ],
+        [
+          145,
+          62,
+          265,
+          1428
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.824366023777487,
+      "test_accuracy": 0.8111842105263158,
+      "test_macro_f1": 0.8111167354841362,
+      "test_f1_per_class": {
+        "World": 0.8288193531422561,
+        "Sports": 0.9070318672636292,
+        "Business": 0.7430555555555556,
+        "Sci/Tech": 0.7655601659751037
+      },
+      "confusion": [
+        [
+          1576,
+          77,
+          142,
+          105
+        ],
+        [
+          77,
+          1722,
+          51,
+          50
+        ],
+        [
+          137,
+          47,
+          1391,
+          325
+        ],
+        [
+          113,
+          51,
+          260,
+          1476
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.1,
+      "val_macro_f1": 0.845847008856321,
+      "test_accuracy": 0.8343421052631579,
+      "test_macro_f1": 0.8340908883934736,
+      "test_f1_per_class": {
+        "World": 0.8465385627796789,
+        "Sports": 0.9242028227914271,
+        "Business": 0.7745695364238411,
+        "Sci/Tech": 0.7910526315789473
+      },
+      "confusion": [
+        [
+          1608,
+          74,
+          122,
+          96
+        ],
+        [
+          64,
+          1768,
+          36,
+          32
+        ],
+        [
+          122,
+          47,
+          1462,
+          269
+        ],
+        [
+          105,
+          37,
+          255,
+          1503
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9999910593032837,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 747,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9998149275779724,
+      "unk_rate": 0.02631578947368421,
+      "text": "Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States team of National Basketball Association stars 89-81 here Friday in the Olympic semi-finals, dethroning the three-time defending champions."
+    },
+    {
+      "index": 1269,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9998002648353577,
+      "unk_rate": 0.07317073170731707,
+      "text": "Philippines mourns dead in Russian school siege The Philippines Saturday expressed quot;deepest sympathy quot; to the families of the dead in the Russian school siege on Friday, in which 322 people were killed when Russian troops stormed "
+    },
+    {
+      "index": 3354,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9997739195823669,
+      "unk_rate": 0.0625,
+      "text": "Nintendo to Unveil Handheld Upgrade Facing its biggest threat ever from the arrival of Sony Corp. in the portable video-game machine market, Japanese game-maker Nintendo Co."
+    },
+    {
+      "index": 6093,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9997389912605286,
+      "unk_rate": 0.11764705882352941,
+      "text": "Football: Spanish FA apologises The Spanish FA apologises to its English counterparts following racist chanting."
+    },
+    {
+      "index": 6150,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9997369647026062,
+      "unk_rate": 0.0625,
+      "text": "England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm the Springboks at Twickenham."
+    },
+    {
+      "index": 5941,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9996459484100342,
+      "unk_rate": 0.0,
+      "text": "Cricket: NZ suffer Franklin blow New Zealand bowler James Franklin misses the first Test against Australia with  injury."
+    },
+    {
+      "index": 967,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9996383190155029,
+      "unk_rate": 0.08571428571428572,
+      "text": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-"
+    },
+    {
+      "index": 5128,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9996234178543091,
+      "unk_rate": 0.13333333333333333,
+      "text": "Argentina Basketball Coach Magnano Quits Ruben Magnano, who coached Argentina to the Olympic basketball gold medal in Athens, resigned Thursday to accept a coaching job in Italy."
+    },
+    {
+      "index": 3063,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9995861649513245,
+      "unk_rate": 0.04,
+      "text": "US football: Patriots' historic win New England win a record-tying 18th straight game - plus an NFL round-up."
+    },
+    {
+      "index": 676,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9990109205245972,
+      "unk_rate": 0.0,
+      "text": "US edge out Brazil for gold The United States beat Brazil 2-1 in extra time to win the women's Olympic football tournament."
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9989901185035706,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 1533,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.998954176902771,
+      "unk_rate": 0.18181818181818182,
+      "text": "Collingwood anchors England (AFP) AFP - Paul Collingwood's unbeaten 80 took England to 299 for seven against Zimbabwe in their opening Champions Trophy Pool D match at Edgbaston here."
+    },
+    {
+      "index": 5431,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9989222288131714,
+      "unk_rate": 0.125,
+      "text": "Vodafone begins 3G service Vodafone launches its third-generation services for mobile phones, offering video calls, music downloads and games."
+    },
+    {
+      "index": 3563,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.998467743396759,
+      "unk_rate": 0.05,
+      "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41..."
+    },
+    {
+      "index": 6022,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9984656572341919,
+      "unk_rate": 0.05405405405405406,
+      "text": "SBC and Yahoo! extend pact to offer Internet service SAN ANTONIO SBC Communications and Yahoo are expanding their high-speed Internet service partnership to link video, wireless phone, Internet and other services."
+    },
+    {
+      "index": 3805,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9978446960449219,
+      "unk_rate": 0.03636363636363636,
+      "text": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St..."
+    },
+    {
+      "index": 4862,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9974033236503601,
+      "unk_rate": 0.125,
+      "text": "AOL's Viral Marketing America Online will now provide gratis antivirus protection to its subscribers."
+    },
+    {
+      "index": 4029,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9973486661911011,
+      "unk_rate": 0.02127659574468085,
+      "text": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No..."
+    },
+    {
+      "index": 3077,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.9963000416755676,
+      "unk_rate": 0.02702702702702703,
+      "text": "Brewers buyer expected to step out of the shadows Monday MILWAUKEE - Paul Attanasio says the story of his brother buying a baseball team is like a script straight out of Hollywood. He should know."
+    }
+  ],
+  "unk_rate_correct": 0.07471444608133802,
+  "unk_rate_wrong": 0.07540141176606159,
+  "seconds": 1.0771382080274634
+}

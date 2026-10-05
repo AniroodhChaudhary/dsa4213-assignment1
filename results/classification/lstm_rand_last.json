@@ -1,0 +1,312 @@
+{
+  "name": "lstm_rand_last",
+  "meta": {
+    "kind": "lm",
+    "run": "lstm_s0",
+    "pooling": "last",
+    "dim": 300,
+    "seconds": 5.708067166968249
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.546049503036073,
+      "test_accuracy": 0.5501315789473684,
+      "test_macro_f1": 0.5454412656024326,
+      "test_f1_per_class": {
+        "World": 0.6063855715330246,
+        "Sports": 0.6659718603439291,
+        "Business": 0.3964378052283826,
+        "Sci/Tech": 0.5129698253043938
+      },
+      "confusion": [
+        [
+          1244,
+          176,
+          294,
+          186
+        ],
+        [
+          282,
+          1278,
+          191,
+          149
+        ],
+        [
+          389,
+          247,
+          690,
+          574
+        ],
+        [
+          288,
+          237,
+          406,
+          969
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.5840113138050967,
+      "test_accuracy": 0.5959210526315789,
+      "test_macro_f1": 0.5944258719260396,
+      "test_f1_per_class": {
+        "World": 0.6354897375941803,
+        "Sports": 0.7219307450157397,
+        "Business": 0.47035903145004176,
+        "Sci/Tech": 0.5499239736441967
+      },
+      "confusion": [
+        [
+          1223,
+          165,
+          273,
+          239
+        ],
+        [
+          197,
+          1376,
+          157,
+          170
+        ],
+        [
+          314,
+          189,
+          845,
+          552
+        ],
+        [
+          215,
+          182,
+          418,
+          1085
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.01,
+      "val_macro_f1": 0.6194546602504518,
+      "test_accuracy": 0.626578947368421,
+      "test_macro_f1": 0.6234080513282436,
+      "test_f1_per_class": {
+        "World": 0.6751722378157693,
+        "Sports": 0.7430025445292621,
+        "Business": 0.505702364394993,
+        "Sci/Tech": 0.56975505857295
+      },
+      "confusion": [
+        [
+          1323,
+          171,
+          228,
+          178
+        ],
+        [
+          165,
+          1460,
+          117,
+          158
+        ],
+        [
+          318,
+          223,
+          909,
+          450
+        ],
+        [
+          213,
+          176,
+          441,
+          1070
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 3063,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9841362237930298,
+      "unk_rate": 0.04,
+      "text": "US football: Patriots' historic win New England win a record-tying 18th straight game - plus an NFL round-up."
+    },
+    {
+      "index": 3899,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9823083877563477,
+      "unk_rate": 0.04878048780487805,
+      "text": "Warne takes six but India establish handy lead (Reuters) Reuters - World test wicket record holder Shane Warne grabbed six wickets as India established a handy 141-run first innings lead in the second test on Saturday."
+    },
+    {
+      "index": 1493,
+      "true": "Sports",
+      "pred": "World",
+      "confidence": 0.978164553642273,
+      "unk_rate": 0.06382978723404255,
+      "text": "Atlanta police arrest Braves player on DUI charge ATLANTA - An Atlanta Braves player is in the Atlanta Jail today after being arrested on a charge of driving under the influence. Members of the DUI Task Force arrested shortstop Rafael Furcal about 4:20 am "
+    },
+    {
+      "index": 225,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.9728840589523315,
+      "unk_rate": 0.07692307692307693,
+      "text": "Holiday-Shopping Season Remains Sluggish (Reuters) Reuters - U.S. shoppers have kept a tight grip\\on their wallets this holiday season with indices on Tuesday\\showing sluggish sales in the second week of the  season."
+    },
+    {
+      "index": 1277,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9704491496086121,
+      "unk_rate": 0.24324324324324326,
+      "text": "Petronas pursues China LNG supply opportunities Petroliam Nasional Bhd., or Petronas, Malaysias national oil and gas firm, is in discussions with Chinas State-owned oil and gas firms for potential liquefied natural "
+    },
+    {
+      "index": 6145,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9693239331245422,
+      "unk_rate": 0.0,
+      "text": "World's oldest man dies aged 113 The world's oldest man, who gave up  driving at 108 because \"slow drivers annoyed him\", dies at 113."
+    },
+    {
+      "index": 462,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9651402235031128,
+      "unk_rate": 0.07526881720430108,
+      "text": "New Russian-US Team to Leave for ISS in October MOSCOW (AFP) -- A new Russian-US team for the International Space Station (ISS) will take off from the Baikonur space station in the former Soviet republic of Kazakhstan in October, Russian space officials said.       The three-person team, due to be a"
+    },
+    {
+      "index": 515,
+      "true": "Sports",
+      "pred": "World",
+      "confidence": 0.9648207426071167,
+      "unk_rate": 0.06060606060606061,
+      "text": "Gregg: I will help to close deal EVERTON chairman Bill Kenwright #39;s plans for a Russian revolution at Goodison Park may have thawed the cold war with director Paul Gregg."
+    },
+    {
+      "index": 847,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9644102454185486,
+      "unk_rate": 0.1276595744680851,
+      "text": "Dyke reopens WMD row Former BBC chief Greg Dyke has reopened the row over Tony Blair #39;s decision to go to war with Iraq. Dyke was forced to resign from his post, along with former BBC chairman Gavyn Davies, last January after Lord "
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9636863470077515,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 24,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9610262513160706,
+      "unk_rate": 0.14285714285714285,
+      "text": "Rivals Try to Turn Tables on Charles Schwab By MICHAEL LIEDTKE     SAN FRANCISCO (AP) -- With its low prices and iconoclastic attitude, discount stock broker Charles Schwab Corp. (SCH) represented an annoying stone in Wall Street's wing-tipped shoes for decades..."
+    },
+    {
+      "index": 5850,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.957110583782196,
+      "unk_rate": 0.13636363636363635,
+      "text": "American Express sues credit card rivals American Express is suing Visa and MasterCard plus eight US banks, claiming anti-competitive tactics kept it out of the market. The litigation is the latest setback for Visa and MasterCard, which last month "
+    },
+    {
+      "index": 4029,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9558854699134827,
+      "unk_rate": 0.02127659574468085,
+      "text": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No..."
+    },
+    {
+      "index": 4549,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9552544355392456,
+      "unk_rate": 0.04878048780487805,
+      "text": "Australia 362-7 v India, third test - close (Reuters) Reuters - Australia were 362 for seven wickets at the close of play on the first day of their third cricket test against India on Tuesday."
+    },
+    {
+      "index": 4234,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9472852945327759,
+      "unk_rate": 0.0,
+      "text": "Cricket: Pakistan edge ahead Pakistan take a slim lead over Sri Lanka by the end of the day two in the first Test."
+    },
+    {
+      "index": 6065,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9471105337142944,
+      "unk_rate": 0.02702702702702703,
+      "text": "Bush Confronts New Challenge on Issue of Iran While assembling a new national security team, President Bush is confronting what could become the biggest challenge of his second term: how to contain Iran #39;s "
+    },
+    {
+      "index": 747,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9458658695220947,
+      "unk_rate": 0.02631578947368421,
+      "text": "Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States team of National Basketball Association stars 89-81 here Friday in the Olympic semi-finals, dethroning the three-time defending champions."
+    },
+    {
+      "index": 4257,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.945384681224823,
+      "unk_rate": 0.08333333333333333,
+      "text": "Photo gallery: Bill Gates' home on Lake Washington Webshots users offer their photos of Bill Gates mansion in Medina, Wash."
+    },
+    {
+      "index": 4742,
+      "true": "Sci/Tech",
+      "pred": "Sports",
+      "confidence": 0.9417685866355896,
+      "unk_rate": 0.0,
+      "text": "Game on as Sony puts 100 tag on PSP system SONY is going head-to-head with Nintendo in the battle for the handheld games console market. The company will price its long-awaited PlayStation Portable (PSP) at about 100 for its launch in Japan, when "
+    },
+    {
+      "index": 1512,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9410717487335205,
+      "unk_rate": 0.022727272727272728,
+      "text": "Court rules against state Web-blocking law A Pennsylvania law requiring Internet service providers to block Web sites deemed by the state's prosecuting attorneys to be child pornography has been reversed by a U.S. federal court on free-speech grounds."
+    }
+  ],
+  "unk_rate_correct": 0.07565975852248294,
+  "unk_rate_wrong": 0.07343301970795357,
+  "seconds": 0.8895311250234954
+}

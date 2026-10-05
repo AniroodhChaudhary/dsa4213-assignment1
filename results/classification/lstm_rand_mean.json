@@ -1,0 +1,312 @@
+{
+  "name": "lstm_rand_mean",
+  "meta": {
+    "kind": "lm",
+    "run": "lstm_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 5.109988707990851
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.5994788073993064,
+      "test_accuracy": 0.6085526315789473,
+      "test_macro_f1": 0.6064786341918785,
+      "test_f1_per_class": {
+        "World": 0.6406329760081675,
+        "Sports": 0.7104923949471513,
+        "Business": 0.513679508654383,
+        "Sci/Tech": 0.5611096571578121
+      },
+      "confusion": [
+        [
+          1255,
+          191,
+          247,
+          207
+        ],
+        [
+          212,
+          1378,
+          153,
+          157
+        ],
+        [
+          298,
+          197,
+          920,
+          485
+        ],
+        [
+          253,
+          213,
+          362,
+          1072
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.655591672991525,
+      "test_accuracy": 0.6439473684210526,
+      "test_macro_f1": 0.6421219202154088,
+      "test_f1_per_class": {
+        "World": 0.6622933613224875,
+        "Sports": 0.7553846153846154,
+        "Business": 0.5509116409537167,
+        "Sci/Tech": 0.5998980632008155
+      },
+      "confusion": [
+        [
+          1262,
+          182,
+          236,
+          220
+        ],
+        [
+          158,
+          1473,
+          110,
+          159
+        ],
+        [
+          281,
+          169,
+          982,
+          468
+        ],
+        [
+          210,
+          176,
+          337,
+          1177
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.1,
+      "val_macro_f1": 0.6901279183786921,
+      "test_accuracy": 0.680921052631579,
+      "test_macro_f1": 0.6788718878776335,
+      "test_f1_per_class": {
+        "World": 0.696258064516129,
+        "Sports": 0.7847522236340534,
+        "Business": 0.5986206896551725,
+        "Sci/Tech": 0.6358565737051792
+      },
+      "confusion": [
+        [
+          1349,
+          179,
+          211,
+          161
+        ],
+        [
+          137,
+          1544,
+          95,
+          124
+        ],
+        [
+          274,
+          158,
+          1085,
+          383
+        ],
+        [
+          215,
+          154,
+          334,
+          1197
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 3785,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.999660849571228,
+      "unk_rate": 0.08,
+      "text": "Bollywood actress Nirupa Roy dies Bollywood actress Nirupa Roy dies after a heart attack at her home in Mumbai (Bombay) aged 73."
+    },
+    {
+      "index": 3563,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9948773980140686,
+      "unk_rate": 0.05,
+      "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41..."
+    },
+    {
+      "index": 967,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9933029413223267,
+      "unk_rate": 0.08571428571428572,
+      "text": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-"
+    },
+    {
+      "index": 1775,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9888874888420105,
+      "unk_rate": 0.05,
+      "text": "Coast Guard Shuts Gulf of Mexico Ports  HOUSTON (Reuters) - The U.S. Coast Guard shut five ports on  Wednesday in the Gulf of Mexico coast states of Alabama,  Florida and Mississippi as Hurricane Ivan churned nearer."
+    },
+    {
+      "index": 3899,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9883455038070679,
+      "unk_rate": 0.04878048780487805,
+      "text": "Warne takes six but India establish handy lead (Reuters) Reuters - World test wicket record holder Shane Warne grabbed six wickets as India established a handy 141-run first innings lead in the second test on Saturday."
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9867231249809265,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 6727,
+      "true": "Sports",
+      "pred": "World",
+      "confidence": 0.9851395487785339,
+      "unk_rate": 0.10344827586206896,
+      "text": "Palace Bans Two Fans The Palace in Auburn Hills bans two men from events for their involvement in last month's brawl between the Pistons and Indian Pacers."
+    },
+    {
+      "index": 4029,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9838511347770691,
+      "unk_rate": 0.02127659574468085,
+      "text": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No..."
+    },
+    {
+      "index": 1043,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9761808514595032,
+      "unk_rate": 0.0425531914893617,
+      "text": "Strong Hurricane Roars Over Bahamas Toward Florida (Reuters) Reuters - Hurricane Frances battered the\\southeastern Bahamas islands with 140 mph winds on Wednesday as\\it roared toward the United States and put millions of people\\on alert along Florida's heavily populated east coast."
+    },
+    {
+      "index": 1110,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9733409881591797,
+      "unk_rate": 0.10204081632653061,
+      "text": "EU foreign ministers hope to break deadlock over ASEM summit The European Union said Friday it  quot;hoped to reach a conclusion quot; at a meeting of foreign ministers on the participation of military-ruled Myanmar in an upcoming summit of Asian and European nations."
+    },
+    {
+      "index": 2940,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9724589586257935,
+      "unk_rate": 0.03571428571428571,
+      "text": "Level 3 Acquires Sprint #39;s Wholesale Dial-Up Internet Business Level 3 today announced that it has purchased Sprint #39;s wholesale dial-up Internet access business for \\$34 million in cash. Sprint is one of the largest providers of wholesale dial-up service to ISPs in North America."
+    },
+    {
+      "index": 584,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9702352285385132,
+      "unk_rate": 0.02127659574468085,
+      "text": "Jones Advances in Long Jump; Johnson Out ATHENS, Greece - Marion Jones made her Athens debut in virtual anonymity, quietly advancing to the long jump final. Allen Johnson had the attention of everyone in the stadium, for all the wrong reasons..."
+    },
+    {
+      "index": 3077,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.9701647162437439,
+      "unk_rate": 0.02702702702702703,
+      "text": "Brewers buyer expected to step out of the shadows Monday MILWAUKEE - Paul Attanasio says the story of his brother buying a baseball team is like a script straight out of Hollywood. He should know."
+    },
+    {
+      "index": 7008,
+      "true": "Business",
+      "pred": "Sports",
+      "confidence": 0.9698505401611328,
+      "unk_rate": 0.0,
+      "text": "Get Real? This time last week, first lady Laura Bush was having what she might call her Christmas Tree Day. First, she showed off the decorated executive mansion to reporters and then joined her husband "
+    },
+    {
+      "index": 1881,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9697357416152954,
+      "unk_rate": 0.027777777777777776,
+      "text": "Hurricane Ivan Slams U.S. Gulf Coast Hurricane Ivan roared into the Gulf Coast near Mobile, Alabama, early this morning with peak winds exceeding 125 miles an hour (200 kilometers an hour)."
+    },
+    {
+      "index": 1307,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9682571291923523,
+      "unk_rate": 0.0,
+      "text": "Tribe challenges American origins Some of the earliest settlers of America may have been from Australia, southern Asia, and the Pacific, not northern Asia, research suggests."
+    },
+    {
+      "index": 1466,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9637172222137451,
+      "unk_rate": 0.10204081632653061,
+      "text": "Colts Lead Pats Early in Third Quarter FOXBORO, Mass. - Peyton Manning reached the 25,000-yard passing mark faster than anyone but Dan Marino, and the Indianapolis Colts shredded the New England Patriots for a 17-13 halftime lead Thursday night..."
+    },
+    {
+      "index": 4739,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9609182476997375,
+      "unk_rate": 0.043478260869565216,
+      "text": "Royal Dutch/Shell merges holding companies with unified board LONDON, October 28 (newratings.com) - Royal Dutch/Shell Group has announced its plans to merge its two holding companies in the Netherlands and the UK, Royal Dutch Petroleum (ROY."
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9607667326927185,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 3805,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9602501392364502,
+      "unk_rate": 0.03636363636363636,
+      "text": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St..."
+    }
+  ],
+  "unk_rate_correct": 0.07489312756636339,
+  "unk_rate_wrong": 0.07468979169455894,
+  "seconds": 1.331560000020545
+}
