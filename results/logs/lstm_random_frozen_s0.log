@@ -1,0 +1,14 @@
+[lstm_random_frozen_s0] params: {'total': 18821513, 'trainable': 10147613, 'embedding': 8673900, 'output': 8702813, 'core': 1444800}  embedding frozen: True  device: mps
+[lstm_random_frozen_s0] epoch  1 train  1377.86 val   559.09 lr 1.00e-03 (107s train, 8s val, gn 0.30)
+[lstm_random_frozen_s0] epoch  2 train   611.09 val   411.54 lr 1.00e-03 (105s train, 8s val, gn 0.25)
+[lstm_random_frozen_s0] epoch  3 train   448.85 val   358.07 lr 1.00e-03 (105s train, 8s val, gn 0.29)
+[lstm_random_frozen_s0] epoch  4 train   371.37 val   313.94 lr 1.00e-03 (105s train, 8s val, gn 0.33)
+[lstm_random_frozen_s0] epoch  5 train   323.29 val   296.46 lr 1.00e-03 (108s train, 8s val, gn 0.37)
+[lstm_random_frozen_s0] epoch  6 train   290.97 val   274.20 lr 1.00e-03 (105s train, 8s val, gn 0.36)
+[lstm_random_frozen_s0] epoch  7 train   267.04 val   263.60 lr 1.00e-03 (106s train, 8s val, gn 0.35)
+[lstm_random_frozen_s0] epoch  8 train   247.51 val   245.28 lr 1.00e-03 (107s train, 8s val, gn 0.32)
+[lstm_random_frozen_s0] epoch  9 train   232.61 val   237.36 lr 1.00e-03 (106s train, 8s val, gn 0.32)
+[lstm_random_frozen_s0] epoch 10 train   219.66 val   235.24 lr 1.00e-03 (109s train, 9s val, gn 0.30)
+[lstm_random_frozen_s0] epoch 11 train   209.03 val   225.37 lr 1.00e-03 (106s train, 8s val, gn 0.30)
+[lstm_random_frozen_s0] epoch 12 train   200.24 val   218.75 lr 1.00e-03 (106s train, 8s val, gn 0.30)
+done: best val ppl 218.75 at epoch 12 in 1274s training

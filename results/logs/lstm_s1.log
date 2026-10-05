@@ -1,0 +1,14 @@
+[lstm_s1] params: {'total': 18821513, 'trainable': 18821513, 'embedding': 8673900, 'output': 8702813, 'core': 1444800}  embedding frozen: False  device: mps
+[lstm_s1] epoch  1 train  1145.03 val   397.59 lr 1.00e-03 (112s train, 8s val, gn 0.30)
+[lstm_s1] epoch  2 train   407.17 val   270.45 lr 1.00e-03 (111s train, 8s val, gn 0.23)
+[lstm_s1] epoch  3 train   284.68 val   230.01 lr 1.00e-03 (110s train, 8s val, gn 0.26)
+[lstm_s1] epoch  4 train   225.53 val   206.91 lr 1.00e-03 (110s train, 8s val, gn 0.28)
+[lstm_s1] epoch  5 train   191.10 val   189.47 lr 1.00e-03 (110s train, 8s val, gn 0.31)
+[lstm_s1] epoch  6 train   168.74 val   174.99 lr 1.00e-03 (110s train, 8s val, gn 0.28)
+[lstm_s1] epoch  7 train   152.43 val   166.78 lr 1.00e-03 (110s train, 8s val, gn 0.28)
+[lstm_s1] epoch  8 train   140.21 val   160.49 lr 1.00e-03 (111s train, 8s val, gn 0.28)
+[lstm_s1] epoch  9 train   130.60 val   154.76 lr 1.00e-03 (110s train, 8s val, gn 0.28)
+[lstm_s1] epoch 10 train   122.46 val   152.24 lr 1.00e-03 (111s train, 8s val, gn 0.28)
+[lstm_s1] epoch 11 train   115.54 val   147.32 lr 1.00e-03 (110s train, 8s val, gn 0.27)
+[lstm_s1] epoch 12 train   109.90 val   143.90 lr 1.00e-03 (111s train, 8s val, gn 0.28)
+done: best val ppl 143.90 at epoch 12 in 1326s training

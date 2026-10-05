@@ -1,0 +1,112 @@
+{
+  "run_name": "lstm_glove_frozen_s0",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the first two @-@ year @-@ old <unk> , the <unk> , and the <unk> of the <unk> <unk> <unk> ( <unk> ) , and the <unk> <unk> ( <unk> <unk> ) , <unk> <unk> ( <unk> <unk>",
+        "seconds": 0.07015337503980845,
+        "distinct_1": 0.3,
+        "distinct_2": 0.5510204081632653,
+        "distinct_3": 0.75,
+        "repeated_4gram_frac": 0.10638297872340426
+      },
+      "topk": {
+        "text": "against the conflict . <eos> the first two chapters of the united kingdom made his own campaign in the 1920s , but he has a reputation of the <unk> . an attempt to ensure the assassination of independence , and also had taken down his own work and the \"",
+        "seconds": 0.08152570796664804,
+        "distinct_1": 0.74,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the first @-@ term <unk> of the <unk> <unk> <unk> <unk> ( <unk> <unk> ) , the <unk> <unk> ( <unk> <unk> ) , was a <unk> of the <unk> <unk> <unk> <unk> <unk> ( <unk> <unk> )",
+        "seconds": 0.05977608304237947,
+        "distinct_1": 0.28,
+        "distinct_2": 0.46938775510204084,
+        "distinct_3": 0.5833333333333334,
+        "repeated_4gram_frac": 0.2978723404255319
+      },
+      "topk": {
+        "text": ", and the middle coast of the east , which is not an area of <unk> in the eastern eastern pacific of western africa . they were not known in the eastern south of north africa . the song 's <unk> fleet on the eastern north china area and its",
+        "seconds": 0.08406324998941272,
+        "distinct_1": 0.6,
+        "distinct_2": 0.9183673469387755,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "the <unk> of the <unk> . <eos> = = = = <unk> = = = = <eos> = = = = <unk> = = = = <eos> = = = = <unk> = = = = <eos> = = = = <unk> = = = = <eos> = = =",
+        "seconds": 0.059710040979553014,
+        "distinct_1": 0.12,
+        "distinct_2": 0.20408163265306123,
+        "distinct_3": 0.2708333333333333,
+        "repeated_4gram_frac": 0.6808510638297872
+      },
+      "topk": {
+        "text": "a peace of the old family , who also were granted to the united states in august 1991 . the majority of the three people was arrested in the dominican and australia between their territory and became <unk> <unk> . the city , with a number of <unk> to the",
+        "seconds": 0.08246570796472952,
+        "distinct_1": 0.68,
+        "distinct_2": 0.9387755102040817,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "<unk> of the <unk> <unk> . <eos> = = = = <unk> = = = = <eos> the first @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@ class @-@",
+        "seconds": 0.05968275002669543,
+        "distinct_1": 0.18,
+        "distinct_2": 0.32653061224489793,
+        "distinct_3": 0.375,
+        "repeated_4gram_frac": 0.574468085106383
+      },
+      "topk": {
+        "text": "national navy . <eos> = = = = final of the first two two weeks = = = = <eos> the <unk> sector 's history of the world and the uk is a number of people in that they were to be seen in the west <unk> . the first",
+        "seconds": 0.08366641699103639,
+        "distinct_1": 0.6,
+        "distinct_2": 0.8571428571428571,
+        "distinct_3": 0.9375,
+        "repeated_4gram_frac": 0.02127659574468085
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american <unk> , the <unk> of the <unk> <unk> ( <unk> ) , <unk> <unk> ( <unk> ) , <unk> ( <unk> <unk> ) , <unk> ( <unk> <unk> ) , <unk> ( <unk> <unk> ) , <unk> <unk> ( <unk> <unk> ) , <unk> <unk> ( <unk> <unk> )",
+        "seconds": 0.05944991699652746,
+        "distinct_1": 0.14,
+        "distinct_2": 0.24489795918367346,
+        "distinct_3": 0.3333333333333333,
+        "repeated_4gram_frac": 0.6170212765957447
+      },
+      "topk": {
+        "text": "portion , he had not been described as the \" common <unk> \" . the second generation was used as the sole of a \" <unk> \" of the new york class line \u2014 \" the greatest extent of the war \" and his own <unk> from the united states",
+        "seconds": 0.08075337501941249,
+        "distinct_1": 0.68,
+        "distinct_2": 0.9387755102040817,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

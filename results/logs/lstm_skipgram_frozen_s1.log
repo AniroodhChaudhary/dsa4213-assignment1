@@ -1,0 +1,14 @@
+[lstm_skipgram_frozen_s1] params: {'total': 18821513, 'trainable': 10147613, 'embedding': 8673900, 'output': 8702813, 'core': 1444800}  embedding frozen: True  device: mps
+[lstm_skipgram_frozen_s1] epoch  1 train  1203.15 val   432.97 lr 1.00e-03 (101s train, 8s val, gn 0.31)
+[lstm_skipgram_frozen_s1] epoch  2 train   442.94 val   273.43 lr 1.00e-03 (101s train, 8s val, gn 0.29)
+[lstm_skipgram_frozen_s1] epoch  3 train   301.20 val   221.31 lr 1.00e-03 (101s train, 8s val, gn 0.28)
+[lstm_skipgram_frozen_s1] epoch  4 train   235.66 val   195.04 lr 1.00e-03 (100s train, 8s val, gn 0.29)
+[lstm_skipgram_frozen_s1] epoch  5 train   199.25 val   178.03 lr 1.00e-03 (104s train, 8s val, gn 0.29)
+[lstm_skipgram_frozen_s1] epoch  6 train   175.94 val   165.15 lr 1.00e-03 (109s train, 8s val, gn 0.30)
+[lstm_skipgram_frozen_s1] epoch  7 train   159.57 val   156.34 lr 1.00e-03 (111s train, 8s val, gn 0.29)
+[lstm_skipgram_frozen_s1] epoch  8 train   147.09 val   150.54 lr 1.00e-03 (108s train, 8s val, gn 0.29)
+[lstm_skipgram_frozen_s1] epoch  9 train   137.95 val   147.11 lr 1.00e-03 (106s train, 8s val, gn 0.29)
+[lstm_skipgram_frozen_s1] epoch 10 train   130.99 val   142.68 lr 1.00e-03 (106s train, 8s val, gn 0.29)
+[lstm_skipgram_frozen_s1] epoch 11 train   124.89 val   139.19 lr 1.00e-03 (106s train, 8s val, gn 0.29)
+[lstm_skipgram_frozen_s1] epoch 12 train   120.05 val   136.23 lr 1.00e-03 (107s train, 8s val, gn 0.29)
+done: best val ppl 136.23 at epoch 12 in 1261s training

@@ -1,0 +1,14 @@
+[lstm_glove_frozen_s0] params: {'total': 18821513, 'trainable': 10147613, 'embedding': 8673900, 'output': 8702813, 'core': 1444800}  embedding frozen: True  device: mps
+[lstm_glove_frozen_s0] epoch  1 train  1169.67 val   409.44 lr 1.00e-03 (109s train, 8s val, gn 0.29)
+[lstm_glove_frozen_s0] epoch  2 train   416.43 val   255.25 lr 1.00e-03 (106s train, 8s val, gn 0.24)
+[lstm_glove_frozen_s0] epoch  3 train   281.43 val   205.75 lr 1.00e-03 (109s train, 8s val, gn 0.26)
+[lstm_glove_frozen_s0] epoch  4 train   221.88 val   181.80 lr 1.00e-03 (106s train, 8s val, gn 0.27)
+[lstm_glove_frozen_s0] epoch  5 train   189.46 val   166.95 lr 1.00e-03 (108s train, 8s val, gn 0.28)
+[lstm_glove_frozen_s0] epoch  6 train   169.07 val   156.01 lr 1.00e-03 (106s train, 8s val, gn 0.29)
+[lstm_glove_frozen_s0] epoch  7 train   154.72 val   149.36 lr 1.00e-03 (105s train, 8s val, gn 0.29)
+[lstm_glove_frozen_s0] epoch  8 train   143.65 val   143.93 lr 1.00e-03 (106s train, 8s val, gn 0.29)
+[lstm_glove_frozen_s0] epoch  9 train   135.00 val   140.74 lr 1.00e-03 (106s train, 8s val, gn 0.29)
+[lstm_glove_frozen_s0] epoch 10 train   128.41 val   137.81 lr 1.00e-03 (105s train, 8s val, gn 0.29)
+[lstm_glove_frozen_s0] epoch 11 train   122.78 val   133.30 lr 1.00e-03 (106s train, 8s val, gn 0.28)
+[lstm_glove_frozen_s0] epoch 12 train   118.11 val   131.79 lr 1.00e-03 (107s train, 8s val, gn 0.28)
+done: best val ppl 131.79 at epoch 12 in 1280s training

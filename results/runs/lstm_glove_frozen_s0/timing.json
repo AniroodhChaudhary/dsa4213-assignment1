@@ -1,0 +1,36 @@
+{
+  "run_name": "lstm_glove_frozen_s0",
+  "device": "mps",
+  "hardware": {
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "torch": "2.14.0",
+    "mps_available": true,
+    "cuda_available": false,
+    "cpu": "Apple M4",
+    "memory_gb": 16.0,
+    "macos": "15.7.9"
+  },
+  "size": {
+    "total": 18821513,
+    "trainable": 18821513,
+    "embedding": 8673900,
+    "output": 8702813,
+    "core": 1444800,
+    "checkpoint_bytes": 75291999
+  },
+  "score_test": {
+    "tokens": 244102,
+    "seconds": 9.25957387505332,
+    "tokens_per_second": 26362.120254545123
+  },
+  "generate": {
+    "prompts": 5,
+    "new_tokens_per_prompt": 50,
+    "decoding": "top-k 40, T=1.0",
+    "seconds": 0.41247445793123916,
+    "ms_per_token": 1.6498978317249566,
+    "tokens_per_second": 606.0981357582045
+  }
+}

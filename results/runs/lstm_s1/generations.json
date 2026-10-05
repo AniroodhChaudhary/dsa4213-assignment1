@@ -1,0 +1,112 @@
+{
+  "run_name": "lstm_s1",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". the <unk> of the jin was the first of the first time of the jin . the jin was the first @-@ known <unk> of the jin , and the jin was the first of the first time of the jin . the jin was the first of the",
+        "seconds": 0.07433004199992865,
+        "distinct_1": 0.24,
+        "distinct_2": 0.3673469387755102,
+        "distinct_3": 0.5,
+        "repeated_4gram_frac": 0.425531914893617
+      },
+      "topk": {
+        "text": "into the dominican republic . <eos> the song dynasty in the 19th century has been established by the new republic , which had made the creation of the <unk> . he had written over the yangtze , although the remaining frelimo was ordered about its own in the city .",
+        "seconds": 0.08417316601844504,
+        "distinct_1": 0.72,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ", and the <unk> of the <unk> . the <unk> of the jin , the <unk> and the <unk> <unk> , is a <unk> <unk> , and the <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>",
+        "seconds": 0.06117516598897055,
+        "distinct_1": 0.18,
+        "distinct_2": 0.32653061224489793,
+        "distinct_3": 0.4583333333333333,
+        "repeated_4gram_frac": 0.44680851063829785
+      },
+      "topk": {
+        "text": ", the united states 's world ( which , is a more major and of the east ) and the cathedral ( \" the end \" in the united states . in the second division of the 19th century , the jurchens had to move the nest against the dominican",
+        "seconds": 0.08400841697584838,
+        "distinct_1": 0.64,
+        "distinct_2": 0.8979591836734694,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "a <unk> . <eos> = = = = <unk> = = = = <eos> the jin was the first @-@ known <unk> of the <unk> <unk> ( <unk> ) , which was the first time of the jin . the jin was the first @-@ known <unk> <unk> in the",
+        "seconds": 0.06000991596374661,
+        "distinct_1": 0.36,
+        "distinct_2": 0.6530612244897959,
+        "distinct_3": 0.7916666666666666,
+        "repeated_4gram_frac": 0.1276595744680851
+      },
+      "topk": {
+        "text": "a silver , of which he was able to work into the french and <unk> . in a particular interview with this book , the new horizons was the oldest of their predecessor . he then worked the <unk> of the school <unk> and a <unk> in <unk> and the",
+        "seconds": 0.08533870900282636,
+        "distinct_1": 0.6,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "<unk> and <unk> <unk> . the <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>",
+        "seconds": 0.061439584009349346,
+        "distinct_1": 0.08,
+        "distinct_2": 0.12244897959183673,
+        "distinct_3": 0.14583333333333334,
+        "repeated_4gram_frac": 0.851063829787234
+      },
+      "topk": {
+        "text": "united states . <eos> = = = = early season = = = = <eos> = = = = = <unk> of hailing @-@ de @-@ the and <unk> = = = = <eos> the kakapo is now an area of <unk> in the north and <unk> . the species",
+        "seconds": 0.08450320898555219,
+        "distinct_1": 0.44,
+        "distinct_2": 0.6938775510204082,
+        "distinct_3": 0.7916666666666666,
+        "repeated_4gram_frac": 0.1276595744680851
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american film , the <unk> <unk> , the <unk> <unk> , and the <unk> <unk> <unk> ( <unk> ) , the <unk> <unk> ( <unk> ) , <unk> <unk> ( <unk> <unk> ) , <unk> <unk> ( <unk> <unk> ) , <unk> <unk> ( <unk> <unk> ) , <unk> <unk>",
+        "seconds": 0.06142329197609797,
+        "distinct_1": 0.16,
+        "distinct_2": 0.2653061224489796,
+        "distinct_3": 0.3958333333333333,
+        "repeated_4gram_frac": 0.48936170212765956
+      },
+      "topk": {
+        "text": "african <unk> film a <unk> . the school was \" more <unk> \" , with a significant source of its \" brainwashing \" with the series and a new series . at night magazine , the 766th department of the university of rome also called <unk> \" , \" in",
+        "seconds": 0.08096637501148507,
+        "distinct_1": 0.6,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

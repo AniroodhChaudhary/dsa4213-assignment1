@@ -1,0 +1,112 @@
+{
+  "run_name": "lstm_glove_train_s0",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the first of the first season of the first season was the first time in the first season . the first season of the season was the first time in the first season , and the first two",
+        "seconds": 0.07579504197929054,
+        "distinct_1": 0.28,
+        "distinct_2": 0.4897959183673469,
+        "distinct_3": 0.6666666666666666,
+        "repeated_4gram_frac": 0.2127659574468085
+      },
+      "topk": {
+        "text": "where it took it to the other . however , the next week they would have moved to the dominican and then were established , making for a <unk> . this was used by the soviets , although the british officer was elected against a number of people . <eos>",
+        "seconds": 0.08402816695161164,
+        "distinct_1": 0.76,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the first of the kakapo 's first season was the first time in the united states . the kakapo was the first @-@ largest ever ever ever ever ever ever , and the first time in the united",
+        "seconds": 0.06177458300953731,
+        "distinct_1": 0.4,
+        "distinct_2": 0.6326530612244898,
+        "distinct_3": 0.7708333333333334,
+        "repeated_4gram_frac": 0.1276595744680851
+      },
+      "topk": {
+        "text": ", and the western gulf of the island , which were at a 2 \u2013 1 km ( 8 @.@ 7 mi ) long @-@ distance , and in the north end , the majority of the population was also the oldest for the largest <unk> which came with a",
+        "seconds": 0.08542291697813198,
+        "distinct_1": 0.74,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "a <unk> of the <unk> of the <unk> . <eos> = = = <unk> = = = <eos> the first two years of the war was the first of the first two years of the war . the first of the first two years of the war was the first",
+        "seconds": 0.06202154199127108,
+        "distinct_1": 0.24,
+        "distinct_2": 0.4489795918367347,
+        "distinct_3": 0.6041666666666666,
+        "repeated_4gram_frac": 0.3191489361702128
+      },
+      "topk": {
+        "text": "a criminal in the kingdom of <unk> in may . when the english army was formed in an interview with finkelstein 's post , the first editor of the palestinian state has begun to stay on an <unk> <unk> , as a <unk> and a \" <unk> <unk> \" .",
+        "seconds": 0.08366025000577793,
+        "distinct_1": 0.66,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "<unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> ,",
+        "seconds": 0.06023720803204924,
+        "distinct_1": 0.04,
+        "distinct_2": 0.04081632653061224,
+        "distinct_3": 0.041666666666666664,
+        "repeated_4gram_frac": 0.9574468085106383
+      },
+      "topk": {
+        "text": "east to the <unk> . the most common approach of the \" <unk> \" ( \" [ <unk> ] ) and <unk> means \" ( <unk> . the <unk> ) are an attempt to be used as \" <unk> \" , and is not a common <unk> . <unk> the",
+        "seconds": 0.0829609590000473,
+        "distinct_1": 0.52,
+        "distinct_2": 0.8571428571428571,
+        "distinct_3": 0.9583333333333334,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american <unk> , the <unk> <unk> <unk> <unk> <unk> <unk> ( <unk> <unk> ) , <unk> <unk> ( <unk> <unk> ) , <unk> <unk> ( <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>",
+        "seconds": 0.060791916970629245,
+        "distinct_1": 0.12,
+        "distinct_2": 0.20408163265306123,
+        "distinct_3": 0.25,
+        "repeated_4gram_frac": 0.7021276595744681
+      },
+      "topk": {
+        "text": "review , david finkelstein \" 's the most <unk> of her , \" , for his arrival on a book , criticized the organization of \" a book in the american christian literature ... \" of many scholars . <eos> = = background = = <eos> following his death of",
+        "seconds": 0.0828060419880785,
+        "distinct_1": 0.64,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

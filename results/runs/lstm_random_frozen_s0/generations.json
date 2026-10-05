@@ -1,0 +1,112 @@
+{
+  "run_name": "lstm_random_frozen_s0",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". the <unk> of the <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>",
+        "seconds": 0.07353900000452995,
+        "distinct_1": 0.08,
+        "distinct_2": 0.10204081632653061,
+        "distinct_3": 0.125,
+        "repeated_4gram_frac": 0.8723404255319149
+      },
+      "topk": {
+        "text": "have been observed and the <unk> . <unk> between the song 's actions had been developed by the <unk> with <unk> and the other <unk> \u2014 of the <unk> , who had little more for local . however , in december 2010 , ulysses said that the company of the",
+        "seconds": 0.08051987498765811,
+        "distinct_1": 0.64,
+        "distinct_2": 0.9183673469387755,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ". the <unk> of the <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>",
+        "seconds": 0.06079050002153963,
+        "distinct_1": 0.08,
+        "distinct_2": 0.10204081632653061,
+        "distinct_3": 0.125,
+        "repeated_4gram_frac": 0.8723404255319149
+      },
+      "topk": {
+        "text": ", and a similar area of the same <unk> @-@ century , and the <unk> <unk> @-@ <unk> @-@ <unk> @-@ <unk> @-@ <unk> @-@ . <unk> <unk> , <unk> <unk> and <unk> <unk> by the <unk> <unk> <unk> , <unk> ( <unk> <unk> ) <unk> ( \" <unk> \"",
+        "seconds": 0.08089058304904029,
+        "distinct_1": 0.32,
+        "distinct_2": 0.6122448979591837,
+        "distinct_3": 0.8125,
+        "repeated_4gram_frac": 0.1276595744680851
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "the <unk> . <eos> = = = = <unk> = = = = <eos> the first @-@ year @-@ century was the first of the first time in the united states , and the first time of the united states was the first time of the united states . the",
+        "seconds": 0.060694208019413054,
+        "distinct_1": 0.34,
+        "distinct_2": 0.6122448979591837,
+        "distinct_3": 0.7708333333333334,
+        "repeated_4gram_frac": 0.10638297872340426
+      },
+      "topk": {
+        "text": "a variety of the people and the jin that the 130th of the state was only a small period of their parents of the song . despite the second phase , they lived a short at their <unk> <unk> , a new <unk> and the <unk> . <eos> = =",
+        "seconds": 0.0796559170121327,
+        "distinct_1": 0.6,
+        "distinct_2": 0.9387755102040817,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "<unk> of the <unk> . <eos> = = = = <unk> = = = = <eos> the first @-@ language war of the song was the first time of the first season , and the first time in the united states . the first year was the first time in",
+        "seconds": 0.061475499998778105,
+        "distinct_1": 0.4,
+        "distinct_2": 0.673469387755102,
+        "distinct_3": 0.8541666666666666,
+        "repeated_4gram_frac": 0.06382978723404255
+      },
+      "topk": {
+        "text": "world as a <unk> . the game 's largest , was the first and most successful television , with a \" <unk> race \" and the <unk> . <eos> = = = = in the same : = = = = <eos> = = = = <unk> = = =",
+        "seconds": 0.07842570799402893,
+        "distinct_1": 0.48,
+        "distinct_2": 0.7551020408163265,
+        "distinct_3": 0.8541666666666666,
+        "repeated_4gram_frac": 0.06382978723404255
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "of the <unk> , the <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>",
+        "seconds": 0.0632517920457758,
+        "distinct_1": 0.08,
+        "distinct_2": 0.10204081632653061,
+        "distinct_3": 0.125,
+        "repeated_4gram_frac": 0.8723404255319149
+      },
+      "topk": {
+        "text": "level , it is a large @-@ level <unk> , which was used to be an unusual that they have be collected . it was also described as a \" <unk> \" system system in the 1950s ; the song is an extensive at the <unk> church in the same",
+        "seconds": 0.08187329099746421,
+        "distinct_1": 0.68,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

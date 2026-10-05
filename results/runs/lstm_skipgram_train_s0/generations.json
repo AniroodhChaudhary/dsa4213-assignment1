@@ -1,0 +1,112 @@
+{
+  "run_name": "lstm_skipgram_train_s0",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the first year of the war , the first time of the war , was the first time of the war . <eos> = = = <unk> = = = <eos> the first day of the war ,",
+        "seconds": 0.07383645797381178,
+        "distinct_1": 0.26,
+        "distinct_2": 0.42857142857142855,
+        "distinct_3": 0.5625,
+        "repeated_4gram_frac": 0.3191489361702128
+      },
+      "topk": {
+        "text": "such as he was a <unk> . the subsequent year of the 19th century . \" one of the greatest <unk> \" ( as the eighth world war <unk> , also was based at the expense of men , in both the portuguese era ) , and the <unk> .",
+        "seconds": 0.08364295796491206,
+        "distinct_1": 0.64,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the first time of the war was the first time of the war . <eos> = = = <unk> = = = <eos> the first day of the war was the first time of the war . the",
+        "seconds": 0.06012458400800824,
+        "distinct_1": 0.22,
+        "distinct_2": 0.3673469387755102,
+        "distinct_3": 0.4583333333333333,
+        "repeated_4gram_frac": 0.44680851063829785
+      },
+      "topk": {
+        "text": ", and the modern sea of the southern <unk> in the united states . <eos> the kakapo 's range in south africa is part of a new season . <eos> in april 2009 , a female family was made on the newly published <unk> in <unk> ( portuguese ) and",
+        "seconds": 0.08449774998007342,
+        "distinct_1": 0.7,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "a <unk> . <eos> = = = <unk> = = = <eos> the first time of the war was the first time of the war . <eos> = = = <unk> = = = <eos> the first day of the war , the 766th was the first time of the",
+        "seconds": 0.061256749962922186,
+        "distinct_1": 0.28,
+        "distinct_2": 0.46938775510204084,
+        "distinct_3": 0.5833333333333334,
+        "repeated_4gram_frac": 0.3191489361702128
+      },
+      "topk": {
+        "text": "a car . <eos> = = = post @-@ war tour = = = <eos> \" he had seen a special experience that was to be interested in the audience . this makes it been an ideal <unk> , and it is <unk> \" . <eos> = = music =",
+        "seconds": 0.08218933403259143,
+        "distinct_1": 0.68,
+        "distinct_2": 0.8775510204081632,
+        "distinct_3": 0.9375,
+        "repeated_4gram_frac": 0.02127659574468085
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "<unk> <unk> <unk> <unk> ( <unk> ) . <eos> = = = <unk> = = = <eos> the first time of the united states , the united states , was the first time of the united states . the first time was the first time of the war . <eos>",
+        "seconds": 0.06141862500226125,
+        "distinct_1": 0.3,
+        "distinct_2": 0.5510204081632653,
+        "distinct_3": 0.7083333333333334,
+        "repeated_4gram_frac": 0.1702127659574468
+      },
+      "topk": {
+        "text": "line to the <unk> . the two other groups . the <unk> <unk> <unk> for the past <unk> of the <unk> <unk> al @-@ <unk> <unk> <unk> the <unk> the the <unk> . <eos> in a week on 7 august , the congo 's <unk> of <unk> , the <unk>",
+        "seconds": 0.08535825001308694,
+        "distinct_1": 0.46,
+        "distinct_2": 0.7142857142857143,
+        "distinct_3": 0.9375,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american <unk> , the <unk> of the <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk>",
+        "seconds": 0.061386333021800965,
+        "distinct_1": 0.1,
+        "distinct_2": 0.14285714285714285,
+        "distinct_3": 0.1875,
+        "repeated_4gram_frac": 0.8085106382978723
+      },
+      "topk": {
+        "text": "edition , he has his father and her own name for the end of the world war i and his life until the month , at a day . the family will fly towards the school : she was a strong school at his age <unk> by their wife .",
+        "seconds": 0.08210416696965694,
+        "distinct_1": 0.76,
+        "distinct_2": 1.0,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

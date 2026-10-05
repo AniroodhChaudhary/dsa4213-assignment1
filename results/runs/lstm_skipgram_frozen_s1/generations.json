@@ -1,0 +1,112 @@
+{
+  "run_name": "lstm_skipgram_frozen_s1",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = <eos> the first season of the year , the first time of",
+        "seconds": 0.07260587502969429,
+        "distinct_1": 0.2,
+        "distinct_2": 0.2857142857142857,
+        "distinct_3": 0.3125,
+        "repeated_4gram_frac": 0.6808510638297872
+      },
+      "topk": {
+        "text": "against the conflict . <eos> the song was nominated to the british institute by the national institute of the uk , which also included the portuguese @-@ population <unk> , which was published at the nation . most of the largest city had grown through the united states , and",
+        "seconds": 0.08242641697870567,
+        "distinct_1": 0.7,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ". <eos> = = = = = = = = = = = = = = = = = = = = = = = = = = = <eos> the first year of the united states , the united states of the united states , the united states ,",
+        "seconds": 0.0610719999531284,
+        "distinct_1": 0.2,
+        "distinct_2": 0.2857142857142857,
+        "distinct_3": 0.3333333333333333,
+        "repeated_4gram_frac": 0.6170212765957447
+      },
+      "topk": {
+        "text": ", and in late 1918 , the french <unk> were used to be in the first few days of the battle . the next day he was in the first time to the first five days and was on 3 may 1931 . <eos> = = background = = <eos>",
+        "seconds": 0.08427849999861792,
+        "distinct_1": 0.62,
+        "distinct_2": 0.9183673469387755,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "the <unk> of the <unk> . <eos> = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = <eos> the first episode of the series of the",
+        "seconds": 0.06114674999844283,
+        "distinct_1": 0.18,
+        "distinct_2": 0.2857142857142857,
+        "distinct_3": 0.3541666666666667,
+        "repeated_4gram_frac": 0.6382978723404256
+      },
+      "topk": {
+        "text": "a degree of the great life . he said \" [ and ] a more sense of his parents \" ( then not to be the sole of the person 's hand ' will also be seen <unk> the ) of the <unk> and in the final <unk> of the",
+        "seconds": 0.08249233401147649,
+        "distinct_1": 0.68,
+        "distinct_2": 0.9387755102040817,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "<unk> of the <unk> . <eos> = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = <eos> the <unk> of the united states , the united states ,",
+        "seconds": 0.060605166014283895,
+        "distinct_1": 0.18,
+        "distinct_2": 0.2653061224489796,
+        "distinct_3": 0.3333333333333333,
+        "repeated_4gram_frac": 0.6170212765957447
+      },
+      "topk": {
+        "text": "east side of <unk> . the south street then <unk> in the city , which had previously a great area , the boundary to the north . <eos> the national pacific force for the new york state post was to a <unk> that it was not <unk> to the north",
+        "seconds": 0.0831299580167979,
+        "distinct_1": 0.68,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american american american union , the <unk> of the <unk> <unk> <unk> <unk> ( <unk> ) , <unk> <unk> ( <unk> ) , <unk> <unk> ( <unk> <unk> ) , <unk> <unk> ( <unk> <unk> ) , <unk> <unk> ( <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>",
+        "seconds": 0.06088904099306092,
+        "distinct_1": 0.16,
+        "distinct_2": 0.2653061224489796,
+        "distinct_3": 0.375,
+        "repeated_4gram_frac": 0.5531914893617021
+      },
+      "topk": {
+        "text": "african <unk> to the south and north east , the eastern city was first named in order to prevent a new strategy . he was also considered a major role in a palestinian revolutionary in the republic republic , and that the portuguese movement as <unk> ( \" the first",
+        "seconds": 0.08380770799703896,
+        "distinct_1": 0.7,
+        "distinct_2": 1.0,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

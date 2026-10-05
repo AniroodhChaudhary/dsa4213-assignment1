@@ -1,0 +1,49 @@
+{
+  "seed": 1,
+  "device": "auto",
+  "data_dir": "data/processed",
+  "results_dir": "results",
+  "checkpoint_dir": "checkpoints",
+  "emb_dim": 300,
+  "dropout": 0.3,
+  "batch_size": 32,
+  "bptt": 128,
+  "max_epochs": 12,
+  "lr": 0.001,
+  "betas": [
+    0.9,
+    0.98
+  ],
+  "warmup_steps": 200,
+  "plateau_factor": 0.5,
+  "plateau_patience": 1,
+  "early_stop_patience": 3,
+  "grad_clip": 1.0,
+  "eval": {
+    "eval_chunk": 512,
+    "transformer_context": 128,
+    "transformer_stride": 32
+  },
+  "generation": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "agnews": {
+    "max_len": 96,
+    "n_train": 20000,
+    "n_val": 2000
+  },
+  "model": {
+    "type": "lstm",
+    "hidden": 300,
+    "n_layers": 2
+  },
+  "embedding": {
+    "source": "random",
+    "freeze": false
+  },
+  "run_name": "lstm_s1"
+}

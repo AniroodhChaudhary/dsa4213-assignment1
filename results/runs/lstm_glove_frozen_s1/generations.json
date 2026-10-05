@@ -1,0 +1,112 @@
+{
+  "run_name": "lstm_glove_frozen_s1",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the first year of the war was the first time in the united states . <eos> = = = = <unk> = = = = <eos> the first year of the war , the first @-@ round of",
+        "seconds": 0.07406700000865385,
+        "distinct_1": 0.34,
+        "distinct_2": 0.5102040816326531,
+        "distinct_3": 0.6041666666666666,
+        "repeated_4gram_frac": 0.3404255319148936
+      },
+      "topk": {
+        "text": "against the border . <unk> the <unk> of war , the general military commander was able to have a successful <unk> that had been <unk> under the government <unk> . one of the initial of those of these and \" high @-@ communist movements were \" . the <unk> of",
+        "seconds": 0.08478220901452005,
+        "distinct_1": 0.66,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the first year of the 19th century , the <unk> of the <unk> <unk> , the <unk> of the <unk> , and the <unk> of the <unk> <unk> <unk> , the <unk> <unk> <unk> , <unk> <unk> ,",
+        "seconds": 0.06077083299169317,
+        "distinct_1": 0.24,
+        "distinct_2": 0.4489795918367347,
+        "distinct_3": 0.625,
+        "repeated_4gram_frac": 0.23404255319148937
+      },
+      "topk": {
+        "text": ", and the rest of the war 's <unk> was a new part of the <unk> \u2013 <unk> for the island and the southern pacific ocean . <eos> = = = early = = = <eos> to the north in the vicinity of the baltimore <unk> area ( the central",
+        "seconds": 0.08616204198915511,
+        "distinct_1": 0.6,
+        "distinct_2": 0.8775510204081632,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "the <unk> of the <unk> . <eos> = = = <unk> = = = <eos> the first year of the war was the first time in the united states . <eos> = = = = <unk> = = = = <eos> the first year of the war was the first",
+        "seconds": 0.06185416702646762,
+        "distinct_1": 0.28,
+        "distinct_2": 0.46938775510204084,
+        "distinct_3": 0.5833333333333334,
+        "repeated_4gram_frac": 0.3617021276595745
+      },
+      "topk": {
+        "text": "as president of the government of <unk> and a <unk> ; the government was an officer to make its support with an agreement of the first democratic . <eos> during the conflict between the soviet union on <unk> <unk> , the british <unk> and the <unk> of <unk> ( <unk>",
+        "seconds": 0.0836935419938527,
+        "distinct_1": 0.62,
+        "distinct_2": 0.9183673469387755,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "<unk> of the <unk> . <eos> = = = = <unk> = = = = <eos> the first season was completed in the united states , and the first half of the first half of the first season . the first season was a second @-@ year @-@ old @-@",
+        "seconds": 0.06356183299794793,
+        "distinct_1": 0.42,
+        "distinct_2": 0.673469387755102,
+        "distinct_3": 0.7916666666666666,
+        "repeated_4gram_frac": 0.10638297872340426
+      },
+      "topk": {
+        "text": "west end of the second century . the next was also a <unk> , which had previously to be given . <eos> baltimore 's main season in the city was created with a 3 \u2013 0 victory at the year . <eos> = = = early <unk> = = =",
+        "seconds": 0.08309612498851493,
+        "distinct_1": 0.72,
+        "distinct_2": 0.9183673469387755,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "american <unk> , the <unk> <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk> ,",
+        "seconds": 0.06213150004623458,
+        "distinct_1": 0.08,
+        "distinct_2": 0.12244897959183673,
+        "distinct_3": 0.16666666666666666,
+        "repeated_4gram_frac": 0.8297872340425532
+      },
+      "topk": {
+        "text": "african <unk> in september 2007 , the group in the uk , was an official for american culture in september . though the latter of the school was first used to take place place in the 1920s by the new york state council that was <unk> by a british president",
+        "seconds": 0.08415054198121652,
+        "distinct_1": 0.7,
+        "distinct_2": 0.9591836734693877,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "run_name": "lstm_skipgram_frozen_s0",
+  "device": "mps",
+  "hardware": {
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "torch": "2.14.0",
+    "mps_available": true,
+    "cuda_available": false,
+    "cpu": "Apple M4",
+    "memory_gb": 16.0,
+    "macos": "15.7.9"
+  },
+  "size": {
+    "total": 18821513,
+    "trainable": 18821513,
+    "embedding": 8673900,
+    "output": 8702813,
+    "core": 1444800,
+    "checkpoint_bytes": 75292242
+  },
+  "score_test": {
+    "tokens": 244102,
+    "seconds": 9.324087665998377,
+    "tokens_per_second": 26179.71953332796
+  },
+  "generate": {
+    "prompts": 5,
+    "new_tokens_per_prompt": 50,
+    "decoding": "top-k 40, T=1.0",
+    "seconds": 0.40836116601713,
+    "ms_per_token": 1.63344466406852,
+    "tokens_per_second": 612.2031691659754
+  }
+}
