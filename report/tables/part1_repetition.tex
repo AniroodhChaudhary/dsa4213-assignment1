@@ -1,0 +1,16 @@
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Model & Decoding & distinct-1 & distinct-2 & distinct-3 & repeated 4-grams \\
+\midrule
+KN 5-gram & greedy & 0.24 & 0.36 & 0.39 & 0.58 \\
+KN 5-gram & topk & 0.71 & 0.98 & 1.00 & 0.00 \\
+RNN & greedy & 0.13 & 0.20 & 0.23 & 0.74 \\
+RNN & topk & 0.64 & 0.91 & 0.97 & 0.01 \\
+LSTM & greedy & 0.30 & 0.50 & 0.65 & 0.25 \\
+LSTM & topk & 0.66 & 0.95 & 1.00 & 0.00 \\
+Transformer (4L) & greedy & 0.30 & 0.48 & 0.61 & 0.31 \\
+Transformer (4L) & topk & 0.63 & 0.94 & 0.99 & 0.00 \\
+Transformer (1L, control) & greedy & 0.20 & 0.31 & 0.38 & 0.57 \\
+Transformer (1L, control) & topk & 0.63 & 0.87 & 0.93 & 0.03 \\
+\bottomrule
+\end{tabular}

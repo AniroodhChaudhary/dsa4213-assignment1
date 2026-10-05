@@ -1,0 +1,22 @@
+\begin{tabular}{@{}ll@{}}
+\toprule
+Setting & Value \\
+\midrule
+Embedding dim / Transformer $d_\mathrm{model}$ & 300 \\
+RNN / LSTM & 2 layers, hidden 300, tanh / LSTM cells \\
+Transformer & 4 layers (control: 1), 6 heads, FFN 1200, pre-LN, GELU, learned positions, context 128 \\
+Dropout & 0.3 after embedding, between layers, before output \\
+Batch $\times$ BPTT & 32 $\times$ 128 tokens (continuous stream, state detached between chunks) \\
+Optimiser & Adam, lr 0.001, $\beta$=(0.9, 0.98), 200-step linear warm-up \\
+Schedule & halve lr after 1 epoch(s) without val.\ improvement; early stop after 3; max 12 epochs \\
+Gradient clipping & global norm 1.0 \\
+Output layer & untied (frozen input tables would otherwise freeze the softmax) \\
+Validation / test protocol & recurrent: full history, batch 1; Transformer: sliding window 128 / stride 32 \\
+Decoding & greedy and top-$k$=40, $T$=1.0, 50 new tokens, seed 1234+prompt index \\
+$n$-gram & interpolated Kneser--Ney, orders 2--5 fitted, order chosen on validation, $D_n = n_1/(n_1+2n_2)$ \\
+Skip-gram & gensim, sg=1, window 5, 10 negatives, subsampling $10^{-4}$, 10 epochs, min\_count 1, 1 worker \\
+GloVe & 6B tokens, 300d, uncased; missing rows $\mathcal{N}(0, \sigma_d)$ from the found rows \\
+Part III classifier & scikit-learn multinomial logistic regression (lbfgs), standardised features, $C\in\{0.01,0.1,1,10\}$ on validation \\
+Seeds & 0 everywhere; Part II required settings also seed 1 \\
+\bottomrule
+\end{tabular}

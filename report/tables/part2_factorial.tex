@@ -1,0 +1,12 @@
+\begin{tabular}{@{}llrrrrrrrr@{}}
+\toprule
+Embedding source & Trainable & Cov.\ (\%) & Emb.\ cost & Test PPL & Val ep.\ 3 & Val ep.\ 6 & $\|g\|$ mean & Clipped & Row norm \\
+\midrule
+random & yes & 100.0 & -- & 134.0 $\pm$ 0.3 & 237.3 & 184.9 & 0.27 & 0.3\% & 1.46 \\
+random & no & 100.0 & -- & 198.0 & 358.1 & 274.2 & 0.32 & 0.4\% & 1.00 \\
+skip-gram & yes & 100.0 & 1.9 min & 119.0 & 200.8 & 155.9 & 0.27 & 0.3\% & 2.71 \\
+skip-gram & no & 100.0 & 1.9 min & 127.9 $\pm$ 0.5 & 228.6 & 170.4 & 0.29 & 0.3\% & 2.37 \\
+GloVe & yes & 96.2 & public & 116.5 & 190.1 & 147.7 & 0.27 & 0.3\% & 6.57 \\
+GloVe & no & 96.2 & public & 123.8 $\pm$ 0.4 & 205.7 & 156.0 & 0.28 & 0.3\% & 6.47 \\
+\bottomrule
+\end{tabular}
