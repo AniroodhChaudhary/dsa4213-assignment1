@@ -1,0 +1,39 @@
+# Shared settings for every run. Run configs override these (see load_config).
+seed: 0
+device: auto              # auto -> mps if available, else cuda, else cpu
+data_dir: data/processed
+results_dir: results
+checkpoint_dir: checkpoints
+
+# model width shared by all neural LMs so Part I models can be reused in Part II
+emb_dim: 300
+dropout: 0.3
+
+# training recipe shared by all neural LMs
+batch_size: 32
+bptt: 128
+max_epochs: 12
+lr: 0.001
+betas: [0.9, 0.98]
+warmup_steps: 200
+plateau_factor: 0.5
+plateau_patience: 1
+early_stop_patience: 3
+grad_clip: 1.0
+
+eval:
+  eval_chunk: 512          # tokens per forward pass when scoring with a carried state
+  transformer_context: 128 # sliding-window context for the Transformer
+  transformer_stride: 32   # tokens scored per window (the last `stride` positions)
+
+generation:
+  prompts_file: results/data/prompts.json
+  max_new_tokens: 50
+  top_k: 40
+  temperature: 1.0
+  gen_seed: 1234
+
+agnews:
+  max_len: 96
+  n_train: 20000
+  n_val: 2000

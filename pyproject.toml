@@ -1,0 +1,25 @@
+[project]
+name = "dsa4213-a1"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "datasets>=5.0.1",
+    "gensim>=4.4.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "pandas>=3.0.6",
+    "pyyaml>=6.0.3",
+    "sacremoses>=0.2.0",
+    "scikit-learn>=1.9.1",
+    "torch>=2.14.0",
+    "tqdm>=4.70.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
