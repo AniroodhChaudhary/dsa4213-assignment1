@@ -1,0 +1,12 @@
+lstm_rand_last: {'kind': 'lm', 'run': 'lstm_s0', 'pooling': 'last', 'dim': 300, 'seconds': 5.708067166968249}
+lstm_rand_mean: {'kind': 'lm', 'run': 'lstm_s0', 'pooling': 'mean', 'dim': 300, 'seconds': 5.109988707990851}
+transformer_rand_mean: {'kind': 'lm', 'run': 'transformer_s0', 'pooling': 'mean', 'dim': 300, 'seconds': 17.04055174998939}
+transformer_rand_last: {'kind': 'lm', 'run': 'transformer_s0', 'pooling': 'last', 'dim': 300, 'seconds': 15.934258083987515}
+rnn_rand_mean: {'kind': 'lm', 'run': 'rnn_s0', 'pooling': 'mean', 'dim': 300, 'seconds': 4.802224166051019}
+transformer1l_rand_mean: {'kind': 'lm', 'run': 'transformer_1layer_s0', 'pooling': 'mean', 'dim': 300, 'seconds': 4.63328587502474}
+lstm_skipgram_frozen_mean: {'kind': 'lm', 'run': 'lstm_skipgram_frozen_s0', 'pooling': 'mean', 'dim': 300, 'seconds': 5.202588584041223}
+lstm_glove_frozen_mean: {'kind': 'lm', 'run': 'lstm_glove_frozen_s0', 'pooling': 'mean', 'dim': 300, 'seconds': 5.235511333972681}
+emb_rand_learned_mean: {'kind': 'embedding_only', 'source': 'input embedding of lstm_s0', 'pooling': 'mean', 'dim': 300, 'seconds': 0.37031750002643093}
+emb_skipgram_mean: {'kind': 'embedding_only', 'source': 'data/embeddings/skipgram300.npy', 'pooling': 'mean', 'dim': 300, 'seconds': 0.23387529200408608}
+emb_glove_mean: {'kind': 'embedding_only', 'source': 'data/embeddings/glove300.npy', 'pooling': 'mean', 'dim': 300, 'seconds': 0.2176770000369288}
+tfidf: {'kind': 'tfidf', 'dim': 98555, 'sparse': True, 'seconds': 4.819421416963451}
