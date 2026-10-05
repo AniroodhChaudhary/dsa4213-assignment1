@@ -1,0 +1,10 @@
+# Part I: pre-LN Transformer with causal self-attention, random trainable embeddings
+model:
+  type: transformer
+  n_layers: 4
+  n_heads: 6
+  ff_dim: 1200
+  max_len: 128
+embedding:
+  source: random
+  freeze: false

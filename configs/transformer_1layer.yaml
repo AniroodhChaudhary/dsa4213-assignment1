@@ -1,0 +1,5 @@
+# Part I control: 1-layer Transformer whose core parameter count (~1.1M) is close
+# to the 2-layer LSTM's (~1.44M), isolating "parameter count" from "architecture".
+_base: transformer.yaml
+model:
+  n_layers: 1

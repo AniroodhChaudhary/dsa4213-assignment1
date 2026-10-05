@@ -1,0 +1,2 @@
+# Part I: interpolated Kneser-Ney; the order is selected on validation perplexity
+orders: [2, 3, 4, 5]
