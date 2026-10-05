@@ -4,6 +4,7 @@
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{siunitx}
@@ -104,7 +105,7 @@ that repeat an earlier 4-gram of the same continuation.
 \newcommand{\figifexists}[2]{\IfFileExists{figures/#1}{\includegraphics[#2]{#1}}{\fbox{\textit{figure \texttt{\detokenize{#1}} pending}}}}
 
 \section{Part I: four language models on one corpus}
-\begin{table}[t]\centering\small
+\begin{table}[t]\centering\footnotesize
 \inputifexists{tables/part1_quality.tex}
 \caption{Part I prediction quality on the common \nTestTargets{} test targets. ``ctx$\le$128'' resets the
 state every 128 tokens for every model; the epoch-3 and 8-minute columns compare the models at a
@@ -187,7 +188,7 @@ effect (no fused batch-1 kernel), not an architectural one, and the greedy loops
 recent context rather than with decoding, since sampling removes them.
 
 \section{Part II: input-embedding ablation on the LSTM}
-\begin{table}[t]\centering\small
+\begin{table}[t]\centering\footnotesize
 \inputifexists{tables/part2_factorial.tex}
 \caption{Part II: the LSTM of Part I with six input-embedding settings (rows 1, 4 and 6 are the required
 comparison; test PPL $\pm$ half the range over seeds 0 and 1 where two seeds were run). Cov.: vocabulary
@@ -272,7 +273,7 @@ rare-word advantage in Part~I), so any procedure that gives every row a usable v
 starts is worth more than the freedom to adjust the rows during it.
 
 \section{Part III: representations for topic classification}
-\begin{table}[t]\centering\small
+\begin{table}[t]\centering\footnotesize
 \inputifexists{tables/part3_main.tex}
 \caption{AG News test accuracy and macro-F1 (\%) of one multinomial logistic regression on each frozen
 representation, for 20,000, 2,000 and 500 labelled examples ($C$ chosen on 2,000 validation documents).}
@@ -362,7 +363,9 @@ analysis is the author's own (see \texttt{AI\_USAGE.md}).
 \clearpage
 \appendix
 \section{All generated continuations}
+{\raggedright\sloppy
 \inputifexists{tables/appendix_generations.tex}
+}
 \begin{table}[h]\centering\small\inputifexists{tables/part1_repetition.tex}
 \caption{Repetition statistics averaged over the five prompts.}\end{table}
 \section{Embedding nearest neighbours}

@@ -230,7 +230,7 @@ def part1(numbers: dict):
     numbers["deltaTransformerVsLSTM"] = _d("transformer_s0", "lstm_s0", "test_ppl")
     # quality table
     L = [r"\begin{tabular}{@{}lrrrrrr@{}}", r"\toprule",
-         r"Model & Test PPL & Test PPL, ctx$\le$128 & Val PPL, ep.\ 3 & Val PPL, 8\,min & Val PPL, ep.\ 12 & Test PPL, 24 ep. \\",
+         r"Model & Test PPL & Test, ctx$\le$128 & Val, ep.\ 3 & Val, 8\,min & Val, ep.\ 12 & Test, 24 ep. \\",
          r"\midrule"]
     for r in rows:
         L.append(f"{r['model']} & {fmt(r['test_ppl'])} & {fmt(r['test_ppl_blocks'])} & "
@@ -315,7 +315,7 @@ def part1(numbers: dict):
         gens = {n: runs[n]["generations"]["generations"] for n, _ in with_gen}
         prompts = gens[with_gen[0][0]]
         pi = 0
-        L = [r"\begin{tabular}{@{}p{2.3cm}p{10.6cm}rr@{}}", r"\toprule",
+        L = [r"\begin{tabular}{@{}p{2.3cm}>{\raggedright\arraybackslash}p{10.4cm}rr@{}}", r"\toprule",
              r"Model & Continuation (top-$k$=40, $T$=1, 50 tokens; first 24 shown) & distinct-2 & rep.\ 4-gram \\",
              r"\midrule", rf"\multicolumn{{4}}{{@{{}}l}}{{\textit{{Prompt:}} \texttt{{{tex(prompts[pi]['prompt'])}}}}} \\", r"\midrule"]
         for n, lab in with_gen:
@@ -639,7 +639,7 @@ def part3(numbers: dict) -> dict:
     numbers["confusionRep"] = tex(best_lm["representation"])
     numbers["unkRateCorrect"] = fmt(100 * bl["unk_rate_correct"], 1)
     numbers["unkRateWrong"] = fmt(100 * bl["unk_rate_wrong"], 1)
-    L = [r"\begin{tabular}{@{}llrp{5.6cm}@{}}", r"\toprule", r"True & Pred. & Conf. & Text (truncated) \\", r"\midrule"]
+    L = [r"\begin{tabular}{@{}llr>{\raggedright\arraybackslash}p{5.6cm}@{}}", r"\toprule", r"True & Pred. & Conf. & Text (truncated) \\", r"\midrule"]
     for e in bl["errors_top20"][:4]:
         L.append(f"{e['true']} & {e['pred']} & {e['confidence']:.2f} & {tex(e['text'].replace(chr(92), '')[:95])} \\\\")
     L += [r"\bottomrule", r"\end{tabular}"]
@@ -650,7 +650,7 @@ def part3(numbers: dict) -> dict:
 # ------------------------------------------------------------- appendix etc
 def hyperparams():
     common = load_config(ROOT / "configs" / "common.yaml")
-    L = [r"\begin{tabular}{@{}ll@{}}", r"\toprule", r"Setting & Value \\", r"\midrule"]
+    L = [r"\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{11.3cm}@{}}", r"\toprule", r"Setting & Value \\", r"\midrule"]
     items = [
         ("Embedding dim / Transformer $d_\\mathrm{model}$", common["emb_dim"]),
         ("RNN / LSTM", "2 layers, hidden 300, tanh / LSTM cells"),
