@@ -1,0 +1,28 @@
+{
+  "run_name": "transformer_e24_s0",
+  "device": "mps",
+  "hardware": {
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "torch": "2.14.0",
+    "mps_available": true,
+    "cuda_available": false,
+    "cpu": "Apple M4",
+    "memory_gb": 16.0,
+    "macos": "15.7.9"
+  },
+  "size": {
+    "total": 21751313,
+    "trainable": 21751313,
+    "embedding": 8673900,
+    "output": 8702813,
+    "core": 4374600,
+    "checkpoint_bytes": 87025365
+  },
+  "score_test": {
+    "tokens": 244102,
+    "seconds": 18.033434999999372,
+    "tokens_per_second": 13536.078955562736
+  }
+}

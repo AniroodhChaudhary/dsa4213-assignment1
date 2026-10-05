@@ -1,0 +1,28 @@
+{
+  "run_name": "lstm_e24_s0",
+  "device": "mps",
+  "hardware": {
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "torch": "2.14.0",
+    "mps_available": true,
+    "cuda_available": false,
+    "cpu": "Apple M4",
+    "memory_gb": 16.0,
+    "macos": "15.7.9"
+  },
+  "size": {
+    "total": 18821513,
+    "trainable": 18821513,
+    "embedding": 8673900,
+    "output": 8702813,
+    "core": 1444800,
+    "checkpoint_bytes": 75291782
+  },
+  "score_test": {
+    "tokens": 244102,
+    "seconds": 9.20953904199996,
+    "tokens_per_second": 26505.34395769176
+  }
+}

@@ -1,0 +1,3 @@
+[lstm_e24_s0] default: ppl 124.58 (9.2s)
+[lstm_e24_s0] blocks128: ppl 141.00 (3.6s)
+[lstm_e24_s0] score 26505 tok/s; 

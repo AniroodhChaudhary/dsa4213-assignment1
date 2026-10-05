@@ -58,6 +58,11 @@ Part I, test perplexity on the same 244,102 WikiText-2 targets (12-epoch budget,
 | Transformer, 4 layers | 140.9 | **146.4** | 21.8 M (4.37 M) | 29.8 |
 | Transformer, 1 layer (control) | 171.4 | 174.7 | 18.5 M (1.12 M) | 22.0 |
 
+Convergence check (same configs, 24-epoch cap): the LSTM early-stops with best validation at epoch 18
+(test PPL 124.6, context-reset 141.0); the Transformer is still improving at epoch 24 (test PPL 132.3,
+context-reset 137.3). The full-history ranking (LSTM < Transformer) and the context-reset ranking
+(Transformer < LSTM) both survive the doubled budget.
+
 Part II, the LSTM with six input-embedding settings (test PPL; ± half the range over seeds 0 and 1):
 
 | Source \ trainability | frozen | trainable |

@@ -170,20 +170,20 @@ within a few tokens.
 \emph{Context length, not architecture, explains LSTM $>$ Transformer.} The reversal under the
 context-reset protocol is direct evidence: at $\le$128 tokens the Transformer is the better predictor,
 and the LSTM's overall lead comes from information carried beyond 128 tokens (WikiText articles are
-thousands of tokens long). A Transformer with a longer window would plausibly close the gap; this was
-not tested. \emph{Parameter count does not explain the ranking.} The 1-layer Transformer has about the
+thousands of tokens long). \emph{Parameter count does not explain the ranking.} The 1-layer Transformer has about the
 LSTM's core size (\coreMTransformerOne{}M vs.\ \coreMLSTM{}M) and is \deltaOneLayerVsLSTM{} points
 worse, while the 4-layer model has 3$\times$ the LSTM's core and is still worse with full history; depth
 matters for the Transformer, but more parameters did not buy a better model at this budget.
 \emph{Training budget conditions every conclusion.} Nothing converged in 12 epochs and the ranking at
-epoch~3 (RNN first) differs from that at epoch~12, so the ordering could still change; the last column
-of Table~\ref{tab:p1q} reports a 24-epoch run of the LSTM and Transformer as a check
-(\pplLongLSTM{} vs.\ \pplLongTransformer{} test PPL). \emph{The $n$-gram's edge on rare words} is
+epoch~3 (RNN first) differs from that at epoch~12, so we re-ran the LSTM and Transformer for 24
+epochs (last column of Table~\ref{tab:p1q}, dashed in Fig.~\ref{fig:p1curves}): the LSTM early-stopped
+with its best validation at epoch \bestEpochLongLSTM{} (test PPL \pplLongLSTM), the Transformer was still
+improving at epoch 24 (\pplLongTransformer), and under context reset the Transformer still leads
+(\pplLongBlocksTransformer{} vs.\ \pplLongBlocksLSTM), so both conclusions survive a doubled budget. \emph{The $n$-gram's edge on rare words} is
 expected from Kneser--Ney's continuation counts, which model how many contexts a rare type appears in,
 whereas an embedding row updated at most ten times has barely moved from its initialisation
-(a hypothesis; Part~II tests it with pre-trained rows). \emph{The RNN's slow scoring} is an
-implementation effect (no fused MPS kernel for batch-1 tanh recurrence), not an architectural one, and
-the greedy loops of the RNN and 1-layer Transformer are consistent with their weaker modelling of the
+(a hypothesis; Part~II tests it with pre-trained rows). \emph{The RNN's slow scoring} is an MPS implementation
+effect (no fused batch-1 kernel), not an architectural one, and the greedy loops of the RNN and 1-layer Transformer are consistent with their weaker modelling of the
 recent context rather than with decoding, since sampling removes them.
 
 \section{Part II: input-embedding ablation on the LSTM}
@@ -231,8 +231,8 @@ three epochs (GloVe-trainable \valEpThreeLSTMGloveTrain{} vs.\ random \valEpThre
 \valEpThreeLSTMRandFrozen), and the frozen skip-gram and GloVe cells pass the random cell's final
 12-epoch perplexity at epochs \epochReachLSTMSkipFrozen{} and \epochReachLSTMGloveFrozen{}; the
 random-frozen cell never does. \emph{Stability.} Mean pre-clip gradient norms
-(\gnMeanLSTMRand--\gnMeanLSTMRandFrozen), the share of clipped steps ($\le$0.4\%) and the
-within-epoch spread of the step loss are indistinguishable across cells; the only stability
+(\gnMeanLSTMRand--\gnMeanLSTMRandFrozen) and the share of clipped steps ($\le$0.4\%) are
+indistinguishable across cells; the only stability
 differences are isolated spikes (a maximum norm of \gnMaxLSTMRandSeedOne{} in one seed of the random cell
 and \gnMaxLSTMRandFrozen{} for the frozen random table, against $\le$\gnMaxLSTMGloveTrain{} elsewhere).
 \emph{Generalisation.} Frozen tables fit the training stream less but generalise relatively better:

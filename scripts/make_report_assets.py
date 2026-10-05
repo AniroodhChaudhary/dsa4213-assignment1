@@ -185,6 +185,12 @@ def part1(numbers: dict):
         numbers[f"ppl{key}"] = fmt(row["test_ppl"], 1)
         numbers[f"pplBlocks{key}"] = fmt(row["test_ppl_blocks"], 1)
         numbers[f"pplLong{key}"] = fmt(row["test_ppl_ep24"], 1)
+        long = load_run(n.replace("_s0", "_e24_s0")) if neural else None
+        if long:
+            numbers[f"pplLongBlocks{key}"] = fmt(test_ppl(long, "blocks128"), 1)
+            numbers[f"bestEpochLong{key}"] = fmt(long["metrics"]["best_epoch"], 0)
+            numbers[f"epochsRunLong{key}"] = fmt(long["metrics"]["epochs_run"], 0)
+            numbers[f"trainMinLong{key}"] = fmt(long["metrics"]["train_seconds_total"] / 60, 0)
         numbers[f"trainMin{key}"] = fmt(row["train_min_to_best"], 1)
         numbers[f"valEpThree{key}"] = fmt(row["val_ppl_ep3"], 1)
         numbers[f"valBudget{key}"] = fmt(row["val_ppl_budget"], 1)
