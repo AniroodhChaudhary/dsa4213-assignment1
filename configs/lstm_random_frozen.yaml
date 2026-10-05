@@ -1,0 +1,5 @@
+# Part II extra: random U(-0.1,0.1) table kept frozen (information-free control)
+_base: lstm.yaml
+embedding:
+  source: random
+  freeze: true

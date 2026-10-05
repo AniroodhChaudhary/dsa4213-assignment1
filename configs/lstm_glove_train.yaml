@@ -1,0 +1,6 @@
+# Part II extra: public GloVe-6B vectors as initialisation, trainable
+_base: lstm.yaml
+embedding:
+  source: glove
+  matrix_path: data/embeddings/glove300.npy
+  freeze: false

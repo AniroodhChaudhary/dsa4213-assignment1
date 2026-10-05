@@ -1,0 +1,6 @@
+# Part II (c): public GloVe-6B 300d vectors, kept frozen
+_base: lstm.yaml
+embedding:
+  source: glove
+  matrix_path: data/embeddings/glove300.npy
+  freeze: true

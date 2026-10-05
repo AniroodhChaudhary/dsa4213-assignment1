@@ -1,0 +1,1 @@
+GloVe: coverage 0.9618 of types, 0.9474 of train tokens; missing 1104 e.g. ['<unk>', '<eos>', '@-@', '@.@', '@,@', "'t", '°', '−']; mean row norm 6.472

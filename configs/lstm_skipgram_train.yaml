@@ -1,0 +1,6 @@
+# Part II extra: own skip-gram vectors as initialisation, trainable
+_base: lstm.yaml
+embedding:
+  source: skipgram
+  matrix_path: data/embeddings/skipgram300.npy
+  freeze: false

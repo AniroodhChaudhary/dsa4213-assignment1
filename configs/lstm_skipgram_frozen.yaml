@@ -1,0 +1,6 @@
+# Part II (b): own skip-gram vectors (trained on WikiText-2 train), kept frozen
+_base: lstm.yaml
+embedding:
+  source: skipgram
+  matrix_path: data/embeddings/skipgram300.npy
+  freeze: true

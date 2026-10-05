@@ -1,0 +1,267 @@
+{
+  "dim": 300,
+  "vocab_size": 28913,
+  "found_types": 28912,
+  "coverage_types": 0.9999654134818248,
+  "coverage_train_tokens": 1.0,
+  "missing_types": 1,
+  "missing_examples_most_frequent": [
+    "<pad>"
+  ],
+  "missing_specials": [
+    "<pad>"
+  ],
+  "init_sigma_mean": 0.10855061560869217,
+  "mean_row_norm_found": 2.367262125015259,
+  "mean_row_norm_missing": 1.9375433921813965,
+  "mean_row_norm_all": 2.3672471046447754,
+  "source": "skip-gram (gensim Word2Vec, sg=1) on WikiText-2 train only",
+  "gensim_version": "4.4.0",
+  "settings": {
+    "vector_size": 300,
+    "sg": 1,
+    "window": 5,
+    "negative": 10,
+    "sample": 0.0001,
+    "epochs": 10,
+    "workers": 1,
+    "min_count": 1,
+    "seed": 0,
+    "n_sentences": 23767,
+    "n_tokens": 2075677
+  },
+  "train_seconds": 114.11207995799487,
+  "hardware": {
+    "platform": "macOS-15.7.9-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.16",
+    "torch": "2.14.0",
+    "mps_available": true,
+    "cuda_available": false,
+    "cpu": "Apple M4",
+    "memory_gb": 16.0,
+    "macos": "15.7.9"
+  },
+  "nearest_neighbours": {
+    "king": [
+      [
+        "veera",
+        0.588
+      ],
+      [
+        "leinster",
+        0.584
+      ],
+      [
+        "ballala",
+        0.583
+      ],
+      [
+        "throne",
+        0.583
+      ],
+      [
+        "vassal",
+        0.582
+      ]
+    ],
+    "city": [
+      [
+        "metropolitan",
+        0.554
+      ],
+      [
+        "borough",
+        0.535
+      ],
+      [
+        "town",
+        0.526
+      ],
+      [
+        "conurbation",
+        0.517
+      ],
+      [
+        "burnside",
+        0.516
+      ]
+    ],
+    "war": [
+      [
+        "outbreak",
+        0.626
+      ],
+      [
+        "airbase",
+        0.611
+      ],
+      [
+        "italo",
+        0.582
+      ],
+      [
+        "civil",
+        0.575
+      ],
+      [
+        "hawaiians",
+        0.571
+      ]
+    ],
+    "album": [
+      [
+        "daydream",
+        0.692
+      ],
+      [
+        "yankovic",
+        0.691
+      ],
+      [
+        "charmbracelet",
+        0.683
+      ],
+      [
+        "rca",
+        0.68
+      ],
+      [
+        "slayer",
+        0.68
+      ]
+    ],
+    "1990": [
+      [
+        "1989",
+        0.733
+      ],
+      [
+        "pr",
+        0.707
+      ],
+      [
+        "oceania",
+        0.697
+      ],
+      [
+        "sap",
+        0.695
+      ],
+      [
+        "pursuant",
+        0.693
+      ]
+    ],
+    "north": [
+      [
+        "south",
+        0.728
+      ],
+      [
+        "west",
+        0.655
+      ],
+      [
+        "east",
+        0.647
+      ],
+      [
+        "southward",
+        0.612
+      ],
+      [
+        "alaska",
+        0.596
+      ]
+    ],
+    "played": [
+      [
+        "playing",
+        0.617
+      ],
+      [
+        "striker",
+        0.562
+      ],
+      [
+        "staged",
+        0.558
+      ],
+      [
+        "matches",
+        0.554
+      ],
+      [
+        "shortstop",
+        0.553
+      ]
+    ],
+    "@-@": [
+      [
+        "93rd",
+        0.505
+      ],
+      [
+        "10m",
+        0.503
+      ],
+      [
+        "amassing",
+        0.495
+      ],
+      [
+        "defamation",
+        0.49
+      ],
+      [
+        "dash",
+        0.49
+      ]
+    ],
+    "<eos>": [
+      [
+        "=",
+        0.636
+      ],
+      [
+        "synopsis",
+        0.517
+      ],
+      [
+        "kosovo",
+        0.511
+      ],
+      [
+        "summary",
+        0.503
+      ],
+      [
+        "certifications",
+        0.502
+      ]
+    ],
+    "<unk>": [
+      [
+        "gerd",
+        0.717
+      ],
+      [
+        "spes",
+        0.71
+      ],
+      [
+        "\u10d3",
+        0.705
+      ],
+      [
+        "mira",
+        0.705
+      ],
+      [
+        "marathi",
+        0.703
+      ]
+    ]
+  }
+}
