@@ -12,4 +12,5 @@ that the grader can see exactly which parts were tool-assisted.
 | Report text | Drafted from the generated tables; the observations-vs-hypotheses structure was set by the author | Edited the interpretation; the conclusions reflect the author's understanding |
 
 No AI tool was used to fabricate or alter any result; every number in the report can
-be regenerated with `run_all.sh`.
+be regenerated with `run_all.sh` (to within about one perplexity point, since MPS training is
+not bit-reproducible).

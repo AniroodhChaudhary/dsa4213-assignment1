@@ -78,7 +78,8 @@ def tex(s) -> str:
     return (s.replace("\\", r"\textbackslash{}").replace("&", r"\&").replace("%", r"\%")
             .replace("$", r"\$").replace("#", r"\#").replace("_", r"\_").replace("{", r"\{")
             .replace("}", r"\}").replace("~", r"\textasciitilde{}").replace("^", r"\^{}")
-            .replace("<", r"\textless{}").replace(">", r"\textgreater{}"))
+            .replace("<", r"\textless{}").replace(">", r"\textgreater{}")
+            .replace("\u2014", r"\textemdash{}").replace("\u2013", r"\textendash{}"))
 
 
 def fmt(x, nd=1, dash="--"):
@@ -177,6 +178,8 @@ def part1(numbers: dict):
             "train_min_total": m["train_seconds_total"] / 60,
             "epoch_s": m.get("epoch_seconds_mean_after_first") if neural else None,
             "score_tok_s": r["timing"]["score_test"]["tokens_per_second"] if r["timing"] else None,
+            "score_blocks_tok_s": ((r["eval"]["protocols"]["blocks128"]["n_targets"] / r["eval"]["protocols"]["blocks128"]["seconds"])
+                                   if r["eval"] and "blocks128" in r["eval"]["protocols"] else None),
             "gen_ms_tok": r["timing"]["generate"]["ms_per_token"] if r["timing"] and "generate" in r["timing"] else None,
         }
         rows.append(row)
@@ -191,14 +194,25 @@ def part1(numbers: dict):
             numbers[f"bestEpochLong{key}"] = fmt(long["metrics"]["best_epoch"], 0)
             numbers[f"epochsRunLong{key}"] = fmt(long["metrics"]["epochs_run"], 0)
             numbers[f"trainMinLong{key}"] = fmt(long["metrics"]["train_seconds_total"] / 60, 0)
+            v12_long, v12 = val_at_epoch(long, 12), val_at_epoch(r, 12)
+            if v12_long and v12:
+                numbers[f"mpsRepeatDiff{key}"] = fmt(abs(v12_long - v12), 2)
         numbers[f"trainMin{key}"] = fmt(row["train_min_to_best"], 1)
         numbers[f"valEpThree{key}"] = fmt(row["val_ppl_ep3"], 1)
         numbers[f"valBudget{key}"] = fmt(row["val_ppl_budget"], 1)
         numbers[f"scoreTokS{key}"] = fmt(row["score_tok_s"], 0)
+        numbers[f"scoreBlocksTokS{key}"] = fmt(row["score_blocks_tok_s"], 0)
+        if neural:
+            numbers[f"epochOneSec{key}"] = fmt(m.get("epoch1_seconds"), 0)
+        else:
+            po = m.get("per_order", {})
+            numbers["ngramSelectSec"] = fmt(sum(v["fit_seconds"] + v["val_score_seconds"] for v in po.values()), 0)
+            numbers["ngramFitSec"] = fmt(po.get(str(m.get("selected_order")), {}).get("fit_seconds"), 1)
         numbers[f"genMs{key}"] = fmt(row["gen_ms_tok"], 1)
         numbers[f"coreM{key}"] = fmt(row["params_core_M"], 2)
         if r["eval"]:
             e = r["eval"]["protocols"]["default"]
+            numbers["fracRare"] = fmt(100 * e["bucket_frac"]["1-10"], 1)
             numbers[f"ceRare{key}"] = fmt(e["bucket_ce"]["1-10"], 2)
             numbers[f"ceMid{key}"] = fmt(e["bucket_ce"]["11-100"], 2)
             numbers[f"ceTop{key}"] = fmt(e["bucket_ce"][">10k"], 2)
@@ -230,7 +244,7 @@ def part1(numbers: dict):
     numbers["deltaTransformerVsLSTM"] = _d("transformer_s0", "lstm_s0", "test_ppl")
     # quality table
     L = [r"\begin{tabular}{@{}lrrrrrr@{}}", r"\toprule",
-         r"Model & Test PPL & Test, ctx$\le$128 & Val, ep.\ 3 & Val, 8\,min & Val, ep.\ 12 & Test, 24 ep. \\",
+         r"Model & Test PPL & Test, ctx$\le$128 & Val, ep.\ 3 & Val, $\le$8\,min & Val, ep.\ 12 (best) & Test, 24 ep. \\",
          r"\midrule"]
     for r in rows:
         L.append(f"{r['model']} & {fmt(r['test_ppl'])} & {fmt(r['test_ppl_blocks'])} & "
@@ -238,20 +252,20 @@ def part1(numbers: dict):
     L += [r"\bottomrule", r"\end{tabular}"]
     write(TAB / "part1_quality.tex", "\n".join(L))
     # cost table
-    L = [r"\begin{tabular}{@{}lrrrrrr@{}}", r"\toprule",
-         r"Model & Params (M) & Core (M) & Size (MB) & Train to best (min) & Score (tok/s) & Generate (ms/tok) \\",
+    L = [r"\begin{tabular}{@{}lrrrrrrr@{}}", r"\toprule",
+         r"Model & Params (M) & Core (M) & Size (MB) & Train (min) & Score, blocks (tok/s) & Score, own (tok/s) & Gen.\ (ms/tok) \\",
          r"\midrule"]
     for r in rows:
         p = fmt(r["params_total_M"], 1) if r["params_total_M"] else f"{fmt(r['n_entries_M'],1)} entries"
         L.append(f"{r['model']} & {p} & {fmt(r['params_core_M'], 2)} & {fmt(r['size_MB'], 0)} & "
-                 f"{fmt(r['train_min_to_best'], 1)} & {fmt(r['score_tok_s'], 0)} & {fmt(r['gen_ms_tok'], 1)} \\\\")
+                 f"{fmt(r['train_min_to_best'], 1)} & {fmt(r['score_blocks_tok_s'], 0)} & {fmt(r['score_tok_s'], 0)} & {fmt(r['gen_ms_tok'], 1)} \\\\")
     L += [r"\bottomrule", r"\end{tabular}"]
     write(TAB / "part1_cost.tex", "\n".join(L))
 
     # learning curves: val PPL vs epoch (train dotted) and vs wall-clock
     neural = [(n, labels[n]) for n, _ in PART1 if n != "ngram" and runs[n]]
     if neural:
-        fig, axes = plt.subplots(1, 2, figsize=(6.4, 2.1))
+        fig, axes = plt.subplots(1, 2, figsize=(6.4, 1.7))
         for n, lab in neural:
             h = history(runs[n])
             col = C["transformer_1l" if "1layer" in n else n.split("_")[0]]
@@ -264,7 +278,7 @@ def part1(numbers: dict):
             if long:
                 hl = history(long)
                 axes[0].plot([r["epoch"] for r in hl], [r["val_ppl"] for r in hl], color=col, lw=0.9, ls="--",
-                             label=f"{lab}, 24-epoch run" if n == "lstm_s0" else None)
+                             label=f"{lab}, 24 epochs")
                 axes[1].plot([r["cum_train_seconds"] / 60 for r in hl], [r["val_ppl"] for r in hl], color=col, lw=0.9, ls="--")
         from matplotlib.ticker import FixedLocator, NullFormatter, ScalarFormatter
         for ax in axes:
@@ -280,7 +294,7 @@ def part1(numbers: dict):
         axes[1].axvline(BUDGET_SECONDS / 60, color=MUTED, lw=0.8, ls="--")
         axes[1].text(BUDGET_SECONDS / 60 + 0.4, 110, "matched\n8-min budget", color=MUTED, fontsize=6, va="bottom")
         handles, labels_ = axes[0].get_legend_handles_labels()
-        fig.legend(handles, labels_, loc="lower center", ncol=5, bbox_to_anchor=(0.5, -0.16), fontsize=6.5)
+        fig.legend(handles, labels_, loc="lower center", ncol=3, bbox_to_anchor=(0.5, -0.24), fontsize=6.5)
         fig.subplots_adjust(wspace=0.22, bottom=0.2)
         fig.savefig(FIG / "part1_curves.pdf")
         plt.close(fig)
@@ -289,7 +303,7 @@ def part1(numbers: dict):
     # cross-entropy by train-frequency bucket
     with_eval = [(n, labels[n]) for n, _ in PART1 if runs[n] and runs[n]["eval"]]
     if with_eval:
-        fig, ax = plt.subplots(figsize=(6.4, 1.9))
+        fig, ax = plt.subplots(figsize=(6.4, 1.5))
         cats = list(BUCKET_NAMES) + ["<eos>", "<unk>"]
         width = 0.8 / len(with_eval)
         for i, (n, lab) in enumerate(with_eval):
@@ -315,13 +329,15 @@ def part1(numbers: dict):
         gens = {n: runs[n]["generations"]["generations"] for n, _ in with_gen}
         prompts = gens[with_gen[0][0]]
         pi = 0
-        L = [r"\begin{tabular}{@{}p{2.3cm}>{\raggedright\arraybackslash}p{10.4cm}rr@{}}", r"\toprule",
-             r"Model & Continuation (top-$k$=40, $T$=1, 50 tokens; first 24 shown) & distinct-2 & rep.\ 4-gram \\",
-             r"\midrule", rf"\multicolumn{{4}}{{@{{}}l}}{{\textit{{Prompt:}} \texttt{{{tex(prompts[pi]['prompt'])}}}}} \\", r"\midrule"]
+        L = [r"\begin{tabular}{@{}p{2.0cm}>{\raggedright\arraybackslash}p{14.6cm}@{}}", r"\toprule",
+             r"Model & Continuation (top-$k$=40, $T$=1, 50 tokens; first 20 shown; repetition statistics in Table~\ref{tab:p1rep}) \\",
+             r"\midrule", rf"\multicolumn{{2}}{{@{{}}l}}{{\textit{{Prompt:}} \texttt{{{tex(prompts[pi]['prompt'])}}}}} \\", r"\midrule"]
         for n, lab in with_gen:
+            if "1layer" in n:
+                continue  # control model: its continuations are in the appendix
             g = gens[n][pi]["topk"]
-            words = g["text"].split()[:24]
-            L.append(f"{lab} & \\texttt{{{tex(' '.join(words))}}} \\ldots & {g['distinct_2']:.2f} & {g['repeated_4gram_frac']:.2f} \\\\")
+            words = g["text"].split()[:20]
+            L.append(f"{lab} & \\texttt{{{tex(' '.join(words))}}} \\ldots \\\\")
         L += [r"\bottomrule", r"\end{tabular}"]
         write(TAB / "part1_generations.tex", "\n".join(L))
         # repetition summary averaged over prompts
@@ -359,7 +375,7 @@ def part2(numbers: dict, part3_f1: dict):
         emb[src] = load_json(p) if p.exists() else None
     if emb["glove"]:
         numbers["gloveCoverageTypes"] = fmt(100 * emb["glove"]["coverage_types"], 1)
-        numbers["gloveCoverageTokens"] = fmt(100 * emb["glove"]["coverage_train_tokens"], 2)
+        numbers["gloveCoverageTokens"] = fmt(100 * emb["glove"]["coverage_train_tokens"], 1)
         numbers["gloveMissing"] = fmt(emb["glove"]["missing_types"], 0)
     if emb["skipgram"]:
         numbers["skipgramMinutes"] = fmt(emb["skipgram"]["train_seconds"] / 60, 1)
@@ -412,6 +428,8 @@ def part2(numbers: dict, part3_f1: dict):
         numbers[f"gnMax{key}"] = fmt(max(x["grad_norm_max"] for x in h0), 1)
         numbers[f"gnMean{key}"] = fmt(row["grad_norm_mean"], 2)
         if 1 in seeds:
+            if row["test_ppl_s0"] and row["test_ppl_s1"]:
+                numbers[f"pplSeedDiff{key}"] = fmt(abs(row["test_ppl_s0"] - row["test_ppl_s1"]), 1)
             h1 = history(seeds[1])
             numbers[f"gnMax{key}SeedOne"] = fmt(max(x["grad_norm_max"] for x in h1), 1)
             numbers[f"valEpTwelve{key}SeedOne"] = fmt(h1[-1]["val_ppl"], 1)
@@ -420,10 +438,18 @@ def part2(numbers: dict, part3_f1: dict):
         if base_run and base_run["eval"] and r0["eval"]:
             bb = base_run["eval"]["protocols"]["default"]["bucket_ce"]
             cb = r0["eval"]["protocols"]["default"]["bucket_ce"]
-            numbers[f"gainRare{key}"] = fmt(bb["1-10"] - cb["1-10"], 2)
-            numbers[f"gainMid{key}"] = fmt(bb["11-100"] - cb["11-100"], 2)
-            top = round(bb[">10k"] - cb[">10k"], 2) + 0.0
-            numbers[f"gainTop{key}"] = f"{top:+.2f}" if abs(top) >= 0.005 else "0.00"
+            def _sd(x):
+                x = round(x, 2) + 0.0
+                return f"{x:+.2f}" if abs(x) >= 0.005 else "0.00"
+            numbers[f"dRare{key}"] = _sd(cb["1-10"] - bb["1-10"])
+            numbers[f"dMid{key}"] = _sd(cb["11-100"] - bb["11-100"])
+            numbers[f"dTop{key}"] = _sd(cb[">10k"] - bb[">10k"])
+            bf = base_run["eval"]["protocols"]["default"]["bucket_frac"]
+            contrib = {k: bf[k] * (bb[k] - cb[k]) for k in BUCKET_NAMES}
+            total = sum(contrib.values())
+            if total > 0:
+                numbers[f"gainShareRare{key}"] = fmt(100 * contrib["1-10"] / total, 0)
+                numbers[f"gainShareMid{key}"] = fmt(100 * (contrib["11-100"] + contrib["101-1k"]) / total, 0)
         if r0["generations"]:
             g = r0["generations"]["generations"]
             numbers[f"repGreedy{key}"] = fmt(100 * float(np.mean([x["greedy"]["repeated_4gram_frac"] for x in g])), 0)
@@ -445,6 +471,30 @@ def part2(numbers: dict, part3_f1: dict):
     numbers["cSkipVsGloveFrozen"] = _c("skip-gram, frozen", "GloVe, frozen")
     numbers["cSkipVsGloveTrain"] = _c("skip-gram, trainable", "GloVe, trainable")
     numbers["cRandVsGloveTrain"] = _c("random, trainable (Part I LSTM)", "GloVe, trainable")
+    numbers["cRandVsSkipTrain"] = _c("random, trainable (Part I LSTM)", "skip-gram, trainable")
+    numbers["cRandFrozenVsSkipFrozen"] = _c("random, frozen", "skip-gram, frozen")
+    # appendix: Part II continuations and repetition statistics
+    gen_cells = [(stem, label) for stem, _, _, label in PART2 if load_run(f"{stem}_s0") and load_run(f"{stem}_s0")["generations"]]
+    if gen_cells:
+        gens = {stem: load_run(f"{stem}_s0")["generations"]["generations"] for stem, _ in gen_cells}
+        prompts = gens[gen_cells[0][0]]
+        A = []
+        for pi, pr in enumerate(prompts):
+            A.append(rf"\paragraph{{Prompt {pi+1}}} \texttt{{{tex(pr['prompt'])}}}")
+            A.append(r"\begin{description}")
+            for stem, label in gen_cells:
+                for mode in ("greedy", "topk"):
+                    A.append(rf"\item[LSTM, {label}, {mode}] \texttt{{\small {tex(gens[stem][pi][mode]['text'])}}}")
+            A.append(r"\end{description}")
+        write(TAB / "appendix_generations_part2.tex", "\n".join(A))
+        L = [r"\begin{tabular}{@{}llrrrr@{}}", r"\toprule",
+             r"Embedding setting & Decoding & distinct-1 & distinct-2 & distinct-3 & repeated 4-grams \\", r"\midrule"]
+        for stem, label in gen_cells:
+            for mode in ("greedy", "topk"):
+                vals = {k: float(np.mean([g[mode][k] for g in gens[stem]])) for k in ("distinct_1", "distinct_2", "distinct_3", "repeated_4gram_frac")}
+                L.append(f"{label} & {mode} & {vals['distinct_1']:.2f} & {vals['distinct_2']:.2f} & {vals['distinct_3']:.2f} & {vals['repeated_4gram_frac']:.2f} \\\\")
+        L += [r"\bottomrule", r"\end{tabular}"]
+        write(TAB / "part2_repetition.tex", "\n".join(L))
     if not rows:
         return
     L = [r"\begin{tabular}{@{}llrrrrrrrr@{}}", r"\toprule",
@@ -460,7 +510,7 @@ def part2(numbers: dict, part3_f1: dict):
     L += [r"\bottomrule", r"\end{tabular}"]
     write(TAB / "part2_factorial.tex", "\n".join(L))
 
-    fig, ax = plt.subplots(figsize=(3.4, 2.1))
+    fig, ax = plt.subplots(figsize=(3.4, 1.75))
     for label, by_seed in curves.items():
         source = [s for _, s, _, l in PART2 if l == label][0]
         trainable = [t for _, _, t, l in PART2 if l == label][0]
@@ -486,7 +536,7 @@ def part2(numbers: dict, part3_f1: dict):
     others = [(stem, source, trainable, label) for stem, source, trainable, label in PART2
               if stem not in ("lstm", "lstm_random_frozen") and load_run(f"{stem}_s0") and load_run(f"{stem}_s0")["eval"]]
     if base and base["eval"] and others:
-        fig, ax = plt.subplots(figsize=(3.4, 2.1))
+        fig, ax = plt.subplots(figsize=(3.4, 1.75))
         b = base["eval"]["protocols"]["default"]["bucket_ce"]
         width = 0.8 / len(others)
         for i, (stem, source, trainable, label) in enumerate(others):
@@ -580,10 +630,19 @@ def part3(numbers: dict) -> dict:
         rho, pval = spearmanr([r["source_test_ppl"] for r in lm_rows], [r["test_macro_f1"] for r in lm_rows])
         numbers["spearmanRho"] = f"{rho:.2f}"
         numbers["spearmanN"] = str(len(lm_rows))
+        numbers["spearmanP"] = f"{pval:.2f}"
+        arch = [r for r in lm_rows if "_rand_" in r["name"]]          # four architectures, same random table
+        cells = [r for r in lm_rows if r["name"].startswith("lstm_")]  # LSTM input-table cells
+        if len(arch) >= 3:
+            ra, pa = spearmanr([r["source_test_ppl"] for r in arch], [r["test_macro_f1"] for r in arch])
+            numbers["spearmanRhoArch"] = f"{ra:+.2f}"; numbers["spearmanPArch"] = f"{pa:.2f}"; numbers["spearmanNArch"] = str(len(arch))
+        if len(cells) >= 3:
+            rc, pc = spearmanr([r["source_test_ppl"] for r in cells], [r["test_macro_f1"] for r in cells])
+            numbers["spearmanRhoCells"] = f"{rc:+.2f}"; numbers["spearmanNCells"] = str(len(cells))
         dump_json({"rho": rho, "p": pval, "n": len(lm_rows),
                    "points": [(r["name"], r["source_test_ppl"], r["test_macro_f1"]) for r in lm_rows]},
                   SUM / "part3_rank_agreement.json")
-        fig, ax = plt.subplots(figsize=(3.4, 2.1))
+        fig, ax = plt.subplots(figsize=(3.4, 1.75))
         from matplotlib.ticker import FixedLocator, NullFormatter, ScalarFormatter
         for r in lm_rows:
             col = REP_COLOR.get(r["name"], INK)
@@ -597,7 +656,8 @@ def part3(numbers: dict) -> dict:
         ax.xaxis.set_minor_locator(FixedLocator([]))
         ax.set_xlabel("source LM test perplexity (log scale)")
         ax.set_ylabel("AG News macro-F1 (%), mean pooling")
-        ax.set_title(f"Spearman $\\rho$ = {rho:.2f} (n = {len(lm_rows)})", fontsize=7, color=MUTED)
+        ax.set_title(f"$\\rho$(PPL, F1): {rho:.2f} over all {len(lm_rows)};  "
+                     f"{numbers.get('spearmanRhoArch', '?')} over the 4 same-table models", fontsize=6.5, color=MUTED)
         fig.savefig(FIG / "part3_ppl_vs_f1.pdf")
         plt.close(fig)
         print("wrote report/figures/part3_ppl_vs_f1.pdf")
@@ -607,7 +667,7 @@ def part3(numbers: dict) -> dict:
             "emb_glove_mean", "tfidf"]
     show = [s for s in show if s in reps]
     if show:
-        fig, ax = plt.subplots(figsize=(3.4, 2.1))
+        fig, ax = plt.subplots(figsize=(3.4, 1.75))
         for name in show:
             label = [l for n, l, _ in PART3 if n == name][0]
             ys = [100 * reps[name]["by_n_train"][str(n)]["test_macro_f1"] for n in grid]
@@ -639,8 +699,14 @@ def part3(numbers: dict) -> dict:
     numbers["confusionRep"] = tex(best_lm["representation"])
     numbers["unkRateCorrect"] = fmt(100 * bl["unk_rate_correct"], 1)
     numbers["unkRateWrong"] = fmt(100 * bl["unk_rate_wrong"], 1)
-    L = [r"\begin{tabular}{@{}llr>{\raggedright\arraybackslash}p{5.6cm}@{}}", r"\toprule", r"True & Pred. & Conf. & Text (truncated) \\", r"\midrule"]
-    for e in bl["errors_top20"][:4]:
+    L = [r"\begin{tabular}{@{}llr>{\raggedright\arraybackslash}p{4.7cm}@{}}", r"\toprule", r"True & Pred. & Conf. & Text (truncated) \\", r"\midrule"]
+    seen_pairs, picked = set(), []
+    for e in bl["errors_top20"]:  # most confident error of each distinct (true, predicted) pair
+        if (e["true"], e["pred"]) not in seen_pairs:
+            seen_pairs.add((e["true"], e["pred"]))
+            picked.append(e)
+    picked = sorted(picked, key=lambda e: -e["confidence"])[:5]
+    for e in picked:
         L.append(f"{e['true']} & {e['pred']} & {e['confidence']:.2f} & {tex(e['text'].replace(chr(92), '')[:95])} \\\\")
     L += [r"\bottomrule", r"\end{tabular}"]
     write(TAB / "part3_errors.tex", "\n".join(L))
@@ -658,7 +724,7 @@ def hyperparams():
         ("Dropout", f"{common['dropout']} after embedding, between layers, before output"),
         ("Batch $\\times$ BPTT", f"{common['batch_size']} $\\times$ {common['bptt']} tokens (continuous stream, state detached between chunks)"),
         ("Optimiser", f"Adam, lr {common['lr']}, $\\beta$=({common['betas'][0]}, {common['betas'][1]}), {common['warmup_steps']}-step linear warm-up"),
-        ("Schedule", f"halve lr after {common['plateau_patience']} epoch(s) without val.\\ improvement; early stop after {common['early_stop_patience']}; max {common['max_epochs']} epochs"),
+        ("Schedule", f"halve lr after {common['plateau_patience'] + 1} consecutive epochs without val.\\ improvement; early stop after {common['early_stop_patience']}; max {common['max_epochs']} epochs"),
         ("Gradient clipping", f"global norm {common['grad_clip']}"),
         ("Output layer", "untied (frozen input tables would otherwise freeze the softmax)"),
         ("Validation / test protocol", f"recurrent: full history, batch 1; Transformer: sliding window {common['eval']['transformer_context']} / stride {common['eval']['transformer_stride']}"),

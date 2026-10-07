@@ -1,13 +1,12 @@
-\begin{tabular}{@{}p{2.3cm}>{\raggedright\arraybackslash}p{10.4cm}rr@{}}
+\begin{tabular}{@{}p{2.0cm}>{\raggedright\arraybackslash}p{14.6cm}@{}}
 \toprule
-Model & Continuation (top-$k$=40, $T$=1, 50 tokens; first 24 shown) & distinct-2 & rep.\ 4-gram \\
+Model & Continuation (top-$k$=40, $T$=1, 50 tokens; first 20 shown; repetition statistics in Table~\ref{tab:p1rep}) \\
 \midrule
-\multicolumn{4}{@{}l}{\textit{Prompt:} \texttt{the americans knew of the approach of the japanese forces}} \\
+\multicolumn{2}{@{}l}{\textit{Prompt:} \texttt{the americans knew of the approach of the japanese forces}} \\
 \midrule
-KN 5-gram & \texttt{staged a sit in his home . \textless{}eos\textgreater{} with the rise of cobra commander in the sequel . \textless{}eos\textgreater{} he was appointed director @-@} \ldots & 0.98 & 0.00 \\
-RNN & \texttt{against the kpa 's king , and a peace @-@ force " it into a high position . \textless{}unk\textgreater{} had the right end of} \ldots & 0.96 & 0.00 \\
-LSTM & \texttt{during the conflict . \textless{}eos\textgreater{} the first time against the american union were created by the royal army , both the republic of their} \ldots & 0.96 & 0.00 \\
-Transformer (4L) & \texttt{— and some of the song was " impossible " . \textless{}unk\textgreater{} said that " this were a " dramatic \textless{}unk\textgreater{} " and "} \ldots & 0.90 & 0.00 \\
-Transformer (1L, control) & \texttt{against the 766th forces . \textless{}eos\textgreater{} the 766th headquarters was originally taken over them by the 766th regiment , 2nd division was appointed an} \ldots & 0.94 & 0.00 \\
+KN 5-gram & \texttt{staged a sit in his home . \textless{}eos\textgreater{} with the rise of cobra commander in the sequel . \textless{}eos\textgreater{} he} \ldots \\
+RNN & \texttt{against the kpa 's king , and a peace @-@ force " it into a high position . \textless{}unk\textgreater{} had} \ldots \\
+LSTM & \texttt{during the conflict . \textless{}eos\textgreater{} the first time against the american union were created by the royal army , both} \ldots \\
+Transformer (4L) & \texttt{\textemdash{} and some of the song was " impossible " . \textless{}unk\textgreater{} said that " this were a " dramatic} \ldots \\
 \bottomrule
 \end{tabular}

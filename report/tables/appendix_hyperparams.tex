@@ -8,7 +8,7 @@ Transformer & 4 layers (control: 1), 6 heads, FFN 1200, pre-LN, GELU, learned po
 Dropout & 0.3 after embedding, between layers, before output \\
 Batch $\times$ BPTT & 32 $\times$ 128 tokens (continuous stream, state detached between chunks) \\
 Optimiser & Adam, lr 0.001, $\beta$=(0.9, 0.98), 200-step linear warm-up \\
-Schedule & halve lr after 1 epoch(s) without val.\ improvement; early stop after 3; max 12 epochs \\
+Schedule & halve lr after 2 consecutive epochs without val.\ improvement; early stop after 3; max 12 epochs \\
 Gradient clipping & global norm 1.0 \\
 Output layer & untied (frozen input tables would otherwise freeze the softmax) \\
 Validation / test protocol & recurrent: full history, batch 1; Transformer: sliding window 128 / stride 32 \\

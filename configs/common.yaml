@@ -17,7 +17,7 @@ lr: 0.001
 betas: [0.9, 0.98]
 warmup_steps: 200
 plateau_factor: 0.5
-plateau_patience: 1
+plateau_patience: 1        # halve lr after (plateau_patience + 1) consecutive epochs without val improvement
 early_stop_patience: 3
 grad_clip: 1.0
 

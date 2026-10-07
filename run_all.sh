@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Reproduce every number in results/ from scratch (Apple M4, ~5 h wall-clock).
+# Reproduce every number in results/ from scratch (Apple M4, ~7 h wall-clock incl. the 24-epoch runs).
 # Each step is idempotent; comment out what you have already run.
 set -euo pipefail
 cd "$(dirname "$0")"

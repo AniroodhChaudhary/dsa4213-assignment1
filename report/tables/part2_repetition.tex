@@ -1,0 +1,18 @@
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Embedding setting & Decoding & distinct-1 & distinct-2 & distinct-3 & repeated 4-grams \\
+\midrule
+random, trainable (Part I LSTM) & greedy & 0.30 & 0.50 & 0.65 & 0.25 \\
+random, trainable (Part I LSTM) & topk & 0.66 & 0.95 & 1.00 & 0.00 \\
+random, frozen & greedy & 0.20 & 0.32 & 0.40 & 0.56 \\
+random, frozen & topk & 0.54 & 0.84 & 0.93 & 0.04 \\
+skip-gram, trainable & greedy & 0.23 & 0.39 & 0.50 & 0.41 \\
+skip-gram, trainable & topk & 0.65 & 0.90 & 0.97 & 0.00 \\
+skip-gram, frozen & greedy & 0.22 & 0.40 & 0.52 & 0.41 \\
+skip-gram, frozen & topk & 0.63 & 0.91 & 0.98 & 0.00 \\
+GloVe, trainable & greedy & 0.22 & 0.36 & 0.47 & 0.46 \\
+GloVe, trainable & topk & 0.66 & 0.95 & 0.99 & 0.00 \\
+GloVe, frozen & greedy & 0.20 & 0.36 & 0.46 & 0.46 \\
+GloVe, frozen & topk & 0.66 & 0.92 & 0.98 & 0.00 \\
+\bottomrule
+\end{tabular}
