@@ -12,3 +12,4 @@ report/*.bbl
 report/*.blg
 report/*.xdv
 .DS_Store
+dist/
