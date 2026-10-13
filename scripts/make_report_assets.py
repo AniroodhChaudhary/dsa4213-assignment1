@@ -50,6 +50,7 @@ PART2 = [  # (run stem, source, trainable, label)
     ("lstm_skipgram_frozen", "skipgram", False, "skip-gram, frozen"),
     ("lstm_glove_train", "glove", True, "GloVe, trainable"),
     ("lstm_glove_frozen", "glove", False, "GloVe, frozen"),
+    ("lstm_glove_frozen_scaled", "glove", False, "GloVe rescaled to norm 1, frozen"),
 ]
 REP_COLOR = {"lstm_rand_last": "#eb6834", "lstm_rand_mean": "#eb6834", "transformer_rand_last": "#1baf7a",
              "transformer_rand_mean": "#1baf7a", "rnn_rand_mean": "#2a78d6", "transformer1l_rand_mean": "#eda100",
@@ -66,6 +67,9 @@ PART3 = [  # (name, label, source run for PPL)
     ("lstm_skipgram_frozen_mean", "LSTM + frozen skip-gram, mean", "lstm_skipgram_frozen_s0"),
     ("lstm_glove_frozen_mean", "LSTM + frozen GloVe, mean", "lstm_glove_frozen_s0"),
     ("emb_rand_learned_mean", "embedding only: LSTM-learned table", None),
+    ("emb_rnn_learned_mean", "embedding only: RNN-learned table", None),
+    ("emb_transformer_learned_mean", "embedding only: Transformer-learned table", None),
+    ("emb_transformer1l_learned_mean", "embedding only: Transformer 1L-learned table", None),
     ("emb_skipgram_mean", "embedding only: skip-gram", None),
     ("emb_glove_mean", "embedding only: GloVe", None),
     ("tfidf", "TF-IDF uni+bigrams (reference)", None),
@@ -80,6 +84,13 @@ def tex(s) -> str:
             .replace("}", r"\}").replace("~", r"\textasciitilde{}").replace("^", r"\^{}")
             .replace("<", r"\textless{}").replace(">", r"\textgreater{}")
             .replace("\u2014", r"\textemdash{}").replace("\u2013", r"\textendash{}"))
+
+
+def _cut(text: str, n: int) -> str:
+    """truncate at a word boundary with an ellipsis"""
+    if len(text) <= n:
+        return text
+    return text[:n].rsplit(" ", 1)[0] + " \u2026"
 
 
 def fmt(x, nd=1, dash="--"):
@@ -241,6 +252,10 @@ def part1(numbers: dict):
             key = {"lstm_s0": "LSTM", "transformer_s0": "Transformer", "rnn_s0": "RNN"}[n]
             numbers[f"deltaBlocks{key}"] = fmt(r["test_ppl_blocks"] - r["test_ppl"], 1)
     numbers["deltaOneLayerVsLSTM"] = _d("transformer_1layer_s0", "lstm_s0", "test_ppl")
+    rt, rl = byname.get(labels["transformer_s0"]), byname.get(labels["lstm_s0"])
+    if rt and rl and rt.get("score_blocks_tok_s") and rl.get("score_blocks_tok_s"):
+        numbers["blocksThroughputPct"] = fmt(100 * rt["score_blocks_tok_s"] / rl["score_blocks_tok_s"], 0)
+        numbers["trainTimePct"] = fmt(100 * (rt["train_min_to_best"] / rl["train_min_to_best"] - 1), 0)
     numbers["deltaTransformerVsLSTM"] = _d("transformer_s0", "lstm_s0", "test_ppl")
     # quality table
     L = [r"\begin{tabular}{@{}lrrrrrr@{}}", r"\toprule",
@@ -248,7 +263,7 @@ def part1(numbers: dict):
          r"\midrule"]
     for r in rows:
         L.append(f"{r['model']} & {fmt(r['test_ppl'])} & {fmt(r['test_ppl_blocks'])} & "
-                 f"{fmt(r['val_ppl_ep3'])} & {fmt(r['val_ppl_budget'])} & {fmt(r['val_ppl_best']) if r['best_epoch'] else '--'} & {fmt(r['test_ppl_ep24'])} \\\\")
+                 f"{fmt(r['val_ppl_ep3'])} & {fmt(r['val_ppl_budget'])} & {fmt(r['val_ppl_best'])} & {fmt(r['test_ppl_ep24'])} \\\\")
     L += [r"\bottomrule", r"\end{tabular}"]
     write(TAB / "part1_quality.tex", "\n".join(L))
     # cost table
@@ -256,7 +271,7 @@ def part1(numbers: dict):
          r"Model & Params (M) & Core (M) & Size (MB) & Train (min) & Score, blocks (tok/s) & Score, own (tok/s) & Gen.\ (ms/tok) \\",
          r"\midrule"]
     for r in rows:
-        p = fmt(r["params_total_M"], 1) if r["params_total_M"] else f"{fmt(r['n_entries_M'],1)} entries"
+        p = fmt(r["params_total_M"], 1) if r["params_total_M"] else f"{fmt(r['n_entries_M'],1)}\\,M entries"
         L.append(f"{r['model']} & {p} & {fmt(r['params_core_M'], 2)} & {fmt(r['size_MB'], 0)} & "
                  f"{fmt(r['train_min_to_best'], 1)} & {fmt(r['score_blocks_tok_s'], 0)} & {fmt(r['score_tok_s'], 0)} & {fmt(r['gen_ms_tok'], 1)} \\\\")
     L += [r"\bottomrule", r"\end{tabular}"]
@@ -414,10 +429,11 @@ def part2(numbers: dict, part3_f1: dict):
             "agnews_macro_f1": part3_f1.get(f"{stem}_s0"),
         }
         rows.append(row)
-        curves[label] = {s: history(r) for s, r in seeds.items()}
+        if stem != "lstm_glove_frozen_scaled":  # control row stays in the table, out of the figure
+            curves[label] = {s: history(r) for s, r in seeds.items()}
         key = {"lstm": "LSTMRand", "lstm_random_frozen": "LSTMRandFrozen", "lstm_skipgram_train": "LSTMSkipTrain",
                "lstm_skipgram_frozen": "LSTMSkipFrozen", "lstm_glove_train": "LSTMGloveTrain",
-               "lstm_glove_frozen": "LSTMGloveFrozen"}[stem]
+               "lstm_glove_frozen": "LSTMGloveFrozen", "lstm_glove_frozen_scaled": "LSTMGloveFrozenScaled"}[stem]
         numbers[f"ppl{key}"] = fmt(row["test_ppl_mean"], 1)
         if row["test_ppl_halfrange"] is not None:
             numbers[f"pplRange{key}"] = fmt(row["test_ppl_halfrange"], 1)
@@ -473,8 +489,10 @@ def part2(numbers: dict, part3_f1: dict):
     numbers["cRandVsGloveTrain"] = _c("random, trainable (Part I LSTM)", "GloVe, trainable")
     numbers["cRandVsSkipTrain"] = _c("random, trainable (Part I LSTM)", "skip-gram, trainable")
     numbers["cRandFrozenVsSkipFrozen"] = _c("random, frozen", "skip-gram, frozen")
+    numbers["cGloveScaledVsGlove"] = _c("GloVe rescaled to norm 1, frozen", "GloVe, frozen")
+    numbers["cGloveScaledVsRand"] = _c("random, trainable (Part I LSTM)", "GloVe rescaled to norm 1, frozen")
     # appendix: Part II continuations and repetition statistics
-    gen_cells = [(stem, label) for stem, _, _, label in PART2 if load_run(f"{stem}_s0") and load_run(f"{stem}_s0")["generations"]]
+    gen_cells = [(stem, label) for stem, _, _, label in PART2 if stem != "lstm_glove_frozen_scaled" and load_run(f"{stem}_s0") and load_run(f"{stem}_s0")["generations"]]
     if gen_cells:
         gens = {stem: load_run(f"{stem}_s0")["generations"]["generations"] for stem, _ in gen_cells}
         prompts = gens[gen_cells[0][0]]
@@ -534,7 +552,7 @@ def part2(numbers: dict, part3_f1: dict):
 
     base = load_run("lstm_s0")
     others = [(stem, source, trainable, label) for stem, source, trainable, label in PART2
-              if stem not in ("lstm", "lstm_random_frozen") and load_run(f"{stem}_s0") and load_run(f"{stem}_s0")["eval"]]
+              if stem not in ("lstm", "lstm_random_frozen", "lstm_glove_frozen_scaled") and load_run(f"{stem}_s0") and load_run(f"{stem}_s0")["eval"]]
     if base and base["eval"] and others:
         fig, ax = plt.subplots(figsize=(3.4, 1.75))
         b = base["eval"]["protocols"]["default"]["bucket_ce"]
@@ -600,13 +618,42 @@ def part3(numbers: dict) -> dict:
             f1_by_run[src] = full["test_macro_f1"]
     save_csv(SUM / "part3.csv", rows)
     grid = cfg["n_train_grid"]
-    L = [r"\begin{tabular}{@{}lrrrr" + "r" * (len(grid) - 1) + "@{}}", r"\toprule",
-         r"Representation & Dim & Source LM test PPL & Acc.\ & " +
-         " & ".join(f"F1 ($n$={n:,})" for n in sorted(grid, reverse=True)) + r" \\", r"\midrule"]
+    bpath = cdir / "bootstrap.json"
+    boot = load_json(bpath) if bpath.exists() else {"per_representation": {}, "paired": {}}
+    ci = {n: v["macro_f1_halfwidth"] for n, v in boot["per_representation"].items()}
+    if ci:
+        numbers["ciHalfMin"] = fmt(100 * min(ci.values()), 1); numbers["ciHalfMax"] = fmt(100 * max(ci.values()), 1)
+        numbers["bootstrapB"] = str(boot.get("B", ""))
+    for k, v in boot["paired"].items():
+        key = "".join(w.capitalize() for w in k.replace("__minus__", "_vs_").split("_"))
+        numbers[f"pd{key}"] = f"{100*v['point']:+.1f} [{100*v['ci'][0]:+.1f}, {100*v['ci'][1]:+.1f}]"
+    own = {"lstm_rand_mean": "emb_rand_learned_mean", "rnn_rand_mean": "emb_rnn_learned_mean",
+           "transformer_rand_mean": "emb_transformer_learned_mean", "transformer1l_rand_mean": "emb_transformer1l_learned_mean",
+           "lstm_skipgram_frozen_mean": "emb_skipgram_mean", "lstm_glove_frozen_mean": "emb_glove_mean"}
+    byname = {r["name"]: r for r in rows}
+    holds_all_sizes = True
+    for lm_name, emb_name in own.items():
+        if lm_name in byname and emb_name in byname:
+            key = "".join(w.capitalize() for w in lm_name.split("_"))
+            numbers[f"ownLoss{key}"] = fmt(100 * (byname[emb_name]["test_macro_f1"] - byname[lm_name]["test_macro_f1"]), 1)
+            for n in grid:
+                if byname[lm_name][f"macro_f1_n{n}"] >= byname[emb_name][f"macro_f1_n{n}"]:
+                    holds_all_sizes = False
+    numbers["ownTableSizes"] = "at every label-set size" if holds_all_sizes else f"at {n_full:,} labels"
+    def _short(label):
+        return label.replace("embedding only: ", "table only: ").replace("-learned table", " (learned)").replace(" (reference)", "")
+    L = [r"\begin{tabular}{@{}lrrr" + "r" * (len(grid) - 1) + "@{}}", r"\toprule",
+         r"Representation & LM test PPL & Acc.\ & " +
+         " & ".join((f"F1, $n$={n:,}" + (" ($\\pm$95\\% CI)" if n == n_full and ci else "")) for n in sorted(grid, reverse=True)) + r" \\", r"\midrule"]
     for r in rows:
-        L.append(f"{r['representation']} & {r['dim']:,} & {fmt(r['source_test_ppl'])} & "
-                 f"{100*r['test_accuracy']:.1f} & " +
-                 " & ".join(fmt(100 * r[f'macro_f1_n{n}'], 1) for n in sorted(grid, reverse=True)) + r" \\")
+        cells = []
+        for n in sorted(grid, reverse=True):
+            v = fmt(100 * r[f"macro_f1_n{n}"], 1)
+            if n == n_full and r["name"] in ci:
+                v += f" $\\pm$ {100*ci[r['name']]:.1f}"
+            cells.append(v)
+        L.append(f"{_short(r['representation'])} & {fmt(r['source_test_ppl'])} & "
+                 f"{100*r['test_accuracy']:.1f} & " + " & ".join(cells) + r" \\")
     L += [r"\bottomrule", r"\end{tabular}"]
     write(TAB / "part3_main.tex", "\n".join(L))
 
@@ -707,7 +754,7 @@ def part3(numbers: dict) -> dict:
             picked.append(e)
     picked = sorted(picked, key=lambda e: -e["confidence"])[:5]
     for e in picked:
-        L.append(f"{e['true']} & {e['pred']} & {e['confidence']:.2f} & {tex(e['text'].replace(chr(92), '')[:95])} \\\\")
+        L.append(f"{e['true']} & {e['pred']} & {e['confidence']:.2f} & {tex(_cut(e['text'].replace(chr(92), ''), 95))} \\\\")
     L += [r"\bottomrule", r"\end{tabular}"]
     write(TAB / "part3_errors.tex", "\n".join(L))
     return f1_by_run

@@ -1,18 +1,21 @@
-\begin{tabular}{@{}lrrrrrr@{}}
+\begin{tabular}{@{}lrrrrr@{}}
 \toprule
-Representation & Dim & Source LM test PPL & Acc.\ & F1 ($n$=20,000) & F1 ($n$=2,000) & F1 ($n$=500) \\
+Representation & LM test PPL & Acc.\ & F1, $n$=20,000 ($\pm$95\% CI) & F1, $n$=2,000 & F1, $n$=500 \\
 \midrule
-LSTM, last state & 300 & 134.2 & 62.7 & 62.3 & 59.4 & 54.5 \\
-LSTM, mean & 300 & 134.2 & 68.1 & 67.9 & 64.2 & 60.6 \\
-Transformer, last state & 300 & 140.9 & 73.6 & 73.6 & 69.9 & 66.6 \\
-Transformer, mean & 300 & 140.9 & 77.7 & 77.6 & 73.9 & 69.5 \\
-RNN, mean & 300 & 173.0 & 73.6 & 73.5 & 69.6 & 67.2 \\
-Transformer 1L, mean & 300 & 171.4 & 79.0 & 78.9 & 74.8 & 70.9 \\
-LSTM + frozen skip-gram, mean & 300 & 128.4 & 79.4 & 79.3 & 77.1 & 75.2 \\
-LSTM + frozen GloVe, mean & 300 & 123.4 & 82.4 & 82.3 & 79.6 & 77.8 \\
-embedding only: LSTM-learned table & 300 & -- & 75.2 & 75.1 & 70.0 & 63.3 \\
-embedding only: skip-gram & 300 & -- & 83.4 & 83.4 & 81.1 & 80.1 \\
-embedding only: GloVe & 300 & -- & 87.9 & 87.9 & 87.2 & 85.6 \\
-TF-IDF uni+bigrams (reference) & 98,555 & -- & 89.9 & 89.9 & 84.6 & 78.3 \\
+LSTM, last state & 134.2 & 62.7 & 62.3 $\pm$ 1.0 & 59.4 & 54.5 \\
+LSTM, mean & 134.2 & 68.1 & 67.9 $\pm$ 1.0 & 64.2 & 60.6 \\
+Transformer, last state & 140.9 & 73.6 & 73.6 $\pm$ 1.0 & 69.9 & 66.6 \\
+Transformer, mean & 140.9 & 77.7 & 77.6 $\pm$ 0.9 & 73.9 & 69.5 \\
+RNN, mean & 173.0 & 73.6 & 73.5 $\pm$ 1.0 & 69.6 & 67.2 \\
+Transformer 1L, mean & 171.4 & 79.0 & 78.9 $\pm$ 0.9 & 74.8 & 70.9 \\
+LSTM + frozen skip-gram, mean & 128.4 & 79.4 & 79.3 $\pm$ 1.0 & 77.1 & 75.2 \\
+LSTM + frozen GloVe, mean & 123.4 & 82.4 & 82.3 $\pm$ 0.8 & 79.6 & 77.8 \\
+table only: LSTM (learned) & -- & 75.2 & 75.1 $\pm$ 1.0 & 70.0 & 63.3 \\
+table only: RNN (learned) & -- & 79.4 & 79.4 $\pm$ 0.9 & 75.6 & 72.4 \\
+table only: Transformer (learned) & -- & 80.3 & 80.3 $\pm$ 0.9 & 77.0 & 72.9 \\
+table only: Transformer 1L (learned) & -- & 80.5 & 80.5 $\pm$ 0.8 & 76.8 & 73.6 \\
+table only: skip-gram & -- & 83.4 & 83.4 $\pm$ 0.8 & 81.1 & 80.1 \\
+table only: GloVe & -- & 87.9 & 87.9 $\pm$ 0.7 & 87.2 & 85.6 \\
+TF-IDF uni+bigrams & -- & 89.9 & 89.9 $\pm$ 0.7 & 84.6 & 78.3 \\
 \bottomrule
 \end{tabular}

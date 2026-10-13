@@ -71,12 +71,20 @@ Part II, the LSTM with six input-embedding settings (test PPL; ± half the range
 | own skip-gram (1.9 min CPU) | 127.9 ± 0.5 | 119.0 |
 | GloVe 6B 300d | 123.8 ± 0.4 | 116.5 |
 
-Part III, AG News macro-F1 (%) of one logistic regression on frozen representations (20k labels):
-LSTM last state 62.3, LSTM mean 67.9, Transformer mean 77.6, RNN mean 73.5, 1-layer Transformer mean
-78.9, LSTM+frozen skip-gram mean 79.3, LSTM+frozen GloVe mean 82.3; embedding-only means: learned
-table 75.1, skip-gram 83.4, GloVe 87.9; TF-IDF 89.9. Spearman correlation between source-LM
-perplexity and downstream F1 over the six LM-based representations: −0.60. Better next-token
-prediction did not give better frozen representations on this data.
+Part III, AG News macro-F1 (%) of one logistic regression on frozen representations (20k labels;
+95% bootstrap intervals are ±0.7–1.0): LSTM last state 62.3, LSTM mean 67.9, RNN mean 73.5,
+Transformer mean 77.6, 1-layer Transformer mean 78.9, LSTM+frozen skip-gram mean 79.3, LSTM+frozen
+GloVe mean 82.3. Mean of each model's own input table, no sequence model: LSTM-learned 75.1,
+RNN-learned 79.4, Transformer-learned 80.3, 1-layer-learned 80.5, skip-gram 83.4, GloVe 87.9;
+TF-IDF 89.9. Every LM's pooled states score below its own input table. Spearman ρ(PPL, F1) over
+the six LM-based representations is −0.60 (p = 0.21; negative = agreement, carried by the input
+table); across the four architectures sharing the random table it is +0.40: the best LM is the worst
+feature extractor.
+
+Row-norm control (Part II): the frozen GloVe table rescaled to the random initialisation's mean row
+norm (same directions, 0.15× the length) gives test PPL 135.4, 11.7 points worse than unscaled frozen
+GloVe (123.8) and no better than the trainable random table (134.0): much of the frozen-table gain at
+this budget is input scale rather than content.
 
 ## Environment
 
@@ -104,7 +112,7 @@ uv run scripts/train_ngram.py                                     # Part I n-gra
 uv run scripts/train_lm.py --config configs/lstm.yaml [--seed 1]  # any neural run; see configs/
 uv run scripts/train_word2vec.py && uv run scripts/build_embedding_matrix.py
 uv run scripts/evaluate_lm.py --run lstm_s0      # test perplexity, inference workload, generations
-uv run scripts/extract_features.py && uv run scripts/train_classifier.py
+uv run scripts/extract_features.py && uv run scripts/train_classifier.py && uv run scripts/bootstrap_ci.py
 uv run scripts/make_report_assets.py && bash report/build.sh
 ```
 
@@ -128,7 +136,8 @@ lm/            data.py tokenize.py ngram.py models.py train.py evaluate.py gener
                embeddings.py features.py timing.py utils.py
 scripts/       prepare_data.py train_ngram.py train_lm.py train_word2vec.py build_embedding_matrix.py
                evaluate_lm.py extract_features.py train_classifier.py make_report_assets.py
-               download_glove.sh make_submission.sh (builds the submission ZIP from the committed tree)
+               bootstrap_ci.py (95% bootstrap CIs for Part III) download_glove.sh
+               make_submission.sh (builds the submission ZIP from the committed tree)
 configs/       common.yaml + one YAML per run, classify.yaml for Part III
 tests/         pytest suite
 results/       committed outputs: results/runs/<run>/{config,metrics,eval,timing,generations}.json,

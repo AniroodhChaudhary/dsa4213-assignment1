@@ -43,7 +43,7 @@
   "mean_row_norm_all": 6.472235202789307,
   "source": "GloVe 6B 300d (Wikipedia 2014 + Gigaword 5, uncased), Pennington et al. 2014",
   "file": "data/raw/glove.6B.300d.txt",
-  "load_seconds": 0.9051833330013324,
+  "load_seconds": 1.2361055840001427,
   "missing_init": "N(0, sigma_d) per dimension, sigma_d = std of found rows, seed 0",
   "nearest_neighbours": {
     "king": [
