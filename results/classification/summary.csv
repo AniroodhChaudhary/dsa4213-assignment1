@@ -35,3 +35,12 @@ emb_glove_mean,20000,10.0,0.8845,0.8793,0.8791
 tfidf,500,10.0,0.785,0.785,0.7827
 tfidf,2000,10.0,0.8467,0.8464,0.8461
 tfidf,20000,10.0,0.9018,0.8995,0.8993
+emb_rnn_learned_mean,500,0.01,0.7374,0.7249,0.7239
+emb_rnn_learned_mean,2000,0.01,0.7635,0.7568,0.7563
+emb_rnn_learned_mean,20000,0.01,0.7976,0.7943,0.7936
+emb_transformer_learned_mean,500,0.01,0.7467,0.7305,0.7295
+emb_transformer_learned_mean,2000,0.01,0.7838,0.7697,0.7695
+emb_transformer_learned_mean,20000,0.01,0.8088,0.8032,0.8026
+emb_transformer1l_learned_mean,500,0.01,0.7494,0.7375,0.736
+emb_transformer1l_learned_mean,2000,0.01,0.7772,0.7678,0.7676
+emb_transformer1l_learned_mean,20000,0.1,0.8054,0.8053,0.8046

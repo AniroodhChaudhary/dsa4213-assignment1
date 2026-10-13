@@ -1,0 +1,312 @@
+{
+  "name": "emb_transformer_learned_mean",
+  "meta": {
+    "kind": "embedding_only",
+    "source": "input embedding of transformer_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 0.48032566599977145
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.7467328611190098,
+      "test_accuracy": 0.7305263157894737,
+      "test_macro_f1": 0.729470144499725,
+      "test_f1_per_class": {
+        "World": 0.7402663934426229,
+        "Sports": 0.8511966701352758,
+        "Business": 0.6400428839453229,
+        "Sci/Tech": 0.6863746304756786
+      },
+      "confusion": [
+        [
+          1445,
+          120,
+          215,
+          120
+        ],
+        [
+          137,
+          1636,
+          75,
+          52
+        ],
+        [
+          246,
+          88,
+          1194,
+          372
+        ],
+        [
+          176,
+          100,
+          347,
+          1277
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.7838375583449194,
+      "test_accuracy": 0.7697368421052632,
+      "test_macro_f1": 0.7695053578967708,
+      "test_f1_per_class": {
+        "World": 0.7872965038697625,
+        "Sports": 0.8797071129707112,
+        "Business": 0.6884272997032641,
+        "Sci/Tech": 0.7225905150433453
+      },
+      "confusion": [
+        [
+          1475,
+          106,
+          169,
+          150
+        ],
+        [
+          85,
+          1682,
+          65,
+          68
+        ],
+        [
+          168,
+          69,
+          1276,
+          387
+        ],
+        [
+          119,
+          67,
+          297,
+          1417
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.01,
+      "val_macro_f1": 0.8088364026588314,
+      "test_accuracy": 0.8031578947368421,
+      "test_macro_f1": 0.8026312168259561,
+      "test_f1_per_class": {
+        "World": 0.8118448637316562,
+        "Sports": 0.8969823100936525,
+        "Business": 0.7393162393162394,
+        "Sci/Tech": 0.7623814541622761
+      },
+      "confusion": [
+        [
+          1549,
+          91,
+          145,
+          115
+        ],
+        [
+          83,
+          1724,
+          46,
+          47
+        ],
+        [
+          163,
+          66,
+          1384,
+          287
+        ],
+        [
+          121,
+          63,
+          269,
+          1447
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9999922513961792,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 6150,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9997373223304749,
+      "unk_rate": 0.0625,
+      "text": "England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm the Springboks at Twickenham."
+    },
+    {
+      "index": 3563,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9995017051696777,
+      "unk_rate": 0.05,
+      "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41..."
+    },
+    {
+      "index": 5941,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9993477463722229,
+      "unk_rate": 0.0,
+      "text": "Cricket: NZ suffer Franklin blow New Zealand bowler James Franklin misses the first Test against Australia with  injury."
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.999119222164154,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 1269,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9990110397338867,
+      "unk_rate": 0.07317073170731707,
+      "text": "Philippines mourns dead in Russian school siege The Philippines Saturday expressed quot;deepest sympathy quot; to the families of the dead in the Russian school siege on Friday, in which 322 people were killed when Russian troops stormed "
+    },
+    {
+      "index": 1533,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9989915490150452,
+      "unk_rate": 0.18181818181818182,
+      "text": "Collingwood anchors England (AFP) AFP - Paul Collingwood's unbeaten 80 took England to 299 for seven against Zimbabwe in their opening Champions Trophy Pool D match at Edgbaston here."
+    },
+    {
+      "index": 2028,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9986631870269775,
+      "unk_rate": 0.0,
+      "text": "Ryder Cup: Europe close on victory Another good day at Oakland Hills sees Europe move 11-5 clear of the USA going into Sunday's Ryder Cup singles."
+    },
+    {
+      "index": 3186,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9980977177619934,
+      "unk_rate": 0.04,
+      "text": "Tennis: Night final for Aus Open The centenary Australian Open will be the first Grand Slam event to stage its final at night."
+    },
+    {
+      "index": 3063,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9976829290390015,
+      "unk_rate": 0.04,
+      "text": "US football: Patriots' historic win New England win a record-tying 18th straight game - plus an NFL round-up."
+    },
+    {
+      "index": 3661,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9976623058319092,
+      "unk_rate": 0.13636363636363635,
+      "text": "Cricket: Tendulkar to miss test Sachin Tendulkar is almost certain to miss Thursday's second Test against Australia in Madras."
+    },
+    {
+      "index": 3900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9975104331970215,
+      "unk_rate": 0.041666666666666664,
+      "text": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series."
+    },
+    {
+      "index": 967,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.997412383556366,
+      "unk_rate": 0.08571428571428572,
+      "text": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-"
+    },
+    {
+      "index": 4029,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9944844841957092,
+      "unk_rate": 0.02127659574468085,
+      "text": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No..."
+    },
+    {
+      "index": 6022,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9936989545822144,
+      "unk_rate": 0.05405405405405406,
+      "text": "SBC and Yahoo! extend pact to offer Internet service SAN ANTONIO SBC Communications and Yahoo are expanding their high-speed Internet service partnership to link video, wireless phone, Internet and other services."
+    },
+    {
+      "index": 3805,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9933086633682251,
+      "unk_rate": 0.03636363636363636,
+      "text": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St..."
+    },
+    {
+      "index": 369,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9928905963897705,
+      "unk_rate": 0.04054054054054054,
+      "text": "U.S. Softball Team Wins, Closes in on Gold ATHENS, Greece - Right now, the Americans aren't just a Dream Team - they're more like the Perfect Team. Lisa Fernandez pitched a three-hitter Sunday and Crystl Bustos drove in two runs as the Americans rolled to their eighth shutout in eight days, 5-0 over"
+    },
+    {
+      "index": 4065,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9911746978759766,
+      "unk_rate": 0.0,
+      "text": "GM Protests Spread Across Europe Tens of thousands of General Motors workers across Europe were set to stop working on Tuesday in a sign of solidarity with their German colleagues, who face massive job cuts."
+    },
+    {
+      "index": 7471,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.990805447101593,
+      "unk_rate": 0.0,
+      "text": "Iceland Offers Shelter to Fugitive Chess Player Fugitive chess master Bobby Fischer has been offered a new home in Iceland, where he won a classic victory in 1972, but it is unclear whether he will be able to make the move from his detention in Japan."
+    },
+    {
+      "index": 2574,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9894424676895142,
+      "unk_rate": 0.11320754716981132,
+      "text": "Adobe updates RAW plug-in with digital negative format Adobe has updated Photoshop #39;s support for digital cameras #39; RAW image formats. The new plug-in adds to the number of camera models supported and includes a utility for converting images into the DNG, digital negative format."
+    }
+  ],
+  "unk_rate_correct": 0.07486956873953664,
+  "unk_rate_wrong": 0.07465964734565794,
+  "seconds": 0.9163855830001921
+}

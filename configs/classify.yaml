@@ -10,6 +10,9 @@ representations:
   - {name: lstm_skipgram_frozen_mean, run: lstm_skipgram_frozen_s0, pooling: mean}
   - {name: lstm_glove_frozen_mean,    run: lstm_glove_frozen_s0,    pooling: mean}
   - {name: emb_rand_learned_mean,     embedding_from_run: lstm_s0,  pooling: mean}
+  - {name: emb_rnn_learned_mean,      embedding_from_run: rnn_s0,   pooling: mean}
+  - {name: emb_transformer_learned_mean,   embedding_from_run: transformer_s0,        pooling: mean}
+  - {name: emb_transformer1l_learned_mean, embedding_from_run: transformer_1layer_s0, pooling: mean}
   - {name: emb_skipgram_mean,         matrix: data/embeddings/skipgram300.npy, pooling: mean}
   - {name: emb_glove_mean,            matrix: data/embeddings/glove300.npy,    pooling: mean}
   - {name: tfidf,                     type: tfidf}

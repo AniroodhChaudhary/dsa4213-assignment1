@@ -1,0 +1,312 @@
+{
+  "name": "emb_transformer1l_learned_mean",
+  "meta": {
+    "kind": "embedding_only",
+    "source": "input embedding of transformer_1layer_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 0.4382794580005793
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.749413900565924,
+      "test_accuracy": 0.7375,
+      "test_macro_f1": 0.7360034270117798,
+      "test_f1_per_class": {
+        "World": 0.7517188693659282,
+        "Sports": 0.8587041373926619,
+        "Business": 0.6457127102288392,
+        "Sci/Tech": 0.6878779910596897
+      },
+      "confusion": [
+        [
+          1476,
+          105,
+          174,
+          145
+        ],
+        [
+          129,
+          1650,
+          60,
+          61
+        ],
+        [
+          256,
+          84,
+          1171,
+          389
+        ],
+        [
+          166,
+          104,
+          322,
+          1308
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.7772075181964678,
+      "test_accuracy": 0.7677631578947368,
+      "test_macro_f1": 0.7676144939542284,
+      "test_f1_per_class": {
+        "World": 0.792063492063492,
+        "Sports": 0.8832193582325092,
+        "Business": 0.6825957100190062,
+        "Sci/Tech": 0.712579415501906
+      },
+      "confusion": [
+        [
+          1497,
+          89,
+          149,
+          165
+        ],
+        [
+          89,
+          1679,
+          63,
+          69
+        ],
+        [
+          176,
+          68,
+          1257,
+          399
+        ],
+        [
+          118,
+          66,
+          314,
+          1402
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.1,
+      "val_macro_f1": 0.8054350861322783,
+      "test_accuracy": 0.8052631578947368,
+      "test_macro_f1": 0.8045549852121434,
+      "test_f1_per_class": {
+        "World": 0.8241469816272966,
+        "Sports": 0.9002849002849003,
+        "Business": 0.7381974248927039,
+        "Sci/Tech": 0.7555906340436728
+      },
+      "confusion": [
+        [
+          1570,
+          87,
+          136,
+          107
+        ],
+        [
+          63,
+          1738,
+          45,
+          54
+        ],
+        [
+          154,
+          66,
+          1376,
+          304
+        ],
+        [
+          123,
+          70,
+          271,
+          1436
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9999961853027344,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 6150,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.999993085861206,
+      "unk_rate": 0.0625,
+      "text": "England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm the Springboks at Twickenham."
+    },
+    {
+      "index": 3063,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9998615980148315,
+      "unk_rate": 0.04,
+      "text": "US football: Patriots' historic win New England win a record-tying 18th straight game - plus an NFL round-up."
+    },
+    {
+      "index": 3563,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9995948672294617,
+      "unk_rate": 0.05,
+      "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41..."
+    },
+    {
+      "index": 3186,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9994075298309326,
+      "unk_rate": 0.04,
+      "text": "Tennis: Night final for Aus Open The centenary Australian Open will be the first Grand Slam event to stage its final at night."
+    },
+    {
+      "index": 747,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9993277788162231,
+      "unk_rate": 0.02631578947368421,
+      "text": "Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States team of National Basketball Association stars 89-81 here Friday in the Olympic semi-finals, dethroning the three-time defending champions."
+    },
+    {
+      "index": 5128,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9987877011299133,
+      "unk_rate": 0.13333333333333333,
+      "text": "Argentina Basketball Coach Magnano Quits Ruben Magnano, who coached Argentina to the Olympic basketball gold medal in Athens, resigned Thursday to accept a coaching job in Italy."
+    },
+    {
+      "index": 1269,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.998689591884613,
+      "unk_rate": 0.07317073170731707,
+      "text": "Philippines mourns dead in Russian school siege The Philippines Saturday expressed quot;deepest sympathy quot; to the families of the dead in the Russian school siege on Friday, in which 322 people were killed when Russian troops stormed "
+    },
+    {
+      "index": 1617,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9985495209693909,
+      "unk_rate": 0.03636363636363636,
+      "text": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field..."
+    },
+    {
+      "index": 3805,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9983920454978943,
+      "unk_rate": 0.03636363636363636,
+      "text": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St..."
+    },
+    {
+      "index": 110,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9969694018363953,
+      "unk_rate": 0.0392156862745098,
+      "text": "Yahoo! Ups Ante for Small Businesses Web giant Yahoo! is gambling that price cuts on its domain name registration and Web hosting products will make it more competitive with discounters in the space -- which means that small businesses looking to move online get a sweeter deal through ..."
+    },
+    {
+      "index": 459,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9968572854995728,
+      "unk_rate": 0.05,
+      "text": "Philippine President Says Country Faces Fiscal Crisis Philippine president Gloria Arroyo warned that her country is in the midst of a fiscal crisis. A report by economists at the University of the Philippines said the country faces economic collapse "
+    },
+    {
+      "index": 2988,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9965420365333557,
+      "unk_rate": 0.05555555555555555,
+      "text": "IMF urged to assist countries in prevention of financial crisis Developing countries on Friday urged the International Monetary Fund (IMF to develop effective lending facilities to assist countries in the prevention of financial crisis."
+    },
+    {
+      "index": 5941,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9964536428451538,
+      "unk_rate": 0.0,
+      "text": "Cricket: NZ suffer Franklin blow New Zealand bowler James Franklin misses the first Test against Australia with  injury."
+    },
+    {
+      "index": 3900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9963280558586121,
+      "unk_rate": 0.041666666666666664,
+      "text": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series."
+    },
+    {
+      "index": 3570,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9942165613174438,
+      "unk_rate": 0.07407407407407407,
+      "text": "Legendary all-rounder Miller dies Keith Miller, arguably Australia's greatest  all-rounder in Test cricket, has died in Melbourne aged 84."
+    },
+    {
+      "index": 4029,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9938722848892212,
+      "unk_rate": 0.02127659574468085,
+      "text": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No..."
+    },
+    {
+      "index": 967,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9933794736862183,
+      "unk_rate": 0.08571428571428572,
+      "text": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-"
+    },
+    {
+      "index": 1197,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9928842782974243,
+      "unk_rate": 0.05714285714285714,
+      "text": "World briefs LONDON - A man wielding a machete and a knife attacked two security guards at the building housing the headquarters of the British domestic intelligence service MI5 on Friday, police said."
+    },
+    {
+      "index": 905,
+      "true": "Sports",
+      "pred": "World",
+      "confidence": 0.9928597211837769,
+      "unk_rate": 0.0967741935483871,
+      "text": "Defrocked Priest Gets Suspended Sentence for Marathon Attack A defrocked Irish priest who attacked the leader during yesterdays Olympic marathon was given a one year suspended sentence in Athens today."
+    }
+  ],
+  "unk_rate_correct": 0.07513345354068149,
+  "unk_rate_wrong": 0.07356617861234138,
+  "seconds": 1.0648013749996608
+}

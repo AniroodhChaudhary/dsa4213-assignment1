@@ -1,0 +1,312 @@
+{
+  "name": "emb_rnn_learned_mean",
+  "meta": {
+    "kind": "embedding_only",
+    "source": "input embedding of rnn_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 0.33968349999940983
+  },
+  "by_n_train": {
+    "500": {
+      "n_train": 500,
+      "C": 0.01,
+      "val_macro_f1": 0.7374043068511837,
+      "test_accuracy": 0.7248684210526316,
+      "test_macro_f1": 0.7239129958755439,
+      "test_f1_per_class": {
+        "World": 0.7430065359477124,
+        "Sports": 0.8382086461299508,
+        "Business": 0.6267379679144385,
+        "Sci/Tech": 0.6876988335100742
+      },
+      "confusion": [
+        [
+          1421,
+          129,
+          219,
+          131
+        ],
+        [
+          130,
+          1619,
+          90,
+          61
+        ],
+        [
+          237,
+          108,
+          1172,
+          383
+        ],
+        [
+          137,
+          107,
+          359,
+          1297
+        ]
+      ],
+      "class_counts_train": [
+        132,
+        123,
+        127,
+        118
+      ]
+    },
+    "2000": {
+      "n_train": 2000,
+      "C": 0.01,
+      "val_macro_f1": 0.7635383721528608,
+      "test_accuracy": 0.7568421052631579,
+      "test_macro_f1": 0.7563111728940077,
+      "test_f1_per_class": {
+        "World": 0.7702991452991453,
+        "Sports": 0.8597449908925319,
+        "Business": 0.6718834322719913,
+        "Sci/Tech": 0.7233171231123624
+      },
+      "confusion": [
+        [
+          1442,
+          115,
+          197,
+          146
+        ],
+        [
+          103,
+          1652,
+          83,
+          62
+        ],
+        [
+          179,
+          90,
+          1245,
+          386
+        ],
+        [
+          120,
+          86,
+          281,
+          1413
+        ]
+      ],
+      "class_counts_train": [
+        495,
+        479,
+        495,
+        531
+      ]
+    },
+    "20000": {
+      "n_train": 20000,
+      "C": 0.01,
+      "val_macro_f1": 0.7976101025171207,
+      "test_accuracy": 0.7943421052631578,
+      "test_macro_f1": 0.7936390331413041,
+      "test_f1_per_class": {
+        "World": 0.802713987473904,
+        "Sports": 0.8841558441558441,
+        "Business": 0.7256064690026954,
+        "Sci/Tech": 0.7620798319327731
+      },
+      "confusion": [
+        [
+          1538,
+          102,
+          144,
+          116
+        ],
+        [
+          93,
+          1702,
+          52,
+          53
+        ],
+        [
+          185,
+          81,
+          1346,
+          288
+        ],
+        [
+          116,
+          65,
+          268,
+          1451
+        ]
+      ],
+      "class_counts_train": [
+        5000,
+        5000,
+        5000,
+        5000
+      ]
+    }
+  },
+  "errors_top20": [
+    {
+      "index": 967,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9990552067756653,
+      "unk_rate": 0.08571428571428572,
+      "text": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-"
+    },
+    {
+      "index": 3186,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9984588623046875,
+      "unk_rate": 0.04,
+      "text": "Tennis: Night final for Aus Open The centenary Australian Open will be the first Grand Slam event to stage its final at night."
+    },
+    {
+      "index": 6150,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9980081915855408,
+      "unk_rate": 0.0625,
+      "text": "England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm the Springboks at Twickenham."
+    },
+    {
+      "index": 3746,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.997986912727356,
+      "unk_rate": 0.047619047619047616,
+      "text": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan."
+    },
+    {
+      "index": 3900,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9977676868438721,
+      "unk_rate": 0.041666666666666664,
+      "text": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series."
+    },
+    {
+      "index": 3805,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9945753812789917,
+      "unk_rate": 0.03636363636363636,
+      "text": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St..."
+    },
+    {
+      "index": 3662,
+      "true": "World",
+      "pred": "Business",
+      "confidence": 0.9932331442832947,
+      "unk_rate": 0.02631578947368421,
+      "text": "Oil Prices, Earnings Send Stocks Lower NEW YORK - Investors sent stocks lower Tuesday as oil prices crossed another milestone, \\$54 per barrel. Earnings reports from heavyweights Johnson   Johnson and Merrill Lynch   Co..."
+    },
+    {
+      "index": 3063,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9931636452674866,
+      "unk_rate": 0.04,
+      "text": "US football: Patriots' historic win New England win a record-tying 18th straight game - plus an NFL round-up."
+    },
+    {
+      "index": 456,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9931371212005615,
+      "unk_rate": 0.0425531914893617,
+      "text": "Observers insist: no proof of fraud in Venezuelan referendum. Independent observers confirmed that the random auditing of results from the recall referendum (Sunday August 15) against Venezuelan president Hugo Chavez show there are no indications of fraud as claimed by the opposition."
+    },
+    {
+      "index": 643,
+      "true": "Business",
+      "pred": "World",
+      "confidence": 0.9928752183914185,
+      "unk_rate": 0.07692307692307693,
+      "text": "Nepal blockade 'blow to tourism' Nepal tour operators say tourists cancelled millions of  dollars of bookings due to the rebel blockade of Kathmandu."
+    },
+    {
+      "index": 1269,
+      "true": "Sci/Tech",
+      "pred": "World",
+      "confidence": 0.9926483035087585,
+      "unk_rate": 0.07317073170731707,
+      "text": "Philippines mourns dead in Russian school siege The Philippines Saturday expressed quot;deepest sympathy quot; to the families of the dead in the Russian school siege on Friday, in which 322 people were killed when Russian troops stormed "
+    },
+    {
+      "index": 6022,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9915140271186829,
+      "unk_rate": 0.05405405405405406,
+      "text": "SBC and Yahoo! extend pact to offer Internet service SAN ANTONIO SBC Communications and Yahoo are expanding their high-speed Internet service partnership to link video, wireless phone, Internet and other services."
+    },
+    {
+      "index": 3563,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9914352297782898,
+      "unk_rate": 0.05,
+      "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41..."
+    },
+    {
+      "index": 4862,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9901628494262695,
+      "unk_rate": 0.125,
+      "text": "AOL's Viral Marketing America Online will now provide gratis antivirus protection to its subscribers."
+    },
+    {
+      "index": 3661,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9898560047149658,
+      "unk_rate": 0.13636363636363635,
+      "text": "Cricket: Tendulkar to miss test Sachin Tendulkar is almost certain to miss Thursday's second Test against Australia in Madras."
+    },
+    {
+      "index": 6084,
+      "true": "Business",
+      "pred": "Sci/Tech",
+      "confidence": 0.9897702932357788,
+      "unk_rate": 0.05,
+      "text": "Yahoo and SBC extend partnership and plan new services Yahoo and SBC Communications have agreed to collaborate to extend some of the online services and content they currently provide to PC users to mobile phones and home entertainment devices."
+    },
+    {
+      "index": 5128,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9895668625831604,
+      "unk_rate": 0.13333333333333333,
+      "text": "Argentina Basketball Coach Magnano Quits Ruben Magnano, who coached Argentina to the Olympic basketball gold medal in Athens, resigned Thursday to accept a coaching job in Italy."
+    },
+    {
+      "index": 6093,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9893062710762024,
+      "unk_rate": 0.11764705882352941,
+      "text": "Football: Spanish FA apologises The Spanish FA apologises to its English counterparts following racist chanting."
+    },
+    {
+      "index": 1629,
+      "true": "Sci/Tech",
+      "pred": "Sports",
+      "confidence": 0.9887319803237915,
+      "unk_rate": 0.043478260869565216,
+      "text": "Personal Tech Fast Forward columnist Rob Pegoraro discusses his latest column on Windows Media Player 10 and answer your personal tech questions."
+    },
+    {
+      "index": 5941,
+      "true": "World",
+      "pred": "Sports",
+      "confidence": 0.9873391389846802,
+      "unk_rate": 0.0,
+      "text": "Cricket: NZ suffer Franklin blow New Zealand bowler James Franklin misses the first Test against Australia with  injury."
+    }
+  ],
+  "unk_rate_correct": 0.07477224599807054,
+  "unk_rate_wrong": 0.07504454953607426,
+  "seconds": 0.8566278749995035
+}

@@ -81,5 +81,26 @@
     "dim": 98555,
     "sparse": true,
     "seconds": 4.819421416963451
+  },
+  "emb_rnn_learned_mean": {
+    "kind": "embedding_only",
+    "source": "input embedding of rnn_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 0.33968349999940983
+  },
+  "emb_transformer_learned_mean": {
+    "kind": "embedding_only",
+    "source": "input embedding of transformer_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 0.48032566599977145
+  },
+  "emb_transformer1l_learned_mean": {
+    "kind": "embedding_only",
+    "source": "input embedding of transformer_1layer_s0",
+    "pooling": "mean",
+    "dim": 300,
+    "seconds": 0.4382794580005793
   }
 }

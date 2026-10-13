@@ -109,7 +109,12 @@ def main() -> None:
         full = out["by_n_train"][str(max(cfg["n_train_grid"]))]
         print(f"{name:28s} acc {full['test_accuracy']:.4f}  macro-F1 {full['test_macro_f1']:.4f}  "
               f"(C={full['C']}, {out['seconds']:.0f}s)")
-    with open(res_dir / "summary.csv", "w", newline="") as f:
+    summary_path = res_dir / "summary.csv"
+    if only and summary_path.exists():  # keep the rows of representations not re-run
+        with open(summary_path) as f:
+            old_rows = [r for r in csv.DictReader(f) if r["representation"] not in only]
+        summary_rows = old_rows + summary_rows
+    with open(summary_path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(summary_rows[0].keys()))
         w.writeheader()
         w.writerows(summary_rows)
