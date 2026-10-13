@@ -1,0 +1,7 @@
+# Part II row-norm control: frozen GloVe table rescaled so its mean row norm equals the
+# random initialisation's (1.0); same vectors up to a scalar, so only scale differs.
+_base: lstm.yaml
+embedding:
+  source: glove
+  matrix_path: data/embeddings/glove300_scaled.npy
+  freeze: true

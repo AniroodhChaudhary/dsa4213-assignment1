@@ -1,0 +1,112 @@
+{
+  "run_name": "lstm_glove_frozen_scaled_s0",
+  "decoding": {
+    "prompts_file": "results/data/prompts.json",
+    "max_new_tokens": 50,
+    "top_k": 40,
+    "temperature": 1.0,
+    "gen_seed": 1234
+  },
+  "generations": [
+    {
+      "prompt": "the americans knew of the approach of the japanese forces",
+      "validation_line": 801,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the first two @-@ year @-@ old @-@ old @-@ class was named in the united states , and the first @-@ year @-@ old @-@ class @-@ class team . <eos> = = = = = =",
+        "seconds": 0.07625254199956544,
+        "distinct_1": 0.38,
+        "distinct_2": 0.5714285714285714,
+        "distinct_3": 0.7083333333333334,
+        "repeated_4gram_frac": 0.19148936170212766
+      },
+      "topk": {
+        "text": "\u2014 in addition of the <unk> . <eos> there is it had been brought by a french of <unk> for <unk> and the city , though was used the first president of the treaty . despite the outbreak , the portuguese government moved again at the following year , and",
+        "seconds": 0.07992945900059567,
+        "distinct_1": 0.72,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "the ruins lie among the tropical rainforests of northern guatemala",
+      "validation_line": 908,
+      "greedy": {
+        "text": ". <eos> = = = = <unk> = = = = <eos> the <unk> of the <unk> of the <unk> of the <unk> of the <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>",
+        "seconds": 0.058647875000133354,
+        "distinct_1": 0.12,
+        "distinct_2": 0.22448979591836735,
+        "distinct_3": 0.2916666666666667,
+        "repeated_4gram_frac": 0.6382978723404256
+      },
+      "topk": {
+        "text": ", and the highest range of the island , which is a large and @-@ <unk> population of the area and its northern range of north west , and the north east of the country and were used to be <unk> into the <unk> and <unk> ; both in the",
+        "seconds": 0.08100029200068093,
+        "distinct_1": 0.58,
+        "distinct_2": 0.8979591836734694,
+        "distinct_3": 0.9791666666666666,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "in 1644 , hu took it upon himself to create",
+      "validation_line": 1357,
+      "greedy": {
+        "text": "the <unk> of the <unk> . <eos> = = = = <unk> = = = = <eos> the first two @-@ year @-@ old was the first @-@ time of the year , and the first half of the year , and the first two @-@ year @-@ old @-@",
+        "seconds": 0.05784779100031301,
+        "distinct_1": 0.32,
+        "distinct_2": 0.5918367346938775,
+        "distinct_3": 0.7291666666666666,
+        "repeated_4gram_frac": 0.19148936170212766
+      },
+      "topk": {
+        "text": "a peace of the national court , but he was unable to provide to the army in a house and led over to the south . despite the other parties , there included it from the northern <unk> <unk> , was an <unk> in the city of <unk> and the",
+        "seconds": 0.0786477500005276,
+        "distinct_1": 0.64,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    },
+    {
+      "prompt": "as the highway approaches thompson , us 2 leaves the",
+      "validation_line": 1598,
+      "greedy": {
+        "text": "<unk> . <eos> = = = = <unk> = = = = <eos> the first two @-@ year @-@ old @-@ class was named as a member of the american navy navy , who was named as the <unk> <unk> <unk> <unk> <unk> <unk> . <eos> = = = =",
+        "seconds": 0.058263875000193366,
+        "distinct_1": 0.42,
+        "distinct_2": 0.6530612244897959,
+        "distinct_3": 0.75,
+        "repeated_4gram_frac": 0.14893617021276595
+      },
+      "topk": {
+        "text": "following day . <eos> = = = = hurricane and = = = = <eos> = = = = august = = = = <eos> the first three @-@ year old for the time of the year 's second 's first was two years . the <unk> was made to",
+        "seconds": 0.07993100000021514,
+        "distinct_1": 0.5,
+        "distinct_2": 0.7346938775510204,
+        "distinct_3": 0.8125,
+        "repeated_4gram_frac": 0.10638297872340426
+      }
+    },
+    {
+      "prompt": "churchill , ward ( 1996 ) . from a native",
+      "validation_line": 2012,
+      "greedy": {
+        "text": "of the united states , the united states was a <unk> of the united states , and the united states in the united states . <eos> = = = = <unk> = = = = <eos> the first year of the united states was a <unk> of the united states",
+        "seconds": 0.05939541699990514,
+        "distinct_1": 0.3,
+        "distinct_2": 0.4897959183673469,
+        "distinct_3": 0.625,
+        "repeated_4gram_frac": 0.23404255319148937
+      },
+      "topk": {
+        "text": "court , he also he had been given the only day , with the third time he would have been in favour . he was born on january 30 , 2014 . however there is a member with the state 's president for her father , she made a school",
+        "seconds": 0.07931908299997303,
+        "distinct_1": 0.76,
+        "distinct_2": 0.9795918367346939,
+        "distinct_3": 1.0,
+        "repeated_4gram_frac": 0.0
+      }
+    }
+  ]
+}

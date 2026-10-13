@@ -1,0 +1,271 @@
+{
+  "dim": 300,
+  "vocab_size": 28913,
+  "found_types": 27809,
+  "coverage_types": 0.9618164839345623,
+  "coverage_train_tokens": 0.9473979104658815,
+  "missing_types": 1104,
+  "missing_examples_most_frequent": [
+    "<unk>",
+    "<eos>",
+    "@-@",
+    "@.@",
+    "@,@",
+    "'t",
+    "\u00b0",
+    "\u2212",
+    "'brien",
+    "\u00d7",
+    "'malley",
+    "magadheera",
+    "sorraia",
+    "degrom",
+    "\u20b9",
+    "isesi",
+    "tonin\u00e1",
+    "coldrum",
+    "mkhedruli",
+    "vandernoot",
+    "\ufeff",
+    "berhtwald",
+    "qedar",
+    "qedarites",
+    "\u2192"
+  ],
+  "missing_specials": [
+    "<eos>",
+    "<pad>",
+    "<unk>"
+  ],
+  "init_sigma_mean": 0.3715328872203827,
+  "mean_row_norm_found": 6.471351623535156,
+  "mean_row_norm_missing": 6.4944987297058105,
+  "mean_row_norm_all": 1.0,
+  "source": "GloVe 6B 300d (Wikipedia 2014 + Gigaword 5, uncased), Pennington et al. 2014; rows rescaled by 0.1545 so the mean row norm is 1.0",
+  "file": "data/raw/glove.6B.300d.txt",
+  "load_seconds": 1.2361055840001427,
+  "missing_init": "N(0, sigma_d) per dimension, sigma_d = std of found rows, seed 0",
+  "nearest_neighbours": {
+    "king": [
+      [
+        "queen",
+        0.634
+      ],
+      [
+        "prince",
+        0.62
+      ],
+      [
+        "monarch",
+        0.59
+      ],
+      [
+        "kingdom",
+        0.579
+      ],
+      [
+        "throne",
+        0.561
+      ]
+    ],
+    "city": [
+      [
+        "cities",
+        0.711
+      ],
+      [
+        "town",
+        0.643
+      ],
+      [
+        "downtown",
+        0.631
+      ],
+      [
+        "mayor",
+        0.576
+      ],
+      [
+        "area",
+        0.544
+      ]
+    ],
+    "war": [
+      [
+        "wars",
+        0.683
+      ],
+      [
+        "conflict",
+        0.673
+      ],
+      [
+        "battle",
+        0.572
+      ],
+      [
+        "civil",
+        0.567
+      ],
+      [
+        "occupation",
+        0.557
+      ]
+    ],
+    "album": [
+      [
+        "albums",
+        0.84
+      ],
+      [
+        "song",
+        0.782
+      ],
+      [
+        "ep",
+        0.747
+      ],
+      [
+        "band",
+        0.732
+      ],
+      [
+        "songs",
+        0.729
+      ]
+    ],
+    "1990": [
+      [
+        "1991",
+        0.886
+      ],
+      [
+        "1992",
+        0.864
+      ],
+      [
+        "1987",
+        0.863
+      ],
+      [
+        "1989",
+        0.86
+      ],
+      [
+        "1986",
+        0.859
+      ]
+    ],
+    "north": [
+      [
+        "south",
+        0.811
+      ],
+      [
+        "east",
+        0.649
+      ],
+      [
+        "korea",
+        0.648
+      ],
+      [
+        "northeast",
+        0.642
+      ],
+      [
+        "west",
+        0.637
+      ]
+    ],
+    "played": [
+      [
+        "playing",
+        0.856
+      ],
+      [
+        "plays",
+        0.762
+      ],
+      [
+        "play",
+        0.757
+      ],
+      [
+        "player",
+        0.645
+      ],
+      [
+        "matches",
+        0.594
+      ]
+    ],
+    "@-@": [
+      [
+        "channels",
+        0.266
+      ],
+      [
+        "regions",
+        0.234
+      ],
+      [
+        "beneficial",
+        0.229
+      ],
+      [
+        "distress",
+        0.228
+      ],
+      [
+        "cable",
+        0.224
+      ]
+    ],
+    "<eos>": [
+      [
+        "sophisticated",
+        0.234
+      ],
+      [
+        "supplying",
+        0.233
+      ],
+      [
+        "snapping",
+        0.221
+      ],
+      [
+        "seizing",
+        0.22
+      ],
+      [
+        "hardware",
+        0.21
+      ]
+    ],
+    "<unk>": [
+      [
+        "maq",
+        0.231
+      ],
+      [
+        "contract",
+        0.21
+      ],
+      [
+        "crosby",
+        0.205
+      ],
+      [
+        "aboard",
+        0.193
+      ],
+      [
+        "delaunay",
+        0.193
+      ]
+    ]
+  },
+  "rescale_factor": 0.15450612789365797
+}
