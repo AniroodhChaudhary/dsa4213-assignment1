@@ -16,6 +16,7 @@ Decoding & greedy and top-$k$=40, $T$=1.0, 50 new tokens, seed 1234+prompt index
 $n$-gram & interpolated Kneser--Ney, orders 2--5 fitted, order chosen on validation, $D_n = n_1/(n_1+2n_2)$ \\
 Skip-gram & gensim, sg=1, window 5, 10 negatives, subsampling $10^{-4}$, 10 epochs, min\_count 1, 1 worker \\
 GloVe & 6B tokens, 300d, uncased; missing rows $\mathcal{N}(0, \sigma_d)$ from the found rows \\
+Part III TF-IDF reference & scikit-learn TfidfVectorizer over vocabulary ids: uni+bigrams, min\_df 2, sublinear tf, fitted on the 20,000 training documents \\
 Part III classifier & scikit-learn multinomial logistic regression (lbfgs), standardised features, $C\in\{0.01,0.1,1,10\}$ on validation \\
 Seeds & 0 everywhere; Part II required settings also seed 1 \\
 \bottomrule

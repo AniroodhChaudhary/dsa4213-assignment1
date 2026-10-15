@@ -126,8 +126,9 @@ block. Run names are `<config>_s<seed>`.
 seed 1). Data subsets, prompts, embedding initialisation and decoding are all
 seeded. Training on MPS is *not* bit-reproducible (the embedding backward uses
 non-deterministic scatter kernels); the seed-0/seed-1 pairs of Part II differ by 0.5 to
-1.1 test-perplexity points, and a same-seed repeat (the first 12 epochs of the 24-epoch runs)
-differs by under 0.05. `--device cpu` gives exact reproduction at a large speed cost.
+1.1 test-perplexity points, and a same-seed repeat (the first 12 epochs of the 24-epoch runs) agrees at epoch 12
+within 0.04 (LSTM) and 0.00 (Transformer), with intermediate-epoch deviations of up to 2.5 PPL
+for the LSTM. `--device cpu` gives exact reproduction at a large speed cost.
 
 ## Layout
 

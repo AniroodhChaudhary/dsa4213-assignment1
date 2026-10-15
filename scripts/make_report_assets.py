@@ -208,6 +208,8 @@ def part1(numbers: dict):
             v12_long, v12 = val_at_epoch(long, 12), val_at_epoch(r, 12)
             if v12_long and v12:
                 numbers[f"mpsRepeatDiff{key}"] = fmt(abs(v12_long - v12), 2)
+                hl, hs = history(long), history(r)
+                numbers[f"mpsRepeatMaxDiff{key}"] = fmt(max(abs(a["val_ppl"] - b["val_ppl"]) for a, b in zip(hl[:12], hs[:12])), 1)
         numbers[f"trainMin{key}"] = fmt(row["train_min_to_best"], 1)
         numbers[f"valEpThree{key}"] = fmt(row["val_ppl_ep3"], 1)
         numbers[f"valBudget{key}"] = fmt(row["val_ppl_budget"], 1)
@@ -280,7 +282,7 @@ def part1(numbers: dict):
     # learning curves: val PPL vs epoch (train dotted) and vs wall-clock
     neural = [(n, labels[n]) for n, _ in PART1 if n != "ngram" and runs[n]]
     if neural:
-        fig, axes = plt.subplots(1, 2, figsize=(6.4, 1.7))
+        fig, axes = plt.subplots(1, 2, figsize=(6.4, 1.5))
         for n, lab in neural:
             h = history(runs[n])
             col = C["transformer_1l" if "1layer" in n else n.split("_")[0]]
@@ -309,8 +311,8 @@ def part1(numbers: dict):
         axes[1].axvline(BUDGET_SECONDS / 60, color=MUTED, lw=0.8, ls="--")
         axes[1].text(BUDGET_SECONDS / 60 + 0.4, 110, "matched\n8-min budget", color=MUTED, fontsize=6, va="bottom")
         handles, labels_ = axes[0].get_legend_handles_labels()
-        fig.legend(handles, labels_, loc="lower center", ncol=3, bbox_to_anchor=(0.5, -0.24), fontsize=6.5)
-        fig.subplots_adjust(wspace=0.22, bottom=0.2)
+        fig.legend(handles, labels_, loc="lower center", ncol=3, bbox_to_anchor=(0.5, -0.40), fontsize=6.5)
+        fig.subplots_adjust(wspace=0.22, bottom=0.22)
         fig.savefig(FIG / "part1_curves.pdf")
         plt.close(fig)
         print("wrote report/figures/part1_curves.pdf")
@@ -318,7 +320,7 @@ def part1(numbers: dict):
     # cross-entropy by train-frequency bucket
     with_eval = [(n, labels[n]) for n, _ in PART1 if runs[n] and runs[n]["eval"]]
     if with_eval:
-        fig, ax = plt.subplots(figsize=(6.4, 1.5))
+        fig, ax = plt.subplots(figsize=(6.4, 1.3))
         cats = list(BUCKET_NAMES) + ["<eos>", "<unk>"]
         width = 0.8 / len(with_eval)
         for i, (n, lab) in enumerate(with_eval):
@@ -521,14 +523,17 @@ def part2(numbers: dict, part3_f1: dict):
     for r in rows:
         ppl = fmt(r["test_ppl_mean"]) + (f" $\\pm$ {fmt(r['test_ppl_halfrange'])}" if r["test_ppl_halfrange"] is not None else "")
         cost = f"{r['emb_train_seconds']/60:.1f} min" if r["emb_train_seconds"] else ("--" if r["source"] != "glove" else "public")
-        L.append(f"{r['source'].replace('skipgram', 'skip-gram').replace('glove', 'GloVe')} & "
+        src = r['source'].replace('skipgram', 'skip-gram').replace('glove', 'GloVe')
+        if "rescaled" in r["setting"]:
+            src = "GloVe, rescaled to norm 1"
+        L.append(f"{src} & "
                  f"{'yes' if r['trainable'] else 'no'} & {fmt(100*r['coverage_types'])} & {cost} & {ppl} & "
                  f"{fmt(r['val_ppl_ep3'])} & {fmt(r['val_ppl_ep6'])} & {r['grad_norm_mean']:.2f} & "
                  f"{100*r['clipped_frac']:.1f}\\% & {r['row_norm']:.2f} \\\\")
     L += [r"\bottomrule", r"\end{tabular}"]
     write(TAB / "part2_factorial.tex", "\n".join(L))
 
-    fig, ax = plt.subplots(figsize=(3.4, 1.75))
+    fig, ax = plt.subplots(figsize=(3.4, 1.65))
     for label, by_seed in curves.items():
         source = [s for _, s, _, l in PART2 if l == label][0]
         trainable = [t for _, _, t, l in PART2 if l == label][0]
@@ -554,7 +559,7 @@ def part2(numbers: dict, part3_f1: dict):
     others = [(stem, source, trainable, label) for stem, source, trainable, label in PART2
               if stem not in ("lstm", "lstm_random_frozen", "lstm_glove_frozen_scaled") and load_run(f"{stem}_s0") and load_run(f"{stem}_s0")["eval"]]
     if base and base["eval"] and others:
-        fig, ax = plt.subplots(figsize=(3.4, 1.75))
+        fig, ax = plt.subplots(figsize=(3.4, 1.65))
         b = base["eval"]["protocols"]["default"]["bucket_ce"]
         width = 0.8 / len(others)
         for i, (stem, source, trainable, label) in enumerate(others):
@@ -643,7 +648,7 @@ def part3(numbers: dict) -> dict:
     def _short(label):
         return label.replace("embedding only: ", "table only: ").replace("-learned table", " (learned)").replace(" (reference)", "")
     L = [r"\begin{tabular}{@{}lrrr" + "r" * (len(grid) - 1) + "@{}}", r"\toprule",
-         r"Representation & LM test PPL & Acc.\ & " +
+         r"Representation & LM test PPL (seed 0) & Acc.\ & " +
          " & ".join((f"F1, $n$={n:,}" + (" ($\\pm$95\\% CI)" if n == n_full and ci else "")) for n in sorted(grid, reverse=True)) + r" \\", r"\midrule"]
     for r in rows:
         cells = []
@@ -689,7 +694,7 @@ def part3(numbers: dict) -> dict:
         dump_json({"rho": rho, "p": pval, "n": len(lm_rows),
                    "points": [(r["name"], r["source_test_ppl"], r["test_macro_f1"]) for r in lm_rows]},
                   SUM / "part3_rank_agreement.json")
-        fig, ax = plt.subplots(figsize=(3.4, 1.75))
+        fig, ax = plt.subplots(figsize=(3.4, 1.65))
         from matplotlib.ticker import FixedLocator, NullFormatter, ScalarFormatter
         for r in lm_rows:
             col = REP_COLOR.get(r["name"], INK)
@@ -714,7 +719,7 @@ def part3(numbers: dict) -> dict:
             "emb_glove_mean", "tfidf"]
     show = [s for s in show if s in reps]
     if show:
-        fig, ax = plt.subplots(figsize=(3.4, 1.75))
+        fig, ax = plt.subplots(figsize=(3.4, 1.65))
         for name in show:
             label = [l for n, l, _ in PART3 if n == name][0]
             ys = [100 * reps[name]["by_n_train"][str(n)]["test_macro_f1"] for n in grid]
@@ -779,6 +784,7 @@ def hyperparams():
         ("$n$-gram", "interpolated Kneser--Ney, orders 2--5 fitted, order chosen on validation, $D_n = n_1/(n_1+2n_2)$"),
         ("Skip-gram", "gensim, sg=1, window 5, 10 negatives, subsampling $10^{-4}$, 10 epochs, min\\_count 1, 1 worker"),
         ("GloVe", "6B tokens, 300d, uncased; missing rows $\\mathcal{N}(0, \\sigma_d)$ from the found rows"),
+        ("Part III TF-IDF reference", "scikit-learn TfidfVectorizer over vocabulary ids: uni+bigrams, min\\_df 2, sublinear tf, fitted on the 20,000 training documents"),
         ("Part III classifier", "scikit-learn multinomial logistic regression (lbfgs), standardised features, $C\\in\\{0.01,0.1,1,10\\}$ on validation"),
         ("Seeds", "0 everywhere; Part II required settings also seed 1"),
     ]
