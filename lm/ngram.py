@@ -86,6 +86,18 @@ class KneserNeyLM:
             out[i - 1] = math.log(self.prob(hist, toks[i]))
         return out
 
+    def logprob_stream_blocks(self, stream: np.ndarray, block: int) -> np.ndarray:
+        """Per-target log-probabilities with the history reset every `block`
+        tokens, matching the neural models' context-reset protocol."""
+        toks = stream.tolist()
+        n_ctx = self.order - 1
+        out = np.empty(len(toks) - 1, dtype=np.float32)
+        for i in range(1, len(toks)):
+            start = ((i - 1) // block) * block
+            hist = tuple(toks[max(start, i - n_ctx):i])
+            out[i - 1] = math.log(self.prob(hist, toks[i]))
+        return out
+
     def next_token_distribution(self, hist) -> np.ndarray:
         """Full P(. | hist) as a length-V vector (used for generation)."""
         h = tuple(int(t) for t in hist)

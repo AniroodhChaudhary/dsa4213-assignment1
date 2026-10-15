@@ -55,7 +55,9 @@ def main() -> None:
         run_name = "ngram"
         model = KneserNeyLM.load(ROOT / common["checkpoint_dir"] / "ngram.pkl")
         cfg = common
-        protocols = {"default": lambda s: model.logprob_stream(s)}
+        ctx = common["eval"]["transformer_context"]
+        protocols = {"default": lambda s: model.logprob_stream(s),
+                     f"blocks{ctx}": lambda s: model.logprob_stream_blocks(s, ctx)}
         default_name = f"kneser-ney order {model.order}, full history"
         size = {"n_entries": model.n_entries(),
                 "checkpoint_bytes": file_bytes(ROOT / common["checkpoint_dir"] / "ngram.pkl")}

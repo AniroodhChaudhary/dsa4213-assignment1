@@ -18,15 +18,15 @@
   },
   "score_test": {
     "tokens": 244102,
-    "seconds": 0.7666872919944581,
-    "tokens_per_second": 318385.3476493575
+    "seconds": 0.7050116249884013,
+    "tokens_per_second": 346238.26238895836
   },
   "generate": {
     "prompts": 5,
     "new_tokens_per_prompt": 50,
     "decoding": "top-k 40, T=1.0",
-    "seconds": 4.934650624927599,
-    "ms_per_token": 19.738602499710396,
-    "tokens_per_second": 50.662147941561315
+    "seconds": 4.634777416998986,
+    "ms_per_token": 18.539109667995945,
+    "tokens_per_second": 53.940022897987355
   }
 }
