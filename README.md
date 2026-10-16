@@ -1,5 +1,7 @@
 # DSA4213 Assignment 1 — Language models, embeddings and representations
 
+Repository: https://github.com/AniroodhChaudhary/dsa4213-assignment1
+
 Code and results for a three-part study on WikiText-2 and AG News:
 
 * **Part I** — n-gram (interpolated Kneser-Ney), vanilla RNN, LSTM and Transformer
